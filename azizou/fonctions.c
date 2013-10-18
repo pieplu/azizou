@@ -1,5 +1,5 @@
-//NOM et PrÈnom : 
-//Code permanent :
+//NOM et Prénom : Alexis Piéplu - François Planet
+//Code permanent : PIEA07058900 - PLAF17069100
 
 #include <stdio.h>
 #include "fonctions.h"
