@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E3423FB1811E65300E3D8B9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E3423FA1811E65300E3D8B9 /* main.c */; };
 		5E3423FD1811E65300E3D8B9 /* azizou.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E3423FC1811E65300E3D8B9 /* azizou.1 */; };
 		5EE69A391811E75000860812 /* fonctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EE69A371811E75000860812 /* fonctions.c */; };
+		5EE69A3C1811EED000860812 /* filtre.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EE69A3B1811EED000860812 /* filtre.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,11 @@
 
 /* Begin PBXFileReference section */
 		5E3423F71811E65300E3D8B9 /* azizou */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = azizou; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E3423FA1811E65300E3D8B9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		5E3423FC1811E65300E3D8B9 /* azizou.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = azizou.1; sourceTree = "<group>"; };
 		5EE69A371811E75000860812 /* fonctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
 		5EE69A381811E75000860812 /* fonctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = "<group>"; };
+		5EE69A3A1811ED7A00860812 /* test01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test01.txt; sourceTree = "<group>"; };
+		5EE69A3B1811EED000860812 /* filtre.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filtre.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				5EE69A371811E75000860812 /* fonctions.c */,
+				5EE69A3B1811EED000860812 /* filtre.c */,
 				5EE69A381811E75000860812 /* fonctions.h */,
-				5E3423FA1811E65300E3D8B9 /* main.c */,
 				5E3423FC1811E65300E3D8B9 /* azizou.1 */,
+				5EE69A3A1811ED7A00860812 /* test01.txt */,
 			);
 			path = azizou;
 			sourceTree = "<group>";
@@ -122,8 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3423FB1811E65300E3D8B9 /* main.c in Sources */,
 				5EE69A391811E75000860812 /* fonctions.c in Sources */,
+				5EE69A3C1811EED000860812 /* filtre.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
