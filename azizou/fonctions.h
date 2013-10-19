@@ -1,5 +1,5 @@
-//NOM et Prénom : 
-//Code permanent : 
+//NOM et Prénom : Alexis Piéplu - François Planet
+//Code permanent : PIEA07058900 - PLAF17069100 
 
 #ifndef TP1
 #define TP1
@@ -30,14 +30,14 @@
 
 // cette fonction est fournie
 //affiche un message d'erreur sur le canal d'erreur selon les cas définis
-void signaler_erreur(int err);
+void signaler_erreur(int err); // fait
 
 // cette fonction est fournie
 //affiche un tableau 2D nxm
-void affiche_Tab2D(int *ptr, int n, int m);
+void affiche_Tab2D(int *ptr, int n, int m); //fait
 
 // retourne le nombre de lignes total du fichier pointé par fp  
-int nbre_lignes_fichier(FILE *fp);
+int nbre_lignes_fichier(FILE *fp); //fait 
 
 // retourne le max du tableau pointé par vecteur et de taille v
 // retourne 0 si le tableau est vide (NULL)

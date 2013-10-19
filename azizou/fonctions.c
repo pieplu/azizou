@@ -5,6 +5,8 @@
 #include "fonctions.h"
 #include <stdlib.h>
 
+
+//affiche un message d'erreur sur le canal d'erreur selon les cas définis
 void
 signaler_erreur(int err)
 {
@@ -37,6 +39,9 @@ signaler_erreur(int err)
     
 }
 
+
+
+//affiche un tableau 2D nxm
 void
 affiche_Tab2D(int *ptr, int n, int m)
 {
@@ -60,3 +65,39 @@ affiche_Tab2D(int *ptr, int n, int m)
         signaler_erreur(TABLEAU2D_VIDE_ERREUR);
     }
 }
+
+
+
+
+// retourne le nombre de lignes total du fichier pointé par fp  
+int nbre_lignes_fichier(FILE *fp)
+{
+	int nbLigne=1;
+	char c;
+	if(fp != NULL)
+	{
+		while (c != EOF) 
+		{
+			c = fgetc(fp);
+			if (c == '\n') 
+			{
+				nbLigne++;
+			}
+		}
+		
+	}
+	return nbLigne;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
