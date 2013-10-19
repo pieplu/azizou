@@ -10,15 +10,22 @@ int main(int argc, const char * argv[])
 {
 
     FILE * fichier = NULL;
-	char c;
-	fichier = fopen("../../azizou/test01.txt", "r");
+	int n = 0;
+	int m = 0;
+	
+	int *vecteur=NULL;
+	int *ptrTab=NULL;
+	
+	
+	
+
+	fichier = fopen("test01.txt", "r");
 
 	
 	if(fichier != NULL)
 	{
-		
-		printf("%d", nbre_lignes_fichier(fichier));
-		
+		n = nbre_lignes_fichier(fichier);
+		vecteur = malloc(n*sizeof(int));	
 	}
 	else 
 	{

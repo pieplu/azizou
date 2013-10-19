@@ -1,7 +1,7 @@
 Tazizou
 v7
 r0
-t403905318.982065
+t403907125.414158
 cCheck dependencies
 cCompileC build/azizou.build/Debug/azizou.build/Objects-normal/i386/fonctions.o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c" normal i386 c com.apple.compilers.gcc.4_2
 cCompileC build/azizou.build/Debug/azizou.build/Objects-normal/i386/filtre.o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c" normal i386 c com.apple.compilers.gcc.4_2
@@ -23,17 +23,17 @@ t1270689001
 s11765
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c
-c000000005262E39B00000000000001D2
-t1382212507
-s466
+c000000005262EAB40000000000000217
+t1382214324
+s535
 i<stdio.h>
 i<stdlib.h>
 i"fonctions.h"
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c
-c000000005262E3A6000000000000072C
-t1382212518
-s1836
+c000000005262E5EB00000000000007DB
+t1382213099
+s2011
 i<stdio.h>
 i"fonctions.h"
 i<stdlib.h>
@@ -44,8 +44,8 @@ t1382212493
 s3968
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou
-t1382212518
-s9816
+t1382214325
+s9856
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/azizou.LinkFileList
 c000000005262B74F00000000000000F5
@@ -53,20 +53,20 @@ t1382201167
 s245
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/filtre.o
-t1382212507
-s3492
+t1382214324
+s3572
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/fonctions.o
-t1382212518
+t1382213100
 s5600
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies403905318#403905318#0(153"[WARN]Mac OS X deployment target '10.8' for architecture 'i386' and variant 'normal' is greater than the maximum value '10.6' for the Mac OS X 10.6 SDK.1(22@146"Mac OS X deployment target '10.8' for architecture 'i386' and variant 'normal' is greater than the maximum value '10.6' for the Mac OS X 10.6 SDK.403905318#18446744073709551615#0#0(1@0"0(0#1#0"8617595360#0"0#
+lSLF07#2@18"Check dependencies403907125#403907125#0(153"[WARN]Mac OS X deployment target '10.8' for architecture 'i386' and variant 'normal' is greater than the maximum value '10.6' for the Mac OS X 10.6 SDK.1(22@146"Mac OS X deployment target '10.8' for architecture 'i386' and variant 'normal' is greater than the maximum value '10.6' for the Mac OS X 10.6 SDK.403907125#18446744073709551615#0#0(1@0"0(0#1#0"8616884640#0"0#
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/i386/filtre.o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c" normal i386 c com.apple.compilers.gcc.4_2
-s403905308.218524
-e403905308.221984
+s403907125.171212
+e403907125.175623
 r1
 xCompileC
 xbuild/azizou.build/Debug/azizou.build/Objects-normal/i386/filtre.o
@@ -75,11 +75,11 @@ xnormal
 xi386
 xc
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c403905308#403905308#0(252"cc1: warning: -Wuninitialized is not supported without -O/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c: In function 'main':/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c:13: warning: unused variable 'c'2(22@43"-Wuninitialized is not supported without -O403905308#0#58#0(6@0"403905308#0#0#0#0#0"0(22@19"Unused variable 'c'403905308#149#103#0(6@69"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c403905307#13#0#13#0#19"unused variable '*'0(0#0#69"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c8617557472#1474"    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wunused-function -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.8 -gdwarf-2 -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap" -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap" "-F/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/include" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/i386" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources" -c "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c" -o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/filtre.o"0#
+lSLF07#2@77"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c403907125#403907125#0(360"cc1: warning: -Wuninitialized is not supported without -O/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c: In function 'main':/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c:17: warning: unused variable 'ptrTab'/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c:14: warning: unused variable 'm'3(22@43"-Wuninitialized is not supported without -O403907125#0#58#0(6@0"403907125#0#0#0#0#0"0(22@24"Unused variable 'ptrTab'403907125#149#108#0(6@69"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c403907124#17#0#17#0#19"unused variable '*'0(22@19"Unused variable 'm'403907125#257#103#0(6@69"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c403907124#14#0#14#0#19"unused variable '*'0(0#0#69"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c8611878848#1474"    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wunused-function -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.8 -gdwarf-2 -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap" -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap" "-F/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/include" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/i386" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources" -c "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c" -o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/filtre.o"0#
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/i386/fonctions.o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c" normal i386 c com.apple.compilers.gcc.4_2
-s403905318.959406
-e403905318.960762
+s403906791.100418
+e403906791.223312
 r1
 xCompileC
 xbuild/azizou.build/Debug/azizou.build/Objects-normal/i386/fonctions.o
@@ -88,15 +88,15 @@ xnormal
 xi386
 xc
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c403905318#403905318#0(58"cc1: warning: -Wuninitialized is not supported without -O1(22@43"-Wuninitialized is not supported without -O403905318#0#58#0(6@0"403905318#0#0#0#0#0"0(0#0#72"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c8616770560#1480"    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wunused-function -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.8 -gdwarf-2 -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap" -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap" "-F/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/include" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/i386" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources" -c "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c" -o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/fonctions.o"0#
+lSLF07#2@80"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c403906791#403906791#0(58"cc1: warning: -Wuninitialized is not supported without -O1(22@43"-Wuninitialized is not supported without -O403906791#0#58#0(6@0"403906791#0#0#0#0#0"0(0#0#72"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c8616937312#1480"    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wunused-function -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.8 -gdwarf-2 -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap" -iquote "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap" "-F/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/include" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/i386" "-I/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources" -c "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c" -o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/fonctions.o"0#
 
 CLd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou" normal i386
-s403905318.960947
-e403905318.982008
+s403907125.175697
+e403907125.414109
 r1
 xLd
 x/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou
 xnormal
 xi386
-lSLF07#2@77"Link /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou403905318#403905318#0(0"0(0#0#0"8618052128#584"    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" "-F/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" -filelist "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/azizou.LinkFileList" -mmacosx-version-min=10.8 -prebind -o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou"0#
+lSLF07#2@77"Link /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou403907125#403907125#0(0"0(0#0#0"8617687648#584"    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" "-F/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug" -filelist "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/i386/azizou.LinkFileList" -mmacosx-version-min=10.8 -prebind -o "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou"0#
 

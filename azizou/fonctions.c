@@ -48,6 +48,7 @@ affiche_Tab2D(int *ptr, int n, int m)
     if (n>0 && m>0 && ptr!=NULL)
     {
         int (*lignePtr)[m];
+		
 
         lignePtr = (int (*)[m]) ptr;
 
