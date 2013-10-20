@@ -21,10 +21,10 @@
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
       <logicalFolder name="f2"
-                     displayName="testAzizou"
+                     displayName="New C Simple Test"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>tests/testFonction.c</itemPath>
+        <itemPath>tests/newsimpletest1.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -50,24 +50,31 @@
           <incDir>
             <pElem>.</pElem>
           </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
         </cTool>
         <ccTool>
           <incDir>
             <pElem>.</pElem>
           </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
         </linkerTool>
       </folder>
       <folder path="TestFiles/f2">
         <cTool>
           <incDir>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </incDir>
         </cTool>
         <ccTool>
           <incDir>
+            <pElem>.</pElem>
             <pElem>.</pElem>
           </incDir>
         </ccTool>
@@ -81,7 +88,7 @@
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/testFonction.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/newsimpletest1.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -110,24 +117,31 @@
           <incDir>
             <pElem>.</pElem>
           </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
         </cTool>
         <ccTool>
           <incDir>
             <pElem>.</pElem>
           </incDir>
+          <commandLine>`cppunit-config --cflags`</commandLine>
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
         </linkerTool>
       </folder>
       <folder path="TestFiles/f2">
         <cTool>
           <incDir>
             <pElem>.</pElem>
+            <pElem>.</pElem>
           </incDir>
         </cTool>
         <ccTool>
           <incDir>
+            <pElem>.</pElem>
             <pElem>.</pElem>
           </incDir>
         </ccTool>
@@ -141,7 +155,7 @@
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/testFonction.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/newsimpletest1.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>

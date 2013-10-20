@@ -84,15 +84,15 @@ ${OBJECTDIR}/main.o: main.c
 
 # Build Test Targets
 .build-tests-conf: .build-conf ${TESTFILES}
-${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/testFonction.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/newsimpletest1.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.c}   -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS} 
 
 
-${TESTDIR}/tests/testFonction.o: tests/testFonction.c 
+${TESTDIR}/tests/newsimpletest1.o: tests/newsimpletest1.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} $@.d
-	$(COMPILE.c) -O2 -I. -MMD -MP -MF $@.d -o ${TESTDIR}/tests/testFonction.o tests/testFonction.c
+	$(COMPILE.c) -O2 -I. -I. -MMD -MP -MF $@.d -o ${TESTDIR}/tests/newsimpletest1.o tests/newsimpletest1.c
 
 
 ${OBJECTDIR}/fonctions_nomain.o: ${OBJECTDIR}/fonctions.o fonctions.c 
