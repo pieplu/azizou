@@ -1,0 +1,164 @@
+// !$*UTF8*$!
+{
+	5E3423EF1811E65300E3D8B9 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = D4BFCD9C1812ED1E007FCBF0 /* azizou */;
+		activeTarget = 5E3423F61811E65300E3D8B9 /* azizou */;
+		codeSenseManager = D4BFCDA11812ED41007FCBF0 /* Code sense */;
+		executables = (
+			D4BFCD9C1812ED1E007FCBF0 /* azizou */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					960,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 403986513;
+			PBXWorkspaceStateSaveDate = 403986513;
+		};
+		perUserProjectItems = {
+			D473BAFD1814584E00E48812 /* PBXTextBookmark */ = D473BAFD1814584E00E48812 /* PBXTextBookmark */;
+			D473BB051814585900E48812 /* PBXTextBookmark */ = D473BB051814585900E48812 /* PBXTextBookmark */;
+		};
+		sourceControlManager = D4BFCDA01812ED41007FCBF0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5E3423F61811E65300E3D8B9 /* azizou */ = {
+		activeExec = 0;
+		executables = (
+			D4BFCD9C1812ED1E007FCBF0 /* azizou */,
+		);
+	};
+	5E3423FC1811E65300E3D8B9 /* azizou.1 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 1027}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1844}";
+		};
+	};
+	5EE69A371811E75000860812 /* fonctions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {833, 1391}}";
+			sepNavSelRange = "{98, 0}";
+			sepNavVisRange = "{0, 380}";
+		};
+	};
+	5EE69A381811E75000860812 /* fonctions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 1352}}";
+			sepNavSelRange = "{1029, 64}";
+			sepNavVisRange = "{0, 1373}";
+		};
+	};
+	5EE69A3A1811ED7A00860812 /* test01.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 532}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 0}";
+			sepNavWindowFrame = "{{51, 0}, {822, 878}}";
+		};
+	};
+	5EE69A3B1811EED000860812 /* filtre.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 637}}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{0, 599}";
+		};
+	};
+	D473BAFD1814584E00E48812 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D473BAFE1814584E00E48812 /* filtre.c */;
+		name = "filtre.c: 17";
+		rLen = 0;
+		rLoc = 279;
+		rType = 0;
+		vrLen = 543;
+		vrLoc = 0;
+	};
+	D473BAFE1814584E00E48812 /* filtre.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = filtre.c;
+		path = /Users/fplanet/Desktop/cpp/filtre.c;
+		sourceTree = "<absolute>";
+	};
+	D473BB051814585900E48812 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D473BB061814585900E48812 /* filtre.c */;
+		name = "filtre.c: 17";
+		rLen = 0;
+		rLoc = 279;
+		rType = 0;
+		vrLen = 542;
+		vrLoc = 0;
+	};
+	D473BB061814585900E48812 /* filtre.c */ = {
+		isa = PBXFileReference;
+		name = filtre.c;
+		path = /Users/fplanet/Desktop/cpp/filtre.c;
+		sourceTree = "<absolute>";
+	};
+	D4BFCD9C1812ED1E007FCBF0 /* azizou */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = azizou;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	D4BFCDA01812ED41007FCBF0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	D4BFCDA11812ED41007FCBF0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
