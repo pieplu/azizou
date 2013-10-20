@@ -10,9 +10,6 @@ int main(int argc, const char * argv[])
 {
     
 
-<<<<<<< HEAD:src/filtre.c
-    FILE *fichier = NULL;
-=======
     FILE * fichier = NULL;
 	int n = 0;
 	int m = 0;
@@ -22,20 +19,20 @@ int main(int argc, const char * argv[])
 	
 	
 	
->>>>>>> 4e449ec1f5633e356d21b44d25f935bdbe2e65ba:azizou/filtre.c
+
 
 	fichier = fopen("test01.txt", "r");
 
 	
 	if(fichier != NULL)
 	{
-<<<<<<< HEAD:src/filtre.c
+
 		printf("%d", nbre_lignes_fichier(fichier));
 		
-=======
+
 		n = nbre_lignes_fichier(fichier);
 		vecteur = malloc(n*sizeof(int));	
->>>>>>> 4e449ec1f5633e356d21b44d25f935bdbe2e65ba:azizou/filtre.c
+
 	}
 	else 
 	{
