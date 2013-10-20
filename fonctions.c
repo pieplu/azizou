@@ -97,7 +97,7 @@ int taille_max_lignes(int * vecteur , int v){
     for(int i=0; i < v; i++){
         maxVal = (*vecteur + i)>maxVal ? (*vecteur + i) : maxVal;
     }
-    return 0;
+    return 0; // 0 pour le test
 }
 
 int check_domaine(char *domaine) {

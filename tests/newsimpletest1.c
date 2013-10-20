@@ -16,7 +16,7 @@
 int tab1[]={2,5,2,3,9,22,0,7};
 
 void testTaille_max_lignes() {
-    int* vecteur = tab1;
+    int* vecteur = tab1; //surement mauvais, le test faill tt le temps, à voir
     int v =8;
     int result = taille_max_lignes(vecteur, v);
     if (result != 0) {
