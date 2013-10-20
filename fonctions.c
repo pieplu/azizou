@@ -95,9 +95,9 @@ int nbre_lignes_fichier(FILE *fp)
 int taille_max_lignes(int * vecteur , int v){
     int maxVal=0;
     for(int i=0; i < v; i++){
-        maxVal = (*vecteur + i)>maxVal ? (*vecteur + i) : maxVal;
+        maxVal = *(vecteur + i)>maxVal ? *(vecteur + i) : maxVal;
     }
-    return 0; // 0 pour le test
+    return maxVal; // 0 pour le test
 }
 
 int check_domaine(char *domaine) {

@@ -8,17 +8,17 @@ CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
-CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=azizou
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/azizou
+CND_ARTIFACT_DIR_Debug=build/Debug/GNU-MacOSX/tests/TestFiles
+CND_ARTIFACT_NAME_Debug=f1
+CND_ARTIFACT_PATH_Debug=build/Debug/GNU-MacOSX/tests/TestFiles/f1
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
 CND_PACKAGE_NAME_Debug=azizou.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/azizou.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
-CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=azizou
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/azizou
+CND_ARTIFACT_DIR_Release=build/Release/GNU-MacOSX/tests/TestFiles
+CND_ARTIFACT_NAME_Release=f1
+CND_ARTIFACT_PATH_Release=build/Release/GNU-MacOSX/tests/TestFiles/f1
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
 CND_PACKAGE_NAME_Release=azizou.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/azizou.tar

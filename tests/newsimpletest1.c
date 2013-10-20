@@ -16,10 +16,10 @@
 int tab1[]={2,5,2,3,9,22,0,7};
 
 void testTaille_max_lignes() {
-    int* vecteur = tab1; //surement mauvais, le test faill tt le temps, à voir
+    int* vecteur = tab1;
     int v =8;
     int result = taille_max_lignes(vecteur, v);
-    if (result != 0) {
+    if (result != 22) {
         printf("%%TEST_FAILED%% time=0 testname=testTaille_max_lignes (newsimpletest1) message=error message sample\n");
     }
 }
