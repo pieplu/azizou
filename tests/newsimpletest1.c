@@ -19,7 +19,7 @@ void testTaille_max_lignes() {
     int* vecteur = tab1;
     int v =8;
     int result = taille_max_lignes(vecteur, v);
-    if (result != 22) {
+    if (result != 22) { // Le résultat est senssé être 22, si ce n'est pas le cas, il exécute failed
         printf("%%TEST_FAILED%% time=0 testname=testTaille_max_lignes (newsimpletest1) message=error message sample\n");
     }
 }
