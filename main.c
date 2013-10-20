@@ -28,8 +28,8 @@ int main(int argc, const char * argv[])
 	{
 
 		printf("%d", nbre_lignes_fichier(fichier));
-		
-
+                int tab[4]={3,4,5,2};
+		printf("taille 4 rempli :%d", taille_max_lignes(tab, 4));
 		n = nbre_lignes_fichier(fichier);
 		vecteur = malloc(n*sizeof(int));	
 
