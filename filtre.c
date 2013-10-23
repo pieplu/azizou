@@ -37,21 +37,14 @@ int main(int argc, const char * argv[])
 		n = nbre_lignes_fichier(fichier);
 		vecteur = malloc( n * sizeof(int));
 
-                for(int i = 0; i <n; i++)
-                {
-                    while(c!= '\n')
-                    {
-                        nbChar++;
-                    }
-                    *(vecteur+i) = nbChar;
-                }
+                
 
 
 
 	}
 	else 
 	{
-		printf("Echec de l'ouverture");
+		signaler_erreur(OUVERTURE_FICHIER_ERREUR);
 	}
 
 	
