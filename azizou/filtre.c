@@ -16,12 +16,22 @@ void errOuverture(void){
     exit(1);
 }
 
+void cas5(const char** argv)
+{
+    //Noms paramètres
+    if (strcmp(&argv[2][1], "C")
+        || strcmp(&argv[2][1], "L")
+        || strcmp(&argv[4][1], "L")
+        || strcmp(&argv[4][1], "C")){
+        signaler_erreur(OPTION_INCONNUE_ERREUR);
+        exit(1);
+    }
+}
 
-
-void nombreParametre(int argc){
+void nombreParametre(int argc, const char *argv[]){
     // nombre params
     switch (argc){
-        case 1:
+        case 1: 
             break;
         case 2:
             break;
@@ -29,7 +39,7 @@ void nombreParametre(int argc){
             break;
         case 4:
             break;
-        case 5:
+        case 5: cas5(argv);
             break;
         case 6:
             break;
@@ -47,17 +57,10 @@ int main(int argc, const char * argv[])
 	//int *ptrTab=NULL;
 	
     //Check le nombre de paramètre et dispatche les vérifications
-    nombreParametre(argc);
+    nombreParametre(argc, argv);git
     
     
-    //Noms paramètres
-    if (strcmp(&argv[2][1], "C")
-        || strcmp(&argv[2][1], "L")
-        || strcmp(&argv[4][1], "L")
-        || strcmp(&argv[4][1], "C")){
-        signaler_erreur(OPTION_INCONNUE_ERREUR);
-        exit(1);
-    }
+    
     
     
     
