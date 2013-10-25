@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E1BEF8E181A1186001216C6 /* fonctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BEF8D181A1186001216C6 /* fonctions.c */; };
+		5EAE033D181A0FF6001E1AB0 /* filtre.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE033C181A0FF6001E1AB0 /* filtre.c */; };
+		5EAE033F181A0FF6001E1AB0 /* azizou.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EAE033E181A0FF6001E1AB0 /* azizou.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E1BEFA1181A2EF2001216C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EAE0331181A0FF6001E1AB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EAE0338181A0FF6001E1AB0;
+			remoteInfo = azizou;
+		};
+		5E1BEFB6181A332E001216C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EAE0331181A0FF6001E1AB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EAE0338181A0FF6001E1AB0;
+			remoteInfo = azizou;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5EAE0337181A0FF6001E1AB0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				5EAE033F181A0FF6001E1AB0 /* azizou.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5E1BEF8D181A1186001216C6 /* fonctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
+		5E1BEF8F181A1192001216C6 /* fonctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = "<group>"; };
+		5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azizou Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azizou TestsOC.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EAE0339181A0FF6001E1AB0 /* azizou */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = azizou; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EAE033C181A0FF6001E1AB0 /* filtre.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filtre.c; sourceTree = "<group>"; };
+		5EAE033E181A0FF6001E1AB0 /* azizou.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = azizou.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E1BEF91181A2EF2001216C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E1BEFA7181A332E001216C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EAE0336181A0FF6001E1AB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EAE0330181A0FF6001E1AB0 = {
+			isa = PBXGroup;
+			children = (
+				5EAE033B181A0FF6001E1AB0 /* azizou */,
+				5EAE033A181A0FF6001E1AB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EAE033A181A0FF6001E1AB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE0339181A0FF6001E1AB0 /* azizou */,
+				5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */,
+				5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EAE033B181A0FF6001E1AB0 /* azizou */ = {
+			isa = PBXGroup;
+			children = (
+				5EAE033C181A0FF6001E1AB0 /* filtre.c */,
+				5E1BEF8D181A1186001216C6 /* fonctions.c */,
+				5E1BEF8F181A1192001216C6 /* fonctions.h */,
+				5EAE033E181A0FF6001E1AB0 /* azizou.1 */,
+			);
+			path = azizou;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E1BEF93181A2EF2001216C6 /* azizou Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E1BEFA3181A2EF2001216C6 /* Build configuration list for PBXNativeTarget "azizou Tests" */;
+			buildPhases = (
+				5E1BEF90181A2EF2001216C6 /* Sources */,
+				5E1BEF91181A2EF2001216C6 /* Frameworks */,
+				5E1BEF92181A2EF2001216C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E1BEFA2181A2EF2001216C6 /* PBXTargetDependency */,
+			);
+			name = "azizou Tests";
+			productName = "azizou Tests";
+			productReference = 5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5E1BEFA9181A332E001216C6 /* azizou TestsOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E1BEFB8181A332E001216C6 /* Build configuration list for PBXNativeTarget "azizou TestsOC" */;
+			buildPhases = (
+				5E1BEFA6181A332E001216C6 /* Sources */,
+				5E1BEFA7181A332E001216C6 /* Frameworks */,
+				5E1BEFA8181A332E001216C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E1BEFB7181A332E001216C6 /* PBXTargetDependency */,
+			);
+			name = "azizou TestsOC";
+			productName = "azizou TestsOC";
+			productReference = 5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5EAE0338181A0FF6001E1AB0 /* azizou */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EAE0342181A0FF6001E1AB0 /* Build configuration list for PBXNativeTarget "azizou" */;
+			buildPhases = (
+				5EAE0335181A0FF6001E1AB0 /* Sources */,
+				5EAE0336181A0FF6001E1AB0 /* Frameworks */,
+				5EAE0337181A0FF6001E1AB0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = azizou;
+			productName = azizou;
+			productReference = 5EAE0339181A0FF6001E1AB0 /* azizou */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EAE0331181A0FF6001E1AB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = INF3135;
+				TargetAttributes = {
+					5E1BEF93181A2EF2001216C6 = {
+						TestTargetID = 5EAE0338181A0FF6001E1AB0;
+					};
+					5E1BEFA9181A332E001216C6 = {
+						TestTargetID = 5EAE0338181A0FF6001E1AB0;
+					};
+				};
+			};
+			buildConfigurationList = 5EAE0334181A0FF6001E1AB0 /* Build configuration list for PBXProject "azizou" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5EAE0330181A0FF6001E1AB0;
+			productRefGroup = 5EAE033A181A0FF6001E1AB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EAE0338181A0FF6001E1AB0 /* azizou */,
+				5E1BEF93181A2EF2001216C6 /* azizou Tests */,
+				5E1BEFA9181A332E001216C6 /* azizou TestsOC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E1BEF92181A2EF2001216C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E1BEFA8181A332E001216C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E1BEF90181A2EF2001216C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E1BEFA6181A332E001216C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EAE0335181A0FF6001E1AB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EAE033D181A0FF6001E1AB0 /* filtre.c in Sources */,
+				5E1BEF8E181A1186001216C6 /* fonctions.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E1BEFA2181A2EF2001216C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EAE0338181A0FF6001E1AB0 /* azizou */;
+			targetProxy = 5E1BEFA1181A2EF2001216C6 /* PBXContainerItemProxy */;
+		};
+		5E1BEFB7181A332E001216C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EAE0338181A0FF6001E1AB0 /* azizou */;
+			targetProxy = 5E1BEFB6181A332E001216C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5E1BEFA4181A2EF2001216C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou Tests/azizou Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "azizou Tests/azizou Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5E1BEFA5181A2EF2001216C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou Tests/azizou Tests-Prefix.pch";
+				INFOPLIST_FILE = "azizou Tests/azizou Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		5E1BEFB9181A332E001216C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou TestsOC/azizou TestsOC-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "azizou TestsOC/azizou TestsOC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5E1BEFBA181A332E001216C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou TestsOC/azizou TestsOC-Prefix.pch";
+				INFOPLIST_FILE = "azizou TestsOC/azizou TestsOC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		5EAE0340181A0FF6001E1AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5EAE0341181A0FF6001E1AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5EAE0343181A0FF6001E1AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"TEST_HOST[sdk=*]" = "";
+			};
+			name = Debug;
+		};
+		5EAE0344181A0FF6001E1AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E1BEFA3181A2EF2001216C6 /* Build configuration list for PBXNativeTarget "azizou Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E1BEFA4181A2EF2001216C6 /* Debug */,
+				5E1BEFA5181A2EF2001216C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E1BEFB8181A332E001216C6 /* Build configuration list for PBXNativeTarget "azizou TestsOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E1BEFB9181A332E001216C6 /* Debug */,
+				5E1BEFBA181A332E001216C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5EAE0334181A0FF6001E1AB0 /* Build configuration list for PBXProject "azizou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EAE0340181A0FF6001E1AB0 /* Debug */,
+				5EAE0341181A0FF6001E1AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EAE0342181A0FF6001E1AB0 /* Build configuration list for PBXNativeTarget "azizou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EAE0343181A0FF6001E1AB0 /* Debug */,
+				5EAE0344181A0FF6001E1AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EAE0331181A0FF6001E1AB0 /* Project object */;
+}

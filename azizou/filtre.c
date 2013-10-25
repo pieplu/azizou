@@ -31,7 +31,7 @@ void cas5(const char** argv)
 void nombreParametre(int argc, const char *argv[]){
     // nombre params
     switch (argc){
-        case 1: 
+        case 1:
             break;
         case 2:
             break;
@@ -57,14 +57,14 @@ int main(int argc, const char * argv[])
 	//int *ptrTab=NULL;
 	
     //Check le nombre de paramètre et dispatche les vérifications
-    nombreParametre(argc, argv);git
+    nombreParametre(argc, argv);
     
     
     
     
     
     
-
+    
 	
 	
     
