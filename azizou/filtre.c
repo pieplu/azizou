@@ -13,8 +13,7 @@ int main(int argc, const char * argv[])
     FILE * fichier = NULL;
 	int n = 0;
 	//int m = 0;
-    int nbChar = 0;
-    char c;
+  
 	
 	int *vecteur=NULL;
 	//int *ptrTab=NULL;
