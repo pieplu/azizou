@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D95D4766-2371-47D4-8342-C2E8EDC869D6</string>
+	<string>9FBB15B5-12C0-452B-ADA6-9F1E02DE8AE3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>azizou</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8D1EE6D0-5EBD-4F83-9178-F04BC517BA4F</key>
-		<string>http://github.com/Pieplu/azizou.git</string>
+		<key>60A91E8F-95B7-445E-B968-3BF40ECE0075</key>
+		<string>https://github.com/Pieplu/azizou.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>azizou.xcodeproj/project.xcworkspace</string>
+	<string>azizou/azizou.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8D1EE6D0-5EBD-4F83-9178-F04BC517BA4F</key>
-		<string>../..</string>
+		<key>60A91E8F-95B7-445E-B968-3BF40ECE0075</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://github.com/Pieplu/azizou.git</string>
+	<string>https://github.com/Pieplu/azizou.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8D1EE6D0-5EBD-4F83-9178-F04BC517BA4F</string>
+	<string>60A91E8F-95B7-445E-B968-3BF40ECE0075</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8D1EE6D0-5EBD-4F83-9178-F04BC517BA4F</string>
+			<string>60A91E8F-95B7-445E-B968-3BF40ECE0075</string>
 			<key>IDESourceControlWCCName</key>
 			<string>azizou</string>
 		</dict>
