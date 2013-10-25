@@ -41,7 +41,7 @@ int nbre_lignes_fichier(FILE *fp); //fait
 
 // retourne le max du tableau pointé par vecteur et de taille v
 // retourne 0 si le tableau est vide (NULL)
-int taille_max_lignes(int * vecteur , int v);
+int taille_max_lignes(int * vecteur , int v); //fait
 
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
 //si vecteur[i]==0, la ligne i du fichier est ignorée car elle est vide d'entier.
