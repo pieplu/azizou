@@ -8,9 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5E1BEF8E181A1186001216C6 /* fonctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BEF8D181A1186001216C6 /* fonctions.c */; };
+		5E1BEF97181A2EF2001216C6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1BEF96181A2EF2001216C6 /* XCTest.framework */; };
+		5E1BEF9D181A2EF2001216C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */; };
+		5E1BEF9F181A2EF2001216C6 /* azizou_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */; };
 		5EAE033D181A0FF6001E1AB0 /* filtre.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE033C181A0FF6001E1AB0 /* filtre.c */; };
 		5EAE033F181A0FF6001E1AB0 /* azizou.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EAE033E181A0FF6001E1AB0 /* azizou.1 */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E1BEFA1181A2EF2001216C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EAE0331181A0FF6001E1AB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EAE0338181A0FF6001E1AB0;
+			remoteInfo = azizou;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5EAE0337181A0FF6001E1AB0 /* CopyFiles */ = {
@@ -28,12 +41,26 @@
 /* Begin PBXFileReference section */
 		5E1BEF8D181A1186001216C6 /* fonctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
 		5E1BEF8F181A1192001216C6 /* fonctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = "<group>"; };
+		5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azizou Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1BEF96181A2EF2001216C6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5E1BEF9A181A2EF2001216C6 /* azizou Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "azizou Tests-Info.plist"; sourceTree = "<group>"; };
+		5E1BEF9C181A2EF2001216C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = azizou_Tests.m; sourceTree = "<group>"; };
+		5E1BEFA0181A2EF2001216C6 /* azizou Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "azizou Tests-Prefix.pch"; sourceTree = "<group>"; };
 		5EAE0339181A0FF6001E1AB0 /* azizou */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = azizou; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAE033C181A0FF6001E1AB0 /* filtre.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filtre.c; sourceTree = "<group>"; };
 		5EAE033E181A0FF6001E1AB0 /* azizou.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = azizou.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E1BEF91181A2EF2001216C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1BEF97181A2EF2001216C6 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EAE0336181A0FF6001E1AB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +71,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E1BEF95181A2EF2001216C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E1BEF96181A2EF2001216C6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E1BEF98181A2EF2001216C6 /* azizou Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */,
+				5E1BEF99181A2EF2001216C6 /* Supporting Files */,
+			);
+			path = "azizou Tests";
+			sourceTree = "<group>";
+		};
+		5E1BEF99181A2EF2001216C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E1BEF9A181A2EF2001216C6 /* azizou Tests-Info.plist */,
+				5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */,
+				5E1BEFA0181A2EF2001216C6 /* azizou Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5EAE0330181A0FF6001E1AB0 = {
 			isa = PBXGroup;
 			children = (
 				5EAE033B181A0FF6001E1AB0 /* azizou */,
+				5E1BEF98181A2EF2001216C6 /* azizou Tests */,
+				5E1BEF95181A2EF2001216C6 /* Frameworks */,
 				5EAE033A181A0FF6001E1AB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				5EAE0339181A0FF6001E1AB0 /* azizou */,
+				5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +131,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E1BEF93181A2EF2001216C6 /* azizou Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E1BEFA3181A2EF2001216C6 /* Build configuration list for PBXNativeTarget "azizou Tests" */;
+			buildPhases = (
+				5E1BEF90181A2EF2001216C6 /* Sources */,
+				5E1BEF91181A2EF2001216C6 /* Frameworks */,
+				5E1BEF92181A2EF2001216C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E1BEFA2181A2EF2001216C6 /* PBXTargetDependency */,
+			);
+			name = "azizou Tests";
+			productName = "azizou Tests";
+			productReference = 5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5EAE0338181A0FF6001E1AB0 /* azizou */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EAE0342181A0FF6001E1AB0 /* Build configuration list for PBXNativeTarget "azizou" */;
@@ -99,6 +174,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = INF3135;
+				TargetAttributes = {
+					5E1BEF93181A2EF2001216C6 = {
+						TestTargetID = 5EAE0338181A0FF6001E1AB0;
+					};
+				};
 			};
 			buildConfigurationList = 5EAE0334181A0FF6001E1AB0 /* Build configuration list for PBXProject "azizou" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -113,11 +193,31 @@
 			projectRoot = "";
 			targets = (
 				5EAE0338181A0FF6001E1AB0 /* azizou */,
+				5E1BEF93181A2EF2001216C6 /* azizou Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5E1BEF92181A2EF2001216C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1BEF9D181A2EF2001216C6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5E1BEF90181A2EF2001216C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1BEF9F181A2EF2001216C6 /* azizou_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EAE0335181A0FF6001E1AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,7 +229,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5E1BEFA2181A2EF2001216C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EAE0338181A0FF6001E1AB0 /* azizou */;
+			targetProxy = 5E1BEFA1181A2EF2001216C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E1BEF9C181A2EF2001216C6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		5E1BEFA4181A2EF2001216C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou Tests/azizou Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "azizou Tests/azizou Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5E1BEFA5181A2EF2001216C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou Tests/azizou Tests-Prefix.pch";
+				INFOPLIST_FILE = "azizou Tests/azizou Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		5EAE0340181A0FF6001E1AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -215,6 +368,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E1BEFA3181A2EF2001216C6 /* Build configuration list for PBXNativeTarget "azizou Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E1BEFA4181A2EF2001216C6 /* Debug */,
+				5E1BEFA5181A2EF2001216C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5EAE0334181A0FF6001E1AB0 /* Build configuration list for PBXProject "azizou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
