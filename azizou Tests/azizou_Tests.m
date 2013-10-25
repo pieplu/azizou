@@ -7,12 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
+#include "fonctions.h"
 
 @interface azizou_Tests : XCTestCase
+- (void)testtailleMaxNormal;
 
 @end
 
 @implementation azizou_Tests
+
 
 - (void)setUp
 {
@@ -26,9 +29,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testtailleMaxNormal
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    int tab[4]={4,5,8,2};
+    XCTAssertEqual(8, taille_max_lignes(tab,4), @"bien bine");
 }
 
 @end

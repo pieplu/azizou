@@ -11,12 +11,20 @@
 		5E1BEF97181A2EF2001216C6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1BEF96181A2EF2001216C6 /* XCTest.framework */; };
 		5E1BEF9D181A2EF2001216C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */; };
 		5E1BEF9F181A2EF2001216C6 /* azizou_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */; };
+		5E1BEFAC181A332E001216C6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1BEFAB181A332E001216C6 /* SenTestingKit.framework */; };
 		5EAE033D181A0FF6001E1AB0 /* filtre.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE033C181A0FF6001E1AB0 /* filtre.c */; };
 		5EAE033F181A0FF6001E1AB0 /* azizou.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EAE033E181A0FF6001E1AB0 /* azizou.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5E1BEFA1181A2EF2001216C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EAE0331181A0FF6001E1AB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EAE0338181A0FF6001E1AB0;
+			remoteInfo = azizou;
+		};
+		5E1BEFB6181A332E001216C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5EAE0331181A0FF6001E1AB0 /* Project object */;
 			proxyType = 1;
@@ -47,6 +55,8 @@
 		5E1BEF9C181A2EF2001216C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = azizou_Tests.m; sourceTree = "<group>"; };
 		5E1BEFA0181A2EF2001216C6 /* azizou Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "azizou Tests-Prefix.pch"; sourceTree = "<group>"; };
+		5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azizou TestsOC.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1BEFAB181A332E001216C6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5EAE0339181A0FF6001E1AB0 /* azizou */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = azizou; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAE033C181A0FF6001E1AB0 /* filtre.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filtre.c; sourceTree = "<group>"; };
 		5EAE033E181A0FF6001E1AB0 /* azizou.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = azizou.1; sourceTree = "<group>"; };
@@ -58,6 +68,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E1BEF97181A2EF2001216C6 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E1BEFA7181A332E001216C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1BEFAC181A332E001216C6 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5E1BEF96181A2EF2001216C6 /* XCTest.framework */,
+				5E1BEFAB181A332E001216C6 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +132,7 @@
 			children = (
 				5EAE0339181A0FF6001E1AB0 /* azizou */,
 				5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */,
+				5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +169,24 @@
 			productReference = 5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5E1BEFA9181A332E001216C6 /* azizou TestsOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E1BEFB8181A332E001216C6 /* Build configuration list for PBXNativeTarget "azizou TestsOC" */;
+			buildPhases = (
+				5E1BEFA6181A332E001216C6 /* Sources */,
+				5E1BEFA7181A332E001216C6 /* Frameworks */,
+				5E1BEFA8181A332E001216C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E1BEFB7181A332E001216C6 /* PBXTargetDependency */,
+			);
+			name = "azizou TestsOC";
+			productName = "azizou TestsOC";
+			productReference = 5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		5EAE0338181A0FF6001E1AB0 /* azizou */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EAE0342181A0FF6001E1AB0 /* Build configuration list for PBXNativeTarget "azizou" */;
@@ -178,6 +216,9 @@
 					5E1BEF93181A2EF2001216C6 = {
 						TestTargetID = 5EAE0338181A0FF6001E1AB0;
 					};
+					5E1BEFA9181A332E001216C6 = {
+						TestTargetID = 5EAE0338181A0FF6001E1AB0;
+					};
 				};
 			};
 			buildConfigurationList = 5EAE0334181A0FF6001E1AB0 /* Build configuration list for PBXProject "azizou" */;
@@ -194,6 +235,7 @@
 			targets = (
 				5EAE0338181A0FF6001E1AB0 /* azizou */,
 				5E1BEF93181A2EF2001216C6 /* azizou Tests */,
+				5E1BEFA9181A332E001216C6 /* azizou TestsOC */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +249,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E1BEFA8181A332E001216C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -215,6 +264,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E1BEF9F181A2EF2001216C6 /* azizou_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E1BEFA6181A332E001216C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +290,11 @@
 			isa = PBXTargetDependency;
 			target = 5EAE0338181A0FF6001E1AB0 /* azizou */;
 			targetProxy = 5E1BEFA1181A2EF2001216C6 /* PBXContainerItemProxy */;
+		};
+		5E1BEFB7181A332E001216C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EAE0338181A0FF6001E1AB0 /* azizou */;
+			targetProxy = 5E1BEFB6181A332E001216C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -280,6 +341,40 @@
 				INFOPLIST_FILE = "azizou Tests/azizou Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		5E1BEFB9181A332E001216C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou TestsOC/azizou TestsOC-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "azizou TestsOC/azizou TestsOC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5E1BEFBA181A332E001216C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "azizou TestsOC/azizou TestsOC-Prefix.pch";
+				INFOPLIST_FILE = "azizou TestsOC/azizou TestsOC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -373,6 +468,14 @@
 			buildConfigurations = (
 				5E1BEFA4181A2EF2001216C6 /* Debug */,
 				5E1BEFA5181A2EF2001216C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E1BEFB8181A332E001216C6 /* Build configuration list for PBXNativeTarget "azizou TestsOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E1BEFB9181A332E001216C6 /* Debug */,
+				5E1BEFBA181A332E001216C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

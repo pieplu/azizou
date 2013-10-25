@@ -12,4 +12,5 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h \
   /Applications/Xcode.app/Contents/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h \
   /Applications/Xcode.app/Contents/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h \
-  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h \
+  /Users/alexis/Prog/C/INF3135/azizou/azizou/fonctions.h
