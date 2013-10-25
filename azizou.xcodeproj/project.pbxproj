@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E1BEF8E181A1186001216C6 /* fonctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BEF8D181A1186001216C6 /* fonctions.c */; };
-		5E1BEF97181A2EF2001216C6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1BEF96181A2EF2001216C6 /* XCTest.framework */; };
-		5E1BEF9D181A2EF2001216C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */; };
-		5E1BEF9F181A2EF2001216C6 /* azizou_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */; };
-		5E1BEFAC181A332E001216C6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1BEFAB181A332E001216C6 /* SenTestingKit.framework */; };
 		5EAE033D181A0FF6001E1AB0 /* filtre.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE033C181A0FF6001E1AB0 /* filtre.c */; };
 		5EAE033F181A0FF6001E1AB0 /* azizou.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5EAE033E181A0FF6001E1AB0 /* azizou.1 */; };
 /* End PBXBuildFile section */
@@ -50,13 +46,7 @@
 		5E1BEF8D181A1186001216C6 /* fonctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
 		5E1BEF8F181A1192001216C6 /* fonctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = "<group>"; };
 		5E1BEF94181A2EF2001216C6 /* azizou Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azizou Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E1BEF96181A2EF2001216C6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5E1BEF9A181A2EF2001216C6 /* azizou Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "azizou Tests-Info.plist"; sourceTree = "<group>"; };
-		5E1BEF9C181A2EF2001216C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = azizou_Tests.m; sourceTree = "<group>"; };
-		5E1BEFA0181A2EF2001216C6 /* azizou Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "azizou Tests-Prefix.pch"; sourceTree = "<group>"; };
 		5E1BEFAA181A332E001216C6 /* azizou TestsOC.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "azizou TestsOC.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E1BEFAB181A332E001216C6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5EAE0339181A0FF6001E1AB0 /* azizou */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = azizou; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAE033C181A0FF6001E1AB0 /* filtre.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filtre.c; sourceTree = "<group>"; };
 		5EAE033E181A0FF6001E1AB0 /* azizou.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = azizou.1; sourceTree = "<group>"; };
@@ -67,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1BEF97181A2EF2001216C6 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1BEFAC181A332E001216C6 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,40 +77,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E1BEF95181A2EF2001216C6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E1BEF96181A2EF2001216C6 /* XCTest.framework */,
-				5E1BEFAB181A332E001216C6 /* SenTestingKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5E1BEF98181A2EF2001216C6 /* azizou Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5E1BEF9E181A2EF2001216C6 /* azizou_Tests.m */,
-				5E1BEF99181A2EF2001216C6 /* Supporting Files */,
-			);
-			path = "azizou Tests";
-			sourceTree = "<group>";
-		};
-		5E1BEF99181A2EF2001216C6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5E1BEF9A181A2EF2001216C6 /* azizou Tests-Info.plist */,
-				5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */,
-				5E1BEFA0181A2EF2001216C6 /* azizou Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		5EAE0330181A0FF6001E1AB0 = {
 			isa = PBXGroup;
 			children = (
 				5EAE033B181A0FF6001E1AB0 /* azizou */,
-				5E1BEF98181A2EF2001216C6 /* azizou Tests */,
-				5E1BEF95181A2EF2001216C6 /* Frameworks */,
 				5EAE033A181A0FF6001E1AB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -245,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1BEF9D181A2EF2001216C6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1BEF9F181A2EF2001216C6 /* azizou_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,17 +253,6 @@
 			targetProxy = 5E1BEFB6181A332E001216C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5E1BEF9B181A2EF2001216C6 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E1BEF9C181A2EF2001216C6 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5E1BEFA4181A2EF2001216C6 /* Debug */ = {
@@ -394,7 +339,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -433,7 +378,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -450,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"TEST_HOST[sdk=*]" = "";
 			};
 			name = Debug;
 		};

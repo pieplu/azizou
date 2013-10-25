@@ -28,26 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E1BEF93181A2EF2001216C6"
-               BuildableName = "azizou Tests.xctest"
-               BlueprintName = "azizou Tests"
-               ReferencedContainer = "container:azizou.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E1BEFA9181A332E001216C6"
-               BuildableName = "azizou TestsOC.octest"
-               BlueprintName = "azizou TestsOC"
-               ReferencedContainer = "container:azizou.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
