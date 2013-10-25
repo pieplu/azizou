@@ -182,9 +182,9 @@ t1382587068
 s5968
 
 N/Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c
-c00000000526ADD450000000000000678
-t1382735173
-s1656
+c00000000526AE32600000000000007E0
+t1382736678
+s2016
 
 N/Users/alexis/Prog/C/INF3135/azizou/azizou/fonctions.c
 c00000000526ADDDB0000000000001323
@@ -197,8 +197,8 @@ t1382735224
 s3962
 
 N/Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou
-t1382735377
-s10624
+t1382736678
+s11104
 
 N/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList
 c00000000526ADE1100000000000000D5
@@ -206,8 +206,8 @@ t1382735377
 s213
 
 N/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o
-t1382735377
-s7052
+t1382736678
+s8476
 
 N/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o
 t1382735377
@@ -221,11 +221,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies34f3f06d161bb841^643df16d161bb841^---0#1#1#--18"Check dependencies36"AF7E7198-27DA-40FC-84A5-1E5B46673D50-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies301216a81a1bb841^567d16a81a1bb841^---0#1#1#--18"Check dependencies36"CA83410C-8130-43C1-8002-522CCB27D932-
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o /Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s404428177.152519
-e404428177.216597
+s404429478.333724
+e404429478.372520
 r1
 xCompileC
 xbuild/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o
@@ -236,8 +236,8 @@ xc
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c
 d/Users/alexis/Prog/C/INF3135/azizou/azizou/fonctions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c153"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler3e402791151bb841^ad6c3791151bb841^---0#0#1#-19%DVTDocumentLocation2@58"file:///Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c0000000000000000^2445"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexis/Prog/C/INF3135/azizou    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/alexis/Prog/C/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources -F/Users/alexis/Prog/C/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.d --serialize-diagnostics /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.dia -c /Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c -o /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o36"02F9D95F-D51F-4121-BC3B-1FD9E8C65BDF-
-b44B929C0-D254-44CD-A847-1E68BD6F4791
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c153"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler3f8f55a61a1bb841^d28964a61a1bb841^---0#0#1#-19%DVTDocumentLocation2@58"file:///Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c0000000000000000^2445"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/alexis/Prog/C/INF3135/azizou    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/alexis/Prog/C/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources -F/Users/alexis/Prog/C/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.d --serialize-diagnostics /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.dia -c /Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c -o /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o36"79AEC0F3-E2BC-475F-A1C5-A3E66DB7CF56-
+b4E5C44B5-C8C9-4D7D-9EC6-05BEC6BD8BB3
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o /Users/alexis/Prog/C/INF3135/azizou/azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s404428177.152678
@@ -256,8 +256,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile
 b44B929C0-D254-44CD-A847-1E68BD6F4791
 
 CLd /Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou normal x86_64
-s404428177.218706
-e404428177.241844
+s404429478.374060
+e404429478.395595
 r1
 xLd
 x/Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou
@@ -298,6 +298,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Link /Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou35"Ld build/Debug/azizou normal x86_648d0a3891151bb841^57ea3d91151bb841^---0#0#1#--807"Ld build/Debug/azizou normal x86_64    cd /Users/alexis/Prog/C/INF3135/azizou    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/alexis/Prog/C/INF3135/azizou/build/Debug -F/Users/alexis/Prog/C/INF3135/azizou/build/Debug -filelist /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou_dependency_info.dat -o /Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou36"2AD33EFA-4940-4AD9-B4BA-554CDFD555D8-
-b44B929C0-D254-44CD-A847-1E68BD6F4791
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Link /Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou35"Ld build/Debug/azizou normal x86_640fd65fa61a1bb841^3d4665a61a1bb841^---0#0#1#--807"Ld build/Debug/azizou normal x86_64    cd /Users/alexis/Prog/C/INF3135/azizou    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/alexis/Prog/C/INF3135/azizou/build/Debug -F/Users/alexis/Prog/C/INF3135/azizou/build/Debug -filelist /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/alexis/Prog/C/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou_dependency_info.dat -o /Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou36"A9A14A99-55BC-4BFF-BB9F-D0CEE03633E4-
+b4E5C44B5-C8C9-4D7D-9EC6-05BEC6BD8BB3
 

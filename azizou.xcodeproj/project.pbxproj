@@ -64,8 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				5ECDB62A181B14A5004A8F90 /* filtre.c */,
-				5ECDB633181B14EA004A8F90 /* fonctions.h */,
 				5ECDB634181B1506004A8F90 /* fonctions.c */,
+				5ECDB633181B14EA004A8F90 /* fonctions.h */,
 				5ECDB62C181B14A5004A8F90 /* azizou.1 */,
 			);
 			path = azizou;
@@ -231,6 +231,7 @@
 				5ECDB632181B14A5004A8F90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
