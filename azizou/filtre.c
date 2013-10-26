@@ -65,10 +65,13 @@ int main(int argc, const char * argv[])
 {
     FILE * fichier = NULL;
 	int n = 0;
-	//int m = 0;
-	int *vecteur=NULL;
+	int m = 0;
+    int ligne = 0;
+    int nbChar = 0;
+    char c = ' ';
+	int *nbCharLigne=NULL;
 	//int *ptrTab=NULL;
-	
+    
     //Check le nombre de paramètre et dispatche les vérifications
     nombreParametre(argc, argv);
     
@@ -85,12 +88,35 @@ int main(int argc, const char * argv[])
 	if(fichier != NULL)
 	{
         
-		printf("%d", nbre_lignes_fichier(fichier));
-        int tab[4]={3,4,5,2};
-		printf("taille 4 rempli :%d", taille_max_lignes(tab, 4));
+		
 		n = nbre_lignes_fichier(fichier);
-		vecteur = malloc( n * sizeof(int));
+		nbCharLigne = malloc( n * sizeof(int));
         
+        
+        while(c != EOF)
+        {
+            fscanf(fichier,"%c", c);
+            printf("%c",c);
+            
+            
+            nbChar++;
+            
+            
+            if (c == '\n')
+            {
+                nbCharLigne[ligne] = nbChar;
+                nbChar = 0;
+                ligne++;
+            }
+            
+            
+        }
+        
+        
+        for (int i = 0; i < n; i++) {
+            printf("\n %d ", nbCharLigne[i]);
+        }
+
 	}
 	else
 	{
