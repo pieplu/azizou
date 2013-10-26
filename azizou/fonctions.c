@@ -87,6 +87,7 @@ int nbre_lignes_fichier(FILE *fp)
 		}
 		
 	}
+    rewind(fp);
 	return nbLigne;
 	
 }
@@ -109,6 +110,38 @@ int taille_max_lignes(int * vecteur , int v){
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
 int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
+    int tailleFichier=taille_vecteur;
+    int **tableau2D=NULL;
+    int nbCurrent = 0;
+    int nbDeNombre = 0;
+    
+    for (int i = 0; i < taille_vecteur; i++)
+    {
+        if (vecteur[i]==0)
+        {
+            taille_vecteur--;
+        }
+    }
+
+    tableau2D = malloc(taille_vecteur* sizeof(int*));
+    for (int i = 0; i < taille_vecteur; i++){
+        tableau2D[i] = malloc(max_vecteur * sizeof(int));
+    }
+    
+    while (!feof(fp))
+    {
+        fscanf(fp, "%d", &nbCurrent);
+        if (nbCurrent=='\n')
+        {
+            nbDeNombre=0;
+        }
+    }
+    
+
+
+    
+    
+    
     return 0;
 }
 

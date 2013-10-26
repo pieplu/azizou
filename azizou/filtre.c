@@ -61,61 +61,97 @@ void nombreParametre(int argc, const char *argv[]){
     }
 }
 
+
+int *nbCharParLigne(FILE* fichier)
+{
+    int ligne = 0;
+    int nbChar = 0;
+    int nombre=0;
+    int* nbCharLigne;
+    char **tabTemp=NULL;
+    int n =nbre_lignes_fichier(fichier);
+    
+    nbCharLigne = malloc( n * sizeof(int));
+    tabTemp=malloc( n * sizeof(int));
+                   
+    for (int i = 0; i < n; i++){
+        tabTemp[i] = malloc(40 * sizeof(char));
+        fgets(tabTemp[i], 40, fichier);
+    }
+    
+    
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j<40; j++)
+        {
+            sscanf(tabTemp[i], "%d", &nombre);
+            if (nombre='\n')
+            {
+                break;
+            }
+            nbChar++;
+        }
+        
+        nbCharLigne[i]=nbChar;
+        printf("%d",nbCharLigne[i]);
+        nbChar=0;
+    }
+    
+    
+//    while(!feof(fichier))
+//    {
+//        
+//        
+//        fscanf(fichier,"%d", &nombre);
+//        printf("%d",nombre);
+//        nbChar++;
+//        if(nombre=='\n')
+//        {
+//            nbCharLigne[ligne] = nbChar;
+//            nbChar = 0;
+//            ligne++;
+//            printf("\n");
+//        }
+//        
+//    }
+    
+    return nbCharLigne;
+}
+
+
+
+
+
+
+
 int main(int argc, const char * argv[])
 {
     FILE * fichier = NULL;
 	int n = 0;
-	int m = 0;
-    int ligne = 0;
-    int nbChar = 0;
-    char c = ' ';
-	int *nbCharLigne=NULL;
-	//int *ptrTab=NULL;
+	int *vecteur=NULL;
+	
     
-    //Check le nombre de paramètre et dispatche les vérifications
     nombreParametre(argc, argv);
     
     
-    
-    
-    
-    
-	
-	
+    int tab[4] = {1,0,6,3};
+   
     
     
 	fichier = fopen("test01.txt", "r");
 	if(fichier != NULL)
 	{
-        
+        vecteur = nbCharParLigne(fichier);
 		
-		n = nbre_lignes_fichier(fichier);
-		nbCharLigne = malloc( n * sizeof(int));
+        charger(fichier, tab, 4, 6);
+        
+      
+        
+            
         
         
-        while(c != EOF)
-        {
-            fscanf(fichier,"%c", c);
-            printf("%c",c);
-            
-            
-            nbChar++;
-            
-            
-            if (c == '\n')
-            {
-                nbCharLigne[ligne] = nbChar;
-                nbChar = 0;
-                ligne++;
-            }
-            
-            
-        }
         
         
-        for (int i = 0; i < n; i++) {
-            printf("\n %d ", nbCharLigne[i]);
-        }
 
 	}
 	else

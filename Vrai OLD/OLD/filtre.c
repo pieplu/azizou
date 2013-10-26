@@ -1,4 +1,4 @@
-//NOM et Prénom : Alexis Piéplu - François Planet
+ //NOM et Prénom : Alexis Piéplu - François Planet
 //Code permanent : PIEA07058900 - PLAF17069100
 
 #include <stdio.h>
