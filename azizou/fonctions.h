@@ -57,6 +57,7 @@ int check_domaine(char *domaine) ;
 //argv représente le tableau des paramères du programme
 //cette fonction retourne la taille de la liste de domaine à partir argv[pos]
 //la fin la liste est localisée soit par la fin du tableau d'argument soit par une option connue
+//pos devrait représenter l'indice de l'option dans argv et retourner la taille de la liste
 int get_nbre_domaines(char  *const argv[], int pos);
 
 //retourne 1 si la syntaxe  de domaine est correcte et place le début et la fin du domaine dans debut et fin
@@ -67,6 +68,7 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin);
 //argv représente le tableau pointant les paramères du programme
 //retourne l'indexe de option dans argv. par exemple esi option est 'C'
 // la valeur retournée est l'indexe de la chaine "-C" dans argv
+// retourne -1 si l'option n'est pas trouvée dans argv
 int seek_option(char *const argv[], char option);
 
 //c est soit 'C', soit 'L'.

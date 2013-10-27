@@ -136,7 +136,8 @@ int main(int argc, const char * argv[])
     
     int tab[4] = {1,0,6,3};
    
-    
+
+    //seek_option(argv, 'C');
     
 	fichier = fopen("test01.txt", "r");
 	if(fichier != NULL)
@@ -144,12 +145,6 @@ int main(int argc, const char * argv[])
         vecteur = nbCharParLigne(fichier);
 		
         charger(fichier, tab, 4, 6);
-        
-      
-        
-            
-        
-        
         
         
 
