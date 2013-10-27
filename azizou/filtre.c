@@ -62,59 +62,55 @@ void nombreParametre(int argc, const char *argv[]){
 }
 
 
-int *nbCharParLigne(FILE* fichier)
+
+
+
+int *creerVecteur(FILE* fichier, int n)
 {
     int ligne = 0;
     int nbChar = 0;
-    int nombre=0;
-    int* nbCharLigne;
-    char **tabTemp=NULL;
-    int n =nbre_lignes_fichier(fichier);
+    int curNb=0;
+    int nxtNb = 0;
+    
+    int * nbCharLigne;
     
     nbCharLigne = malloc( n * sizeof(int));
-    tabTemp=malloc( n * sizeof(int));
-                   
-    for (int i = 0; i < n; i++){
-        tabTemp[i] = malloc(40 * sizeof(char));
-        fgets(tabTemp[i], 40, fichier);
-    }
     
-    
-    for (int i = 0; i < n; i++)
+    while (!feof(fichier))
     {
-        for (int j = 0; j<40; j++)
+        curNb=fgetc(fichier)-'0';
+        if (curNb==' ')
         {
-            sscanf(tabTemp[i], "%d", &nombre);
-            if (nombre='\n')
-            {
-                break;
-            }
-            nbChar++;
+            curNb = fgetc(fichier)-'0';
         }
-        
-        nbCharLigne[i]=nbChar;
-        printf("%d",nbCharLigne[i]);
-        nbChar=0;
+        else if (curNb=='\n')
+        {
+            *nbCharLigne=nbChar;
+            nbCharLigne++;
+        }
+        else
+        {
+            nxtNb = fgetc(fichier)-'0';
+            if (nxtNb==' ')
+            {
+                nbChar++;
+                
+            }
+            else if (nxtNb=='\n')
+            {
+                *nbCharLigne=nbChar;
+                nbCharLigne++;
+            }
+            else
+            {
+                curNb = (curNb*10)+nxtNb;
+            }
+        }
     }
+        
     
     
-//    while(!feof(fichier))
-//    {
-//        
-//        
-//        fscanf(fichier,"%d", &nombre);
-//        printf("%d",nombre);
-//        nbChar++;
-//        if(nombre=='\n')
-//        {
-//            nbCharLigne[ligne] = nbChar;
-//            nbChar = 0;
-//            ligne++;
-//            printf("\n");
-//        }
-//        
-//    }
-    
+    rewind(fichier);
     return nbCharLigne;
 }
 
@@ -127,7 +123,6 @@ int *nbCharParLigne(FILE* fichier)
 int main(int argc, const char * argv[])
 {
     FILE * fichier = NULL;
-	int n = 0;
 	int *vecteur=NULL;
 	
     
@@ -142,9 +137,10 @@ int main(int argc, const char * argv[])
 	fichier = fopen("test01.txt", "r");
 	if(fichier != NULL)
 	{
-        vecteur = nbCharParLigne(fichier);
+        int n =nbre_lignes_fichier(fichier);
+        vecteur = creerVecteur(fichier, n);
 		
-        charger(fichier, tab, 4, 6);
+        //charger(fichier, tab, 4, 6);
         
         
 

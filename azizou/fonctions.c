@@ -128,14 +128,14 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
         tableau2D[i] = malloc(max_vecteur * sizeof(int));
     }
     
-    while (!feof(fp))
-    {
-        fscanf(fp, "%d", &nbCurrent);
-        if (nbCurrent=='\n')
-        {
-            nbDeNombre=0;
-        }
-    }
+//    while (!feof(fp))
+//    {
+//        fscanf(fp, "%d", &nbCurrent);
+//        if (nbCurrent=='\n')
+//        {
+//            nbDeNombre=0;
+//        }
+//    }
     
 
 
