@@ -7,28 +7,32 @@
 int main(){
 
 	FILE * fichier = NULL;
-	fichier = fopen("test01.txt", "r");
+	fichier = fopen("test03.txt", "r");
 	rewind(fichier);
 
-	int Nombre;
+	//int Nombre;
 	int temp;
-	int nbCarac;
+	int nbCarac=0;
+	int nblignes=0;
+	int nonVide =0;
 
 	do{
-		nbCarac = 0;
-		Nombre=0;
 		temp=fgetc(fichier);
 		while(temp != ' ' && temp != '\n' && temp != EOF){
-			Nombre = Nombre*10 + (temp-'0');
 			temp=fgetc(fichier);
+			nonVide=1;
 		}
-		printf(" %d\n", Nombre);
-		nbCarac++;
 
+		if(nonVide){
+			printf("nbCarac %d - ", ++nbCarac);
+		}
+		
 		if(temp == '\n' || temp == EOF){
-		printf("fin de ligne, %d", nbCarac);
-
+		printf("fin de ligne, %d, carac:%d\n", ++nblignes, nbCarac);
+		nbCarac=0;
 		}
+
+		nonVide=0;
 	}while(temp != EOF);
 
 printf("sorti");
