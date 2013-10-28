@@ -89,6 +89,8 @@ int * control(char *const argv[], int dim, char c);
 //retourne NULL sil le tableau résultant est vide.
 int *filter(int * mat, int *n, int *m, int *controlC, int *controlL);
 
+
+
 #endif
 
 

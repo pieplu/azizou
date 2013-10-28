@@ -107,7 +107,16 @@ int *creerVecteur(FILE* fichier, int nbLigne)
 
 
 
-
+int tailleApresSupp(int *vecteur, int taille_vecteur)
+{
+    int ligne0=0;
+    for (int i = 0; i < taille_vecteur; i++) {
+        if (vecteur[i]==0) {
+            ligne0++;
+        }
+    }
+    return taille_vecteur-ligne0;
+}
 
 
 
@@ -134,8 +143,12 @@ int main(int argc, const char * argv[])
         vecteur = creerVecteur(fichier, n);
         int m = taille_max_lignes(vecteur, 4);
         ptrTableau2d = charger(fichier, vecteur, n, m);
-        affiche_Tab2D(ptrTableau2d, n, m);
+        n = tailleApresSupp(vecteur, n);
+        affiche_Tab2D(ptrTableau2d , n , m);
         
+        
+        
+
         
 
 	}

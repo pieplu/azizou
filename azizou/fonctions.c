@@ -111,7 +111,7 @@ int nbLignesVides(int *vecteur, int taille_vecteur)
             ligne0++;
         }
     }
-    return ligne0;
+    return taille_vecteur-ligne0;
 }
 
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
@@ -124,7 +124,7 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 
     
     int curNb;
-    int ligne0 = nbLignesVides(vecteur, taille_vecteur);
+    int nvlleTaille = nbLignesVides(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
     
     
@@ -139,7 +139,7 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     
     
     while (!feof (fp)){
-        for (int y = 0; y < taille_vecteur; ++y){
+        for (int y = 0; y < taille_vecteur; y++){
             while (*vecteur == 0){
                 vecteur++;
             }
@@ -154,7 +154,7 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     }
     
     //realloc taille-nombre de ligne vides
-    tableau2dim = realloc( tableau2dim , ( taille_vecteur - ligne0 ) * sizeof(int));
+    tableau2dim = realloc( tableau2dim , nvlleTaille * sizeof(int));
 
     rewind(fp);
     return &(tableau2dim[0][0]);
