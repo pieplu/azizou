@@ -148,7 +148,7 @@ int main(int argc, const char * argv[])
     nombreParametre(argc, argv);
     
     
-    int tab[4] = {1,2,0,5};
+    int tab[4] = {2,2,0,5};
    
 
     //seek_option(argv, 'C');

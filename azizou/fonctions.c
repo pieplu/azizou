@@ -103,6 +103,17 @@ int taille_max_lignes(int * vecteur , int v){
 
 
 
+int nbLignesVides(int *vecteur, int taille_vecteur)
+{
+    int ligne0=0;
+    for (int i = 0; i < taille_vecteur; i++) {
+        if (vecteur[i]==0) {
+            ligne0++;
+        }
+    }
+    return ligne0;
+}
+
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
 //si vecteur[i]==0, la ligne i du fichier est ignorée car elle est vide d'entier.
 //Cette fonction retourne un pointeur sur la première case d'un tableau 2D n x m
@@ -112,52 +123,51 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
 
     
-    int * ptr2 = vecteur;
-    int ligne0=0;
-    int cpt = 0;
-    int nbre_lignes = taille_vecteur;
-    int (*ptrtab2d)[max_vecteur];
+    
+    int ligne0 = nbLignesVides(vecteur, taille_vecteur);
+    int (*tableau2dim)[max_vecteur];
     
     
     //initialise tout a 0
-    ptrtab2d=calloc(taille_vecteur,sizeof(int));
+    tableau2dim=calloc(taille_vecteur,sizeof(int));
     
        
     int nbre;
     
+    
+    
+    
+    
     while (!feof (fp))
     {
-        for (int i = 0; i < nbre_lignes; ++i)
+        for (int i = 0; i < taille_vecteur; ++i)
         {
-            
-            while (*ptr2 == 0)
+            while (*vecteur == 0)
             {
-                ptr2++;
-                ligne0++;
-                
-                printf("ligne : %d\n", ligne0);
+                vecteur++;
             }
             for (int j = 0; j < max_vecteur; j++)
             {
-                if(j < *ptr2)
+                if(j < *vecteur)
                 {
                     fscanf (fp, "%d", &nbre);
-                    ptrtab2d[i][j] = nbre;
-                    
+                    tableau2dim[i][j] = nbre;
                 }
             }
-            ptr2++;
+            vecteur++;
         }
     }
     
+    //realloc taille-nombre de ligne vides
+    tableau2dim = realloc( tableau2dim , ( taille_vecteur - ligne0 ) * sizeof(int));
     
-    ptrtab2d=realloc(ptrtab2d,(taille_vecteur - ligne0)* sizeof(int));
     
+    //affichage du tableau2d
     for (int i = 0 ; i < (taille_vecteur - ligne0); i++)
     {
         for (int j = 0 ; j < max_vecteur; j++)
         {
-            printf("%d", ptrtab2d[i][j]);
+            printf("%d", tableau2dim[i][j]);
         }
         printf("\n");
     }
@@ -165,7 +175,7 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     
     
     rewind(fp);
-    return &(ptrtab2d[0][0]);
+    return &(tableau2dim[0][0]);
 
 
     
