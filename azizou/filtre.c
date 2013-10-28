@@ -91,7 +91,7 @@ int *creerVecteur(FILE* fichier, int nbLigne)
 		
 		if(temp == '\n' || temp == EOF){
             *nbCharLigne = nbNombres;
-            printf("%d à %p\n", *nbCharLigne, nbCharLigne);
+            //printf("%d à %p\n", *nbCharLigne, nbCharLigne);
             nbCharLigne++;
             nbNombres=0;
 		}
@@ -115,7 +115,7 @@ int main(int argc, const char * argv[])
 {
     FILE * fichier = NULL;
 	int *vecteur=NULL;
-	
+	int * ptrTableau2d=NULL;
     
     //nombreParametre(argc, argv);
     
@@ -131,11 +131,10 @@ int main(int argc, const char * argv[])
         
         
         int n =nbre_lignes_fichier(fichier);
-        //int m = taille_max_lignes(tab, 4);
         vecteur = creerVecteur(fichier, n);
-        printf("vecteur: %p",vecteur);
-
-        //vecteur = charger(fichier, tab, n, m);
+        int m = taille_max_lignes(vecteur, 4);
+        ptrTableau2d = charger(fichier, vecteur, n, m);
+        affiche_Tab2D(ptrTableau2d, n, m);
         
         
 

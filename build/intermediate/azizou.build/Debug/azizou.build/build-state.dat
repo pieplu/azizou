@@ -2,8 +2,8 @@ Tazizou
 v6
 r1
 cCheck dependencies
-cCompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou normal x86_64
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
@@ -152,23 +152,23 @@ t1382455175
 s5968
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c
-c00000000526DDF460000000000000A1C
-t1382932294
-s2588
+c00000000526EAD790000000000000AB9
+t1382985081
+s2745
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c
-c00000000526DD8F40000000000001980
-t1382930676
-s6528
+c00000000526EAD210000000000001838
+t1382984993
+s6200
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.h
-c00000000526D3EBC000000000000100F
-t1382891196
+c00000000526EAC6D000000000000100F
+t1382984813
 s4111
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou
-t1382932295
-s16016
+t1382985074
+s15892
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList
 c00000000526C190F0000000000000113
@@ -176,12 +176,12 @@ t1382816015
 s275
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o
-t1382932295
-s9136
+t1382985083
+s8968
 
 N/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o
-t1382930876
-s10032
+t1382985074
+s9680
 
 CBuild AST from /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c
 r0
@@ -191,11 +191,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies7e51bedc161eb841^62bfbfdc161eb841^-282"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.2(21%IDEActivityLogMessage2@140"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.-404625116#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@140"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.-404625116#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"411D8F01-3539-4132-961C-B5BD59EE1368-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies0f62f3fae41eb841^9198f4fae41eb841^-282"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.2(21%IDEActivityLogMessage2@140"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.-404677882#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@140"OS X deployment target '10.9' for architecture 'x86_64' and variant 'normal' is greater than the maximum value '10.8' for the OS X 10.8 SDK.-404677882#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"89F5AAC1-8B55-411F-9995-6D94FD19DFC0-
 
 CCompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s404625095.090137
-e404625095.167892
+s404677882.952829
+e404677883.038361
 r1
 xCompileC
 xbuild/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o
@@ -206,16 +206,12 @@ xc
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c
 d/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.h
-o/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c:131:13: warning: unused variable 'm' [-Wunused-variable]
-o        int m = taille_max_lignes(tab, 4);
-o            ^
-o1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c166"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilercf2e17c7161eb841^66142bc7161eb841^-205"/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c:131:13: warning: unused variable 'm' [-Wunused-variable]        int m = taille_max_lignes(tab, 4);            ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@19"Unused variable 'm'-404625095#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@78"file:///Users/fplanet/Google%20Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c0000000000000000^130#12#130#12#2364#0#19"Unused Entity Issue--0#0#1#-19%DVTDocumentLocation4@78"file:///Users/fplanet/Google%20Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c0000000000000000^2823"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources -F/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.d --serialize-diagnostics /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.dia -c /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c -o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o36"6EAE57DA-0DDB-4CCF-8A55-B249CC4E8BCF-
-b9492DE48-9C69-4639-8D32-B947A5AEBD83
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c166"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler6f0df4fae41eb841^5bd209fbe41eb841^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/fplanet/Google%20Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c0000000000000000^2823"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources -F/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.d --serialize-diagnostics /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.dia -c /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/filtre.c -o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o36"18543BC4-9B12-4B2D-819A-E056C2E84AF7-
+bEEC918D8-D756-47FF-9EA0-32438B19CE9E
 
 CCompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s404623676.797865
-e404623677.077852
+s404677874.641536
+e404677874.738659
 r1
 xCompileC
 xbuild/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o
@@ -226,12 +222,12 @@ xc
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c
 d/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c172"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler0c5acc3c111eb841^4aef133d111eb841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/fplanet/Google%20Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c0000000000000000^2841"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources -F/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.d --serialize-diagnostics /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.dia -c /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c -o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o36"80B91E42-F3F6-4156-960B-141D742B4CF6-
-b089A7384-725B-4EDA-914D-D636CA3210DF
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c172"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler795ca4f2e41eb841^6611bef2e41eb841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/fplanet/Google%20Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c0000000000000000^2841"CompileC build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/DerivedSources -F/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.d --serialize-diagnostics /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.dia -c /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/azizou/fonctions.c -o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o36"0BD3B574-4C77-441D-B8E5-BFD566146288-
+b3D990961-142C-483B-9311-04A8D5BE5A90
 
 CLd /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou normal x86_64
-s404625095.170467
-e404625095.209269
+s404677883.040083
+e404677883.078132
 r1
 xLd
 x/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou
@@ -266,6 +262,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Link /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou35"Ld build/Debug/azizou normal x86_64d8bb2bc7161eb841^9a9535c7161eb841^---0#0#1#--948"Ld build/Debug/azizou normal x86_64    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -F/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -filelist /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou_dependency_info.dat -o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou36"D4166270-8EF5-45BD-98DC-8FEA30222B63-
-b9492DE48-9C69-4639-8D32-B947A5AEBD83
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Link /Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou35"Ld build/Debug/azizou normal x86_64145a0afbe41eb841^ee0714fbe41eb841^---0#0#1#--948"Ld build/Debug/azizou normal x86_64    cd "/Users/fplanet/Google Drive/Cours/uqam/INF3135/azizou"    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -F/Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug -filelist /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/intermediate/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou_dependency_info.dat -o /Users/fplanet/Google\ Drive/Cours/uqam/INF3135/azizou/build/Debug/azizou36"06CE7F76-CEDB-4D02-8636-5795F2A57086-
+bEEC918D8-D756-47FF-9EA0-32438B19CE9E
 

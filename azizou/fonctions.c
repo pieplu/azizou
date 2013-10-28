@@ -123,7 +123,7 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
 
     
-    
+    int curNb;
     int ligne0 = nbLignesVides(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
     
@@ -132,26 +132,21 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     tableau2dim=calloc(taille_vecteur,sizeof(int));
     
        
-    int nbre;
     
     
     
     
     
-    while (!feof (fp))
-    {
-        for (int i = 0; i < taille_vecteur; ++i)
-        {
-            while (*vecteur == 0)
-            {
+    
+    while (!feof (fp)){
+        for (int y = 0; y < taille_vecteur; ++y){
+            while (*vecteur == 0){
                 vecteur++;
             }
-            for (int j = 0; j < max_vecteur; j++)
-            {
-                if(j < *vecteur)
-                {
-                    fscanf (fp, "%d", &nbre);
-                    tableau2dim[i][j] = nbre;
+            for (int x = 0; x < max_vecteur; x++){
+                if(x < *vecteur){
+                    fscanf (fp, "%d", &curNb);
+                    tableau2dim[y][x] = curNb;
                 }
             }
             vecteur++;
@@ -160,20 +155,7 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     
     //realloc taille-nombre de ligne vides
     tableau2dim = realloc( tableau2dim , ( taille_vecteur - ligne0 ) * sizeof(int));
-    
-    
-    //affichage du tableau2d
-    for (int i = 0 ; i < (taille_vecteur - ligne0); i++)
-    {
-        for (int j = 0 ; j < max_vecteur; j++)
-        {
-            printf("%d", tableau2dim[i][j]);
-        }
-        printf("\n");
-    }
-    
-    
-    
+
     rewind(fp);
     return &(tableau2dim[0][0]);
 
