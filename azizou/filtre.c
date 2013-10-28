@@ -76,13 +76,13 @@ int *creerVecteur(FILE* fichier, int nbLigne)
     
     int temp;
 	int nbNombres=0;
-	int nonVide =0;
+	int nonVide =false;
     
 	do{
 		temp=fgetc(fichier);
 		while(temp != ' ' && temp != '\n' && temp != EOF){
 			temp=fgetc(fichier);
-			nonVide=1;
+			nonVide=true;
 		}
         
 		if(nonVide){
@@ -93,7 +93,7 @@ int *creerVecteur(FILE* fichier, int nbLigne)
             *nbCharLigne = nbNombres;
             printf("%d à %p\n", *nbCharLigne, nbCharLigne);
             nbCharLigne++;
-            nbNombres=0;
+            nbNombres=false;
 		}
         
 		nonVide=0; //peut être à mettre dans le if du dessus, à voir
