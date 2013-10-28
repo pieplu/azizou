@@ -67,39 +67,42 @@ void nombreParametre(int argc, const char *argv[]){
 
 int *creerVecteur(FILE* fichier, int nbLigne)
 {
-    //int ligne = 0;
-    int nbChar = 0;
-    int curNb=0;
-    //int nxtNb = 0;
-    
     rewind(fichier);
     int * nbCharLigne;
     
     nbCharLigne = malloc( nbLigne * sizeof(int));
+    int *vecteur = nbCharLigne;
     
     
-    while (!feof(fichier))
-    {
-        curNb= fgetc(fichier);
-        if (curNb==' ')
-        {
-            nbChar++;
-        }
-        else if (curNb=='\n')
-        {
-            nbChar++;
-            *nbCharLigne = nbChar;
-            printf("%d\n", *nbCharLigne);
-            nbCharLigne++;
-            nbChar=0;
-        }
+    int temp;
+	int nbNombres=0;
+	int nonVide =0;
+    
+	do{
+		temp=fgetc(fichier);
+		while(temp != ' ' && temp != '\n' && temp != EOF){
+			temp=fgetc(fichier);
+			nonVide=1;
+		}
         
-    }
-    
-    
+		if(nonVide){
+			++nbNombres;
+		}
+		
+		if(temp == '\n' || temp == EOF){
+            *nbCharLigne = nbNombres;
+            printf("%d à %p\n", *nbCharLigne, nbCharLigne);
+            nbCharLigne++;
+            nbNombres=0;
+		}
+        
+		nonVide=0; //peut être à mettre dans le if du dessus, à voir
+        
+	}while(temp != EOF);
     
     rewind(fichier);
-    return nbCharLigne;
+    
+    return vecteur;
 }
 
 
@@ -114,10 +117,10 @@ int main(int argc, const char * argv[])
 	int *vecteur=NULL;
 	
     
-    nombreParametre(argc, argv);
+    //nombreParametre(argc, argv);
     
     
-    int tab[4] = {2,2,0,5};
+    //int tab[4] = {2,2,0,5};
    
 
     //seek_option(argv, 'C');
@@ -128,8 +131,9 @@ int main(int argc, const char * argv[])
         
         
         int n =nbre_lignes_fichier(fichier);
-        int m = taille_max_lignes(tab, 4);
+        //int m = taille_max_lignes(tab, 4);
         vecteur = creerVecteur(fichier, n);
+        printf("vecteur: %p",vecteur);
 
         //vecteur = charger(fichier, tab, n, m);
         

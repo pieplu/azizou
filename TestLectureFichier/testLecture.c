@@ -7,10 +7,9 @@
 int main(){
 
 	FILE * fichier = NULL;
-	fichier = fopen("test03.txt", "r");
+	fichier = fopen("test02.txt", "r");
 	rewind(fichier);
 
-	//int Nombre;
 	int temp;
 	int nbCarac=0;
 	int nblignes=0;
@@ -32,10 +31,10 @@ int main(){
 		nbCarac=0;
 		}
 
-		nonVide=0;
+		nonVide=0; //peut être à mettre dans le if du dessus, à voir
 	}while(temp != EOF);
 
-printf("sorti");
+
 
 	fclose(fichier);
 

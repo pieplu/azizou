@@ -98,7 +98,7 @@ int taille_max_lignes(int * vecteur , int v){
     for(int i=0; i < v; i++){
         maxVal = *(vecteur + i)>maxVal ? *(vecteur + i) : maxVal;
     }
-    return maxVal; // 0 pour le test
+    return maxVal;
 }
 
 
