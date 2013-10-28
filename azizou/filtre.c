@@ -65,68 +65,37 @@ void nombreParametre(int argc, const char *argv[]){
 
 
 
-int *creerVecteur(FILE* fichier, int n)
+int *creerVecteur(FILE* fichier, int nbLigne)
 {
-    int ligne = 0;
+    //int ligne = 0;
     int nbChar = 0;
     int curNb=0;
-    int nxtNb = 0;
+    //int nxtNb = 0;
     
+    rewind(fichier);
     int * nbCharLigne;
     
-    nbCharLigne = malloc( n * sizeof(int));
+    nbCharLigne = malloc( nbLigne * sizeof(int));
     
- 
     
     while (!feof(fichier))
     {
-        curNb=0;
-        curNb=fgetc(fichier)-'0';
-        if (curNb=='\n')
+        curNb= fgetc(fichier);
+        if (curNb==' ')
         {
-            
-            *nbCharLigne=nbChar;
-            nbCharLigne++;
-        }
-        else if (curNb==' ')
-        {
-            break;
-        }
-        else
-        {
-        while ((nxtNb=fgetc(fichier))!= ' ' && nxtNb!='\n')
-        {
-            if (nxtNb=='-')
-            {
-                nxtNb=(fgetc(fichier)-'0')*(-1);
-            }
-            
-            nxtNb-='0';
-            curNb=(curNb*10)+nxtNb;
-            nxtNb=0;
-        }
-        if (nxtNb=='\n' || nxtNb==-1)
-        {
-            
             nbChar++;
-            *nbCharLigne=nbChar;
+        }
+        else if (curNb=='\n')
+        {
+            nbChar++;
+            *nbCharLigne = nbChar;
+            printf("%d\n", *nbCharLigne);
             nbCharLigne++;
-            nbChar=-1;
-            
-            break;
+            nbChar=0;
         }
-        nbChar++;
-        }
+        
     }
     
-    
-    
-    for (int i = 0; i < n; i++)
-    {   nbCharLigne--;
-        printf("%d", *nbCharLigne);
-        nbCharLigne++;
-
-    }
     
     
     rewind(fichier);
@@ -156,13 +125,13 @@ int main(int argc, const char * argv[])
 	fichier = fopen("test01.txt", "r");
 	if(fichier != NULL)
 	{
-        //vecteur = creerVecteur(fichier, n);
+        
         
         int n =nbre_lignes_fichier(fichier);
         int m = taille_max_lignes(tab, 4);
-        
+        vecteur = creerVecteur(fichier, n);
 
-        vecteur = charger(fichier, tab, n, m);
+        //vecteur = charger(fichier, tab, n, m);
         
         
 
