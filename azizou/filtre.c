@@ -86,7 +86,7 @@ int main(int argc, char * const argv[])
     
     //nombreParametre(argc, argv);
    
-
+    printf("Result check :%d \n",check_domaine(argv[3]));
     
     
 //	fichier = fopen("test01.txt", "r");

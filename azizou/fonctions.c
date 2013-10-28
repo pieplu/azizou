@@ -172,7 +172,24 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 
 //verifie si un domaine est syntaxiquement correcte
 // retourne 1 si correcte et 0 sinon
-int check_domaine(char *domaine);
+int check_domaine(char *domaine){
+    
+    int nbTiret=0;
+    int nbNombre=0;
+    
+    for (unsigned long taille = strlen(domaine); taille>0; taille--){
+        if (*domaine == '-') {
+            nbTiret++;
+        }else if(*domaine >= '0' && *domaine <= '9'){
+            nbNombre++;
+        }else{
+            return 0;
+        }
+        domaine++;
+    }
+    
+    return (nbTiret <= 1 && nbNombre > 0);
+}
 
 //argv représente le tableau des paramères du programme
 //cette fonction retourne la taille de la liste de domaine à partir argv[pos]
