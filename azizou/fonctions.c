@@ -180,24 +180,20 @@ int check_domaine(char *domaine);
 //pos devrait représenter l'indice de l'option dans argv et retourner la taille de la liste
 int get_nbre_domaines(char  *const argv[], int pos)
 {
-    
     int compt = 0;
     
-    while (*(argv + pos) != '\0')
+    while (argv[pos+1] != '\0')
     {
-        if (!(strcmp(*(argv + pos), "-L")) && !(strcmp(*(argv + pos), "-L")) ) {
-            
-            compt++;
-            argv++;
+        if (!(strcmp(argv[pos+1], "-C")) || !(strcmp(argv[pos+1], "-L")) ) {
+           return compt;
         }
-        else
-        {
-            return compt;
+        else{
+            compt++;
+            pos++;
         }
     }
     
     return compt;
-    
 }
 
 //retourne 1 si la syntaxe  de domaine est correcte et place le début et la fin du domaine dans debut et fin
@@ -211,6 +207,15 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin);
 // retourne -1 si l'option n'est pas trouvée dans argv
 int seek_option(char *const argv[], char option)
 {
+    int pos = 0;
+    while (argv[pos]!='\0')
+    {
+        if (argv[pos][1]==option)
+        {
+            return pos;
+        }
+        pos++;
+    }
     
     return 0;
 }

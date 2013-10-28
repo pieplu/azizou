@@ -75,8 +75,11 @@ int tailleApresSupp(int *vecteur, int taille_vecteur)
 
 
 
-int main(int argc, const char * argv[])
+int main(int argc, char * const argv[])
 {
+    
+    
+    
     FILE * fichier = NULL;
 	int *vecteur=NULL;
 	int * ptrTableau2d=NULL;
@@ -84,7 +87,7 @@ int main(int argc, const char * argv[])
     //nombreParametre(argc, argv);
    
 
-    //seek_option(argv, 'C');
+    
     
 //	fichier = fopen("test01.txt", "r");
     fichier = fopen(argv[1], "r");
@@ -97,12 +100,10 @@ int main(int argc, const char * argv[])
         int m = taille_max_lignes(vecteur, 4);
         ptrTableau2d = charger(fichier, vecteur, n, m);
         n = tailleApresSupp(vecteur, n);
-        affiche_Tab2D(ptrTableau2d , n , m);
+        //affiche_Tab2D(ptrTableau2d , n , m);
         
-
-        
-        
-
+       printf("\n%d\n", get_nbre_domaines(argv, 4));
+        printf("%d",seek_option(argv, 'L'));
         
 
 	}
