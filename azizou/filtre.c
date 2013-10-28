@@ -86,10 +86,15 @@ int main(int argc, char * const argv[])
     
     //nombreParametre(argc, argv);
    
-    printf("Result check :%d \n",check_domaine(argv[3]));
+    //printf("Result check :%d \n",check_domaine(argv[3]));
+    
+    int debut = 0;
+    int fin = 0;
     
     
-//	fichier = fopen("test01.txt", "r");
+    
+    
+
     fichier = fopen(argv[1], "r");
 	if(fichier != NULL)
 	{
@@ -100,11 +105,10 @@ int main(int argc, char * const argv[])
         int m = taille_max_lignes(vecteur, 4);
         ptrTableau2d = charger(fichier, vecteur, n, m);
         n = tailleApresSupp(vecteur, n);
-        //affiche_Tab2D(ptrTableau2d , n , m);
-        
-       printf("\n%d\n", get_nbre_domaines(argv, 4));
-        printf("%d",seek_option(argv, 'L'));
-        
+        affiche_Tab2D(ptrTableau2d , n , m);
+        printf("\nnombres de domaine : %d\n", get_nbre_domaines(argv, 4));
+        printf("\nindice de l'option : %d\n",seek_option(argv, 'L'));
+        get_debut_fin_domaine(argv[3], 5, &debut, &fin);
 
 	}
 	else

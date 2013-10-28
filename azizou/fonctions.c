@@ -216,7 +216,92 @@ int get_nbre_domaines(char  *const argv[], int pos)
 //retourne 1 si la syntaxe  de domaine est correcte et place le début et la fin du domaine dans debut et fin
 //retourne 0 si la syntaxe  de domaine est incorrecte
 //max est utilisé pour que <nun>- represente le domaine <num>-max
-int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin);
+int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
+{
+    unsigned long tailleDomaine = strlen(domaine);
+    char * tokens=NULL;
+    int curChar=0;
+    
+    
+    
+    if (!check_domaine(domaine))
+    {
+        return 0;
+    }
+    
+    // -<num>
+    if (domaine[0]=='-')
+    {
+        tokens = strtok(domaine, "-");
+        
+        while (*tokens!='\0')
+        {
+            curChar = curChar*10+(*tokens-'0');
+            tokens++;
+            
+        }
+        *debut = 0;
+        *fin = curChar;
+        
+    }
+    // <num>-
+    else if (domaine[tailleDomaine-1]=='-')
+    {
+        tokens = strtok(domaine, "-");
+        
+        while (*tokens!='\0')
+        {
+            curChar = curChar*10+(*tokens-'0');
+            tokens++;
+            
+        }
+        *debut = curChar;
+        *fin = max;
+    }
+    
+    else if(domaine[0] != '-' && domaine[tailleDomaine] != '-')
+    {
+        
+        
+        
+        if (strchr(domaine, '-') == NULL)
+        {
+            while (*domaine!='\0')
+            {
+                curChar = curChar*10+(*domaine-'0');
+                domaine++;
+                
+            }
+            *debut = curChar;
+            *fin = curChar;
+ 
+        }
+        // <num>-<num>
+        else
+        {
+            strtok_r(domaine, "-", &tokens);
+            
+            while (*domaine!='\0')
+            {
+                curChar = curChar*10+(*domaine-'0');
+                domaine++;
+                
+            }
+            *debut = curChar;
+            curChar=0;
+            while (*tokens!='\0')
+            {
+
+                curChar = curChar*10+(*tokens-'0');
+                tokens++;
+                
+            }
+            *fin = curChar;
+        }
+    }
+    
+    return 1;
+}
 
 //argv représente le tableau pointant les paramères du programme
 //retourne l'indexe de option dans argv. par exemple esi option est 'C'
