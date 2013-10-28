@@ -93,10 +93,10 @@ int *creerVecteur(FILE* fichier, int nbLigne)
             *nbCharLigne = nbNombres;
             printf("%d à %p\n", *nbCharLigne, nbCharLigne);
             nbCharLigne++;
-            nbNombres=false;
+            nbNombres=0;
 		}
         
-		nonVide=0; //peut être à mettre dans le if du dessus, à voir
+		nonVide=false; //peut être à mettre dans le if du dessus, à voir
         
 	}while(temp != EOF);
     
