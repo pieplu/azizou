@@ -110,39 +110,75 @@ int taille_max_lignes(int * vecteur , int v){
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
 int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
-    int tailleFichier=taille_vecteur;
-    int **tableau2D=NULL;
-    int nbCurrent = 0;
-    int nbDeNombre = 0;
+//    rewind(fp);
+//    int tailleFichier=taille_vecteur;
+//
+//    int nbCurrent = 0;
+//    int nbDeNombre = 0;
+//
+//    int (*tableau2dim)[max_vecteur];
+//    tableau2dim=malloc(taille_vecteur*sizeof(int));
+//    
+//    for (int i = 0; i < taille_vecteur; i++)
+//    {
+//        for (int j = 0 ; j < max_vecteur; j++)
+//        {
+//            fscanf(fp,"%d", &nbCurrent);
+//            tableau2dim[i][j] = nbCurrent;
+//            printf("%d", tableau2dim[i][j]);
+//        }
+//        printf("\n");
+//    }
+//    return 0;
     
-    for (int i = 0; i < taille_vecteur; i++)
+    int *ptr = vecteur;
+    int *ptr2 = vecteur;
+    int cpt = 0;
+    int nbre_lignes = taille_vecteur;
+    int (*ptrtab2d)[max_vecteur];
+    
+    for(int i=0 ; i <nbre_lignes; i++)
     {
-        if (vecteur[i]==0)
+        for(int j=0 ; j<max_vecteur; j++)
         {
-            taille_vecteur--;
+            ptrtab2d = malloc(sizeof(int));
         }
     }
-
-    tableau2D = malloc(taille_vecteur* sizeof(int*));
-    for (int i = 0; i < taille_vecteur; i++){
-        tableau2D[i] = malloc(max_vecteur * sizeof(int));
+    
+    int nbre;
+    
+    while (!feof (fp))
+    {
+        for (int i = 0; i < nbre_lignes; ++i)
+        {
+            while (*ptr2==0)
+            {
+                ptr2++;
+            }
+            for (int j = 0; j < max_vecteur; j++)
+            {
+                if(j < *ptr2)
+                {
+                    fscanf (fp, "%d", &nbre);
+                    ptrtab2d[i][j] = nbre;
+                }
+                else
+                {
+                    ptrtab2d[i][j] = 0;
+                }
+            }
+            ptr2++;
+        }
     }
     
-//    while (!feof(fp))
-//    {
-//        fscanf(fp, "%d", &nbCurrent);
-//        if (nbCurrent=='\n')
-//        {
-//            nbDeNombre=0;
-//        }
-//    }
-    
+    rewind(fp);
+    return &(ptrtab2d[0][0]);
 
 
     
     
     
-    return 0;
+    
 }
 
 

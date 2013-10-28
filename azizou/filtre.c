@@ -148,7 +148,7 @@ int main(int argc, const char * argv[])
     nombreParametre(argc, argv);
     
     
-    int tab[4] = {1,0,6,3};
+    int tab[4] = {1,2,0,5};
    
 
     //seek_option(argv, 'C');
@@ -156,10 +156,13 @@ int main(int argc, const char * argv[])
 	fichier = fopen("test01.txt", "r");
 	if(fichier != NULL)
 	{
+        //vecteur = creerVecteur(fichier, n);
+        
         int n =nbre_lignes_fichier(fichier);
-        vecteur = creerVecteur(fichier, n);
+        int m = taille_max_lignes(tab, 4);
+        
 
-        //charger(fichier, tab, 4, 6);
+        vecteur = charger(fichier, tab, n, m);
         
         
 
