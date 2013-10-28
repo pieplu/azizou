@@ -76,38 +76,57 @@ int *creerVecteur(FILE* fichier, int n)
     
     nbCharLigne = malloc( n * sizeof(int));
     
+ 
+    
     while (!feof(fichier))
     {
+        curNb=0;
         curNb=fgetc(fichier)-'0';
-        if (curNb==' ')
+        if (curNb=='\n')
         {
-            curNb = fgetc(fichier)-'0';
-        }
-        else if (curNb=='\n')
-        {
+            
             *nbCharLigne=nbChar;
             nbCharLigne++;
         }
+        else if (curNb==' ')
+        {
+            break;
+        }
         else
         {
-            nxtNb = fgetc(fichier)-'0';
-            if (nxtNb==' ')
+        while ((nxtNb=fgetc(fichier))!= ' ' && nxtNb!='\n')
+        {
+            if (nxtNb=='-')
             {
-                nbChar++;
-                
+                nxtNb=(fgetc(fichier)-'0')*(-1);
             }
-            else if (nxtNb=='\n')
-            {
-                *nbCharLigne=nbChar;
-                nbCharLigne++;
-            }
-            else
-            {
-                curNb = (curNb*10)+nxtNb;
-            }
+            
+            nxtNb-='0';
+            curNb=(curNb*10)+nxtNb;
+            nxtNb=0;
+        }
+        if (nxtNb=='\n' || nxtNb==-1)
+        {
+            
+            nbChar++;
+            *nbCharLigne=nbChar;
+            nbCharLigne++;
+            nbChar=-1;
+            
+            break;
+        }
+        nbChar++;
         }
     }
-        
+    
+    
+    
+    for (int i = 0; i < n; i++)
+    {   nbCharLigne--;
+        printf("%d", *nbCharLigne);
+        nbCharLigne++;
+
+    }
     
     
     rewind(fichier);
@@ -139,7 +158,7 @@ int main(int argc, const char * argv[])
 	{
         int n =nbre_lignes_fichier(fichier);
         vecteur = creerVecteur(fichier, n);
-		
+
         //charger(fichier, tab, 4, 6);
         
         
