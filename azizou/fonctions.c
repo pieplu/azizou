@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "fonctions.h"
 #include <stdlib.h>
+#include <string.h>
 
 
 //affiche un message d'erreur sur le canal d'erreur selon les cas définis
@@ -171,13 +172,33 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 
 //verifie si un domaine est syntaxiquement correcte
 // retourne 1 si correcte et 0 sinon
-int check_domaine(char *domaine) ;
+int check_domaine(char *domaine);
 
 //argv représente le tableau des paramères du programme
 //cette fonction retourne la taille de la liste de domaine à partir argv[pos]
 //la fin la liste est localisée soit par la fin du tableau d'argument soit par une option connue
 //pos devrait représenter l'indice de l'option dans argv et retourner la taille de la liste
-int get_nbre_domaines(char  *const argv[], int pos);
+int get_nbre_domaines(char  *const argv[], int pos)
+{
+    
+    int compt = 0;
+    
+    while (*(argv + pos) != '\0')
+    {
+        if (!(strcmp(*(argv + pos), "-L")) && !(strcmp(*(argv + pos), "-L")) ) {
+            
+            compt++;
+            argv++;
+        }
+        else
+        {
+            return compt;
+        }
+    }
+    
+    return compt;
+    
+}
 
 //retourne 1 si la syntaxe  de domaine est correcte et place le début et la fin du domaine dans debut et fin
 //retourne 0 si la syntaxe  de domaine est incorrecte
