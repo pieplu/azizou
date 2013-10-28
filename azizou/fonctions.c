@@ -110,50 +110,32 @@ int taille_max_lignes(int * vecteur , int v){
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
 int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
-//    rewind(fp);
-//    int tailleFichier=taille_vecteur;
-//
-//    int nbCurrent = 0;
-//    int nbDeNombre = 0;
-//
-//    int (*tableau2dim)[max_vecteur];
-//    tableau2dim=malloc(taille_vecteur*sizeof(int));
-//    
-//    for (int i = 0; i < taille_vecteur; i++)
-//    {
-//        for (int j = 0 ; j < max_vecteur; j++)
-//        {
-//            fscanf(fp,"%d", &nbCurrent);
-//            tableau2dim[i][j] = nbCurrent;
-//            printf("%d", tableau2dim[i][j]);
-//        }
-//        printf("\n");
-//    }
-//    return 0;
+
     
-    int *ptr = vecteur;
-    int *ptr2 = vecteur;
+    int * ptr2 = vecteur;
+    int ligne0=0;
     int cpt = 0;
     int nbre_lignes = taille_vecteur;
     int (*ptrtab2d)[max_vecteur];
     
-    for(int i=0 ; i <nbre_lignes; i++)
-    {
-        for(int j=0 ; j<max_vecteur; j++)
-        {
-            ptrtab2d = malloc(sizeof(int));
-        }
-    }
     
+    //initialise tout a 0
+    ptrtab2d=calloc(taille_vecteur,sizeof(int));
+    
+       
     int nbre;
     
     while (!feof (fp))
     {
         for (int i = 0; i < nbre_lignes; ++i)
         {
-            while (*ptr2==0)
+            
+            while (*ptr2 == 0)
             {
                 ptr2++;
+                ligne0++;
+                
+                printf("ligne : %d\n", ligne0);
             }
             for (int j = 0; j < max_vecteur; j++)
             {
@@ -161,15 +143,26 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
                 {
                     fscanf (fp, "%d", &nbre);
                     ptrtab2d[i][j] = nbre;
-                }
-                else
-                {
-                    ptrtab2d[i][j] = 0;
+                    
                 }
             }
             ptr2++;
         }
     }
+    
+    
+    ptrtab2d=realloc(ptrtab2d,(taille_vecteur - ligne0)* sizeof(int));
+    
+    for (int i = 0 ; i < (taille_vecteur - ligne0); i++)
+    {
+        for (int j = 0 ; j < max_vecteur; j++)
+        {
+            printf("%d", ptrtab2d[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
     
     rewind(fp);
     return &(ptrtab2d[0][0]);
@@ -234,6 +227,7 @@ int * control(char *const argv[], int dim, char c);
 // des suppressions données par controlC et controlL  et place la nouvelle taille du tableau dans *n et *m.
 //retourne NULL sil le tableau résultant est vide.
 int *filter(int * mat, int *n, int *m, int *controlC, int *controlL);
+
 
 
 
