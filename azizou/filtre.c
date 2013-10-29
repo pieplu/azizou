@@ -71,7 +71,7 @@ int main(int argc, char * const argv[])
 	int * ptrTableau2d=NULL;
     int * ptrTabApresFiltre = NULL;
   
-
+    
     fichier = fopen(argv[1], "r");
 	if(fichier != NULL)
 	{
@@ -81,10 +81,14 @@ int main(int argc, char * const argv[])
         vecteur = creerVecteur(fichier, n);
         int m = taille_max_lignes(vecteur, n);
         ptrTableau2d = charger(fichier, vecteur, n, m);
-        n = tailleApresSupp(vecteur, n);
-        affiche_Tab2D(ptrTableau2d , n , m);
+        
+        
+        n = tailleApresSupp(ptrTableau2d, n);
+        //affiche_Tab2D(ptrTableau2d , n , m);
+        
         int *ControlL = control(argv, n, 'L', ptrTableau2d);
-        //int *ControlC = control(argv, m, 'C', ptrTableau2d);
+
+        int *ControlC = control(argv, m, 'C', ptrTableau2d);
         affiche_Tab2D(ptrTableau2d , n , m);
 
         

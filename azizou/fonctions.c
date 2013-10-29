@@ -123,13 +123,23 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     int curNb;
     int nvlleTaille = nbLignesVides(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
+
+    
     
     
     
 
     //initialise tout a 0
-    tableau2dim=calloc(taille_vecteur,sizeof(int));
+    tableau2dim=calloc(max_vecteur*nvlleTaille,sizeof(int));
     
+    
+    
+//    for (int i = 0 ; i < nvlleTaille; i++) {
+//        for (int j = 0 ; j < max_vecteur; j ++) {
+//            printf("%p\n", &tableau2dim[i][j]);
+//        }
+//        printf("\n");
+//    }
     
     while (!feof (fp)){
         for (int y = 0; y < taille_vecteur; y++){
@@ -153,12 +163,6 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
         }
         vecteur--;
         
-    }
-    
-    for (int i = 0 ; i < taille_vecteur; i++) {
-        for (int j = 0; j < max_vecteur; j++) {
-            printf("%p\n", &(tableau2dim[i][j]));
-        }
     }
     
     //realloc taille-nombre de ligne vides
@@ -342,7 +346,7 @@ int checkArg(const char **argv){
 int * control(char *const argv[], int dim, char c, int * ptr){
     
     
-    int *tabRetour=malloc(dim*sizeof(int));
+    int *tabRetour=calloc(dim,sizeof(int));
         
     int debut;
     int fin;
@@ -374,6 +378,9 @@ int * control(char *const argv[], int dim, char c, int * ptr){
                 exit(1);
             }
         }
+
+    
+  
 
     
     return &(tabRetour[0]);
