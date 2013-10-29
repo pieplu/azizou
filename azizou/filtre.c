@@ -56,7 +56,8 @@ int tailleApresSupp(int *vecteur, int taille_vecteur)
             ligne0++;
         }
     }
-    return taille_vecteur-ligne0;
+
+    return taille_vecteur - ligne0;
 }
 
 
@@ -78,20 +79,25 @@ int main(int argc, char * const argv[])
         
         
         int n =nbre_lignes_fichier(fichier);
+        
         vecteur = creerVecteur(fichier, n);
         int m = taille_max_lignes(vecteur, n);
         ptrTableau2d = charger(fichier, vecteur, n, m);
         
-        
-        n = tailleApresSupp(ptrTableau2d, n);
+                   
+        n = tailleApresSupp(vecteur, n);
+
         //affiche_Tab2D(ptrTableau2d , n , m);
         
         ControlL = control(argv, n, 'L');
         ControlC = control(argv, m, 'C');
+        int n2 = n;
+        int m2 = m;
+
         affiche_Tab2D(ptrTableau2d , n , m);
         
-        ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
-        affiche_Tab2D(ptrTabApresFiltre, n, m);
+        ptrTabApresFiltre = filter(ptrTableau2d, &n2, &m2, ControlC, ControlL);
+        affiche_Tab2D(ptrTabApresFiltre, n2, m2);
         
   
         

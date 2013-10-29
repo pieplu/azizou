@@ -141,21 +141,10 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     int (*tableau2dim)[max_vecteur];
 
     
-    
-    
-    
 
     //initialise tout a 0
     tableau2dim=calloc(max_vecteur*nvlleTaille,sizeof(int));
     
-    
-    
-//    for (int i = 0 ; i < nvlleTaille; i++) {
-//        for (int j = 0 ; j < max_vecteur; j ++) {
-//            printf("%p\n", &tableau2dim[i][j]);
-//        }
-//        printf("\n");
-//    }
     
     while (!feof (fp)){
         int nbLigne = 0;
@@ -435,7 +424,7 @@ int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
     *m= nbColonneAfficher_C;
     *n= nbLigneAfficher_L;
     
-    return (int*)tabFiltrer;
+    return &(tabFiltrer[0][0]);
 }
 
 
