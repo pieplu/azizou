@@ -83,19 +83,16 @@ int main(int argc, char * const argv[])
         ptrTableau2d = charger(fichier, vecteur, n, m);
         n = tailleApresSupp(vecteur, n);
         affiche_Tab2D(ptrTableau2d , n , m);
-        int *ControlL = control(argv, n, 'L');
-        int *ControlC = control(argv, m, 'C');
-        
+        int *ControlL = control(argv, n, 'L', ptrTableau2d);
+        //int *ControlC = control(argv, m, 'C', ptrTableau2d);
+        affiche_Tab2D(ptrTableau2d , n , m);
+
         
 
-        ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
+        //ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
         
         
-        
-//        for (int i = 0; i < n; i++) {
-//            printf("%d", tabControl[i]);
-//        }
-        
+  
         
 
 	}

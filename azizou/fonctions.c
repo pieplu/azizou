@@ -110,7 +110,7 @@ int nbLignesVides(int *vecteur, int taille_vecteur)
             ligne0++;
         }
     }
-    return taille_vecteur-ligne0;
+    return taille_vecteur - ligne0;
 }
 
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
@@ -123,27 +123,46 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     int curNb;
     int nvlleTaille = nbLignesVides(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
+    
+    
+    
 
     //initialise tout a 0
     tableau2dim=calloc(taille_vecteur,sizeof(int));
-
+    
+    
     while (!feof (fp)){
         for (int y = 0; y < taille_vecteur; y++){
             while (*vecteur == 0){
+                
+                
                 vecteur++;
+                y++;
             }
+            
             for (int x = 0; x < max_vecteur; x++){
                 if(x < *vecteur){
                     fscanf (fp, "%d", &curNb);
                     tableau2dim[y][x] = curNb;
+                    
                 }
+                
             }
             vecteur++;
+            
+        }
+        vecteur--;
+        
+    }
+    
+    for (int i = 0 ; i < taille_vecteur; i++) {
+        for (int j = 0; j < max_vecteur; j++) {
+            printf("%p\n", &(tableau2dim[i][j]));
         }
     }
     
     //realloc taille-nombre de ligne vides
-    tableau2dim = realloc( tableau2dim , nvlleTaille * sizeof(int));
+    //tableau2dim = realloc( tableau2dim , nvlleTaille * max_vecteur * sizeof(int));
 
     rewind(fp);
     return &(tableau2dim[0][0]);
@@ -320,14 +339,18 @@ int checkArg(const char **argv){
 //être supprimée selon argv et l'option c ;
 //une case est remplie avec 1 si elle correspond à une ligne ou une colonne qui va
 //être supprimée selon argv et l'option c
-int * control(char *const argv[], int dim, char c){
-    int *tabRetour=calloc(dim,sizeof(int)); //met tout à 0
+int * control(char *const argv[], int dim, char c, int * ptr){
     
+    
+    int *tabRetour=malloc(dim*sizeof(int));
+        
     int debut;
     int fin;
     
-
-    
+    //met tout à 0
+    for (int x = 0 ; x < dim; x++) {
+        tabRetour[x]=0;
+    }
     
     int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
     
@@ -337,7 +360,8 @@ int * control(char *const argv[], int dim, char c){
     }
     
     int nbDomaine = get_nbre_domaines(argv, debutDomaines);// donne le nb de dommaine pour la boucle
-        
+    
+    
         for (int i = 1; i<=nbDomaine ; i++){// a faire pour chaque domaine
 
             if (get_debut_fin_domaine(*(argv+(debutDomaines+i)), dim, &debut, &fin))
@@ -350,8 +374,9 @@ int * control(char *const argv[], int dim, char c){
                 exit(1);
             }
         }
+
     
-    return tabRetour;
+    return &(tabRetour[0]);
 }
 
 //mat pointe le début d'un tableau 2D de taill *n x *m.
@@ -363,8 +388,13 @@ int * control(char *const argv[], int dim, char c){
 int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
 {
     
-    int i = *(mat+(3*(*m)*1));
-    printf("%d", i);
+    int (*tabApresFiltre)[*m] = NULL;
+    tabApresFiltre = (int (*)[*m]) mat;
+    
+    printf("%p", tabApresFiltre);
+        printf("\n%p", (tabApresFiltre+2));
+    
+    
     
     int nbLigneVideC = nbLignesVides(controlC, *m);
     int nbLigneVideL = nbLignesVides(controlL, *n);
