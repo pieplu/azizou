@@ -106,9 +106,12 @@ int main(int argc, char * const argv[])
         ptrTableau2d = charger(fichier, vecteur, n, m);
         n = tailleApresSupp(vecteur, n);
         affiche_Tab2D(ptrTableau2d , n , m);
-        printf("\nnombres de domaine : %d\n", get_nbre_domaines(argv, 4));
         printf("\nindice de l'option : %d\n",seek_option(argv, 'L'));
         get_debut_fin_domaine(argv[3], 5, &debut, &fin);
+        
+        int *tabControl = control(argv, m, 'L');
+        
+        //printf("%d",tabControl);
 
 	}
 	else

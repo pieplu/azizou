@@ -86,11 +86,9 @@ int nbre_lignes_fichier(FILE *fp)
 				nbLigne++;
 			}
 		}
-		
 	}
     rewind(fp);
 	return nbLigne;
-	
 }
 
 
@@ -122,23 +120,13 @@ int nbLignesVides(int *vecteur, int taille_vecteur)
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
 int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
-
-    
     int curNb;
     int nvlleTaille = nbLignesVides(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
-    
-    
+
     //initialise tout a 0
     tableau2dim=calloc(taille_vecteur,sizeof(int));
-    
-       
-    
-    
-    
-    
-    
-    
+
     while (!feof (fp)){
         for (int y = 0; y < taille_vecteur; y++){
             while (*vecteur == 0){
@@ -159,12 +147,6 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 
     rewind(fp);
     return &(tableau2dim[0][0]);
-
-
-    
-    
-    
-    
 }
 
 
@@ -263,7 +245,7 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
     {
         
         
-        
+        // <num>
         if (strchr(domaine, '-') == NULL)
         {
             while (*domaine!='\0')
@@ -338,7 +320,31 @@ int checkArg(const char **argv){
 //être supprimée selon argv et l'option c ;
 //une case est remplie avec 1 si elle correspond à une ligne ou une colonne qui va
 //être supprimée selon argv et l'option c
-int * control(char *const argv[], int dim, char c);
+int * control(char *const argv[], int dim, char c){
+    int *tabRetour=calloc(dim,sizeof(int)); //met tout à 0
+    
+    int debut;
+    int fin;
+    
+    int correct;
+    
+    int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
+    int nbDomaine = get_nbre_domaines(argv, debutDomaines);// donne le nb de dommaine pour la boucle
+        
+        for (int i = 1; i<=nbDomaine ; i++){// a faire pour chaque domaine
+            correct= get_debut_fin_domaine(argv[debutDomaines+i], dim, &debut, &fin);
+            if (correct) {
+                for (int j=debut; j<=fin; j++) {
+                    tabRetour[j]=1;
+                }
+            }else{
+                signaler_erreur(SYNTAX_DOMAIN_ERREUR);
+                exit(1);
+            }
+        }
+    
+    return tabRetour;
+}
 
 //mat pointe le début d'un tableau 2D de taill *n x *m.
 //controlC de taille *m est un vecteur indiquant les colonnes à supprimer selon la fonction control.
