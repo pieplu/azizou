@@ -421,16 +421,16 @@ int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
         return NULL;
         //erreur à traiter
     }
-    int * controlCincr = controlC;
     
+    
+    int * controlCincr = controlC;
     int posY=0;
-    int posX = 0;
     for (int y=0; y < nbLigneAfficher_L; y++, posY++) {
         while (*controlL) {
             posY++;
             controlL++;
         }
-        
+        int posX = 0;
         for (int x=0; x < nbColonneAfficher_C; x++, posX++) {
             while(*controlCincr){
                 posX++;
