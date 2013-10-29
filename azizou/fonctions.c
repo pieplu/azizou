@@ -355,15 +355,13 @@ int checkArg(const char **argv){
 //être supprimée selon argv et l'option c ;
 //une case est remplie avec 1 si elle correspond à une ligne ou une colonne qui va
 //être supprimée selon argv et l'option c
-int * control(char *const argv[], int dim, char c, int * ptr){
-    
-    
+int * control(char *const argv[], int dim, char c){
+
     int *tabRetour=calloc(dim,sizeof(int));
         
     int debut;
     int fin;
 
-    
     int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
     
     if (debutDomaines==-1)
@@ -372,8 +370,6 @@ int * control(char *const argv[], int dim, char c, int * ptr){
     }
     
     int nbDomaine = get_nbre_domaines(argv, debutDomaines);// donne le nb de dommaine pour la boucle
-    
-    
         for (int i = 1; i<=nbDomaine ; i++){// a faire pour chaque domaine
 
             if (get_debut_fin_domaine(*(argv+(debutDomaines+i)), dim, &debut, &fin))
@@ -387,10 +383,6 @@ int * control(char *const argv[], int dim, char c, int * ptr){
             }
         }
 
-    
-  
-
-    
     return &(tabRetour[0]);
 }
 

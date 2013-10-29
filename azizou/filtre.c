@@ -86,8 +86,8 @@ int main(int argc, char * const argv[])
         n = tailleApresSupp(ptrTableau2d, n);
         //affiche_Tab2D(ptrTableau2d , n , m);
         
-        ControlL = control(argv, n, 'L', ptrTableau2d);
-        ControlC = control(argv, m, 'C', ptrTableau2d);
+        ControlL = control(argv, n, 'L');
+        ControlC = control(argv, m, 'C');
         affiche_Tab2D(ptrTableau2d , n , m);
         
         ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);

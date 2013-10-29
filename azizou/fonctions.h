@@ -79,7 +79,7 @@ int seek_option(char *const argv[], char option);
 //être supprimée selon argv et l'option c ;
 //une case est remplie avec 1 si elle correspond à une ligne ou une colonne qui va
 //être supprimée selon argv et l'option c
-int * control(char *const argv[], int dim, char c, int* ptr);
+int * control(char *const argv[], int dim, char c);
 
 //mat pointe le début d'un tableau 2D de taill *n x *m.
 //controlC de taille *m est un vecteur indiquant les colonnes à supprimer selon la fonction control.
