@@ -362,11 +362,7 @@ int * control(char *const argv[], int dim, char c, int * ptr){
         
     int debut;
     int fin;
-    
-    //met tout à 0
-    for (int x = 0 ; x < dim; x++) {
-        tabRetour[x]=0;
-    }//A SUPPRIMéééééééééééé!               !        !      !
+
     
     int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
     
