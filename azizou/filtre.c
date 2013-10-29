@@ -69,7 +69,7 @@ int main(int argc, char * const argv[])
     FILE * fichier = NULL;
 	int *vecteur=NULL;
 	int * ptrTableau2d=NULL;
-    
+    int * ptrTabApresFiltre = NULL;
   
 
     fichier = fopen(argv[1], "r");
@@ -83,7 +83,12 @@ int main(int argc, char * const argv[])
         ptrTableau2d = charger(fichier, vecteur, n, m);
         n = tailleApresSupp(vecteur, n);
         affiche_Tab2D(ptrTableau2d , n , m);
-        int *tabControl = control(argv, n, 'L');
+        int *ControlL = control(argv, n, 'L');
+        int *ControlC = control(argv, m, 'C');
+        
+        
+
+        ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
         
         
         

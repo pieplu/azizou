@@ -301,7 +301,7 @@ int seek_option(char *const argv[], char option)
         pos++;
     }
     
-    return 0;
+    return -1;
 }
 
 
@@ -328,7 +328,14 @@ int * control(char *const argv[], int dim, char c){
     
 
     
+    
     int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
+    
+    if (debutDomaines==-1)
+    {
+        return tabRetour;
+    }
+    
     int nbDomaine = get_nbre_domaines(argv, debutDomaines);// donne le nb de dommaine pour la boucle
         
         for (int i = 1; i<=nbDomaine ; i++){// a faire pour chaque domaine
@@ -353,12 +360,51 @@ int * control(char *const argv[], int dim, char c){
 //retourne un pointeur sur le début d'un tableau 2D de la bonne taille après application
 // des suppressions données par controlC et controlL  et place la nouvelle taille du tableau dans *n et *m.
 //retourne NULL sil le tableau résultant est vide.
-int *filter(int * mat, int *n, int *m, int *controlC, int *controlL);
+int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
+{
+    
+    int i = *(mat+(3*(*m)*1));
+    printf("%d", i);
+    
+    int nbLigneVideC = nbLignesVides(controlC, *m);
+    int nbLigneVideL = nbLignesVides(controlL, *n);
+    //printf("\n ligne vide C : %d\n ligne vide L : %d", nbLigneVideC,nbLigneVideL);
+    
+    if (nbLigneVideC!=0)
+    {
+        
+    }
+    else if (nbLigneVideL!=0)
+    {
+        
+    }
+    else
+    {
+        
+    }
+    
+    
+    
+    
+    
+    return 0;
+}
 
 
 
 
-
+//for (int y = 0; y < taille_vecteur; y++){
+//    while (*vecteur == 0){
+//        vecteur++;
+//    }
+//    for (int x = 0; x < max_vecteur; x++){
+//        if(x < *vecteur){
+//            fscanf (fp, "%d", &curNb);
+//            tableau2dim[y][x] = curNb;
+//        }
+//    }
+//    vecteur++;
+//}
 
 
 
