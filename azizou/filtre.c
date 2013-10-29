@@ -70,8 +70,8 @@ int main(int argc, char * const argv[])
 	int *vecteur=NULL;
 	int * ptrTableau2d=NULL;
     int * ptrTabApresFiltre = NULL;
-  
-    
+    int *ControlL = NULL;
+    int *ControlC = NULL;
     fichier = fopen(argv[1], "r");
 	if(fichier != NULL)
 	{
@@ -86,14 +86,11 @@ int main(int argc, char * const argv[])
         n = tailleApresSupp(ptrTableau2d, n);
         //affiche_Tab2D(ptrTableau2d , n , m);
         
-        int *ControlL = control(argv, n, 'L', ptrTableau2d);
-
-        int *ControlC = control(argv, m, 'C', ptrTableau2d);
+        ControlL = control(argv, n, 'L', ptrTableau2d);
+        ControlC = control(argv, m, 'C', ptrTableau2d);
         affiche_Tab2D(ptrTableau2d , n , m);
-
         
-
-        //ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
+        ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
         
         
   
@@ -107,6 +104,9 @@ int main(int argc, char * const argv[])
     
 	free(vecteur);
     free(ptrTableau2d);
+    free(ptrTabApresFiltre);
+    free(ControlC);
+    free(ControlL);
 	fclose(fichier);
     
     return 0;

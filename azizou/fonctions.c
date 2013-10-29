@@ -102,7 +102,7 @@ int taille_max_lignes(int * vecteur , int v){
 
 
 
-int nbLignesVides(int *vecteur, int taille_vecteur)
+int nbCaseZero(int *vecteur, int taille_vecteur)
 {
     int ligne0=0;
     for (int i = 0; i < taille_vecteur; i++) {
@@ -121,7 +121,7 @@ int nbLignesVides(int *vecteur, int taille_vecteur)
 int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
     int curNb;
-    int nvlleTaille = nbLignesVides(vecteur, taille_vecteur);
+    int nvlleTaille = nbCaseZero(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
 
     
@@ -142,26 +142,22 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 //    }
     
     while (!feof (fp)){
-        for (int y = 0; y < taille_vecteur; y++){
+        int nbLigne = 0;
+        for (int y = 0; nbLigne < taille_vecteur; y++, nbLigne++){
             while (*vecteur == 0){
-                
-                
                 vecteur++;
-                y++;
+                nbLigne++;
             }
             
             for (int x = 0; x < max_vecteur; x++){
                 if(x < *vecteur){
                     fscanf (fp, "%d", &curNb);
                     tableau2dim[y][x] = curNb;
-                    
                 }
                 
             }
             vecteur++;
-            
         }
-        vecteur--;
         
     }
     
@@ -398,26 +394,41 @@ int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
     int (*tabApresFiltre)[*m] = NULL;
     tabApresFiltre = (int (*)[*m]) mat;
     
-    printf("%p", tabApresFiltre);
-        printf("\n%p", (tabApresFiltre+2));
+
+   
+//    for (int i = 0 ; i < *n; i++) {
+//        for (int j = 0 ; j < *m; j ++) {
+//            printf("%d", tabApresFiltre[i][j]);
+//        }
+//        printf("\n");
+//    }
     
     
+    int nbLigneAfficher_C = nbCaseZero(controlC, *m);
+    int nbLigneAfficher_L = nbCaseZero(controlL, *n);
+    int (*tabFiltrer)[nbLigneAfficher_C];
     
-    int nbLigneVideC = nbLignesVides(controlC, *m);
-    int nbLigneVideL = nbLignesVides(controlL, *n);
-    //printf("\n ligne vide C : %d\n ligne vide L : %d", nbLigneVideC,nbLigneVideL);
+    tabFiltrer =  malloc(nbLigneAfficher_L*nbLigneAfficher_C*sizeof(int));
     
-    if (nbLigneVideC!=0)
+    
+    if (nbLigneAfficher_C==(*m) || nbLigneAfficher_L==(*n)) {
+        signaler_erreur(TABLEAU2D_VIDE_ERREUR);
+        exit(1);
+    }
+    
+    
+    if (nbLigneAfficher_C!=0)
     {
         
+        
     }
-    else if (nbLigneVideL!=0)
+    else if (nbLigneAfficher_L!=0)
     {
         
     }
     else
     {
-        
+        return 0;
     }
     
     
