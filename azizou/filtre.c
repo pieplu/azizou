@@ -7,20 +7,6 @@
 #include "fonctions.h"
 
 
-int checkOpt1(const char **argv){
-    return strcmp(&argv[2][1], "C") || strcmp(&argv[2][1], "L")    ;
-}
-
-int checkOpt2(const char **argv){
-    return strcmp(&argv[4][1], "L") || strcmp(&argv[4][1], "C");
-}
-
-int checkTiretLettre(const char** argv, int position){
-    return strcmp(&argv[position][0], "-");
-}
-
-
-
 int *creerVecteur(FILE* fichier, int nbLigne)
 {
     rewind(fichier);
@@ -84,16 +70,7 @@ int main(int argc, char * const argv[])
 	int *vecteur=NULL;
 	int * ptrTableau2d=NULL;
     
-    //nombreParametre(argc, argv);
-   
-    //printf("Result check :%d \n",check_domaine(argv[3]));
-    
-    int debut = 0;
-    int fin = 0;
-    
-    
-    
-    
+  
 
     fichier = fopen(argv[1], "r");
 	if(fichier != NULL)
@@ -102,21 +79,24 @@ int main(int argc, char * const argv[])
         
         int n =nbre_lignes_fichier(fichier);
         vecteur = creerVecteur(fichier, n);
-        int m = taille_max_lignes(vecteur, 4);
+        int m = taille_max_lignes(vecteur, n);
         ptrTableau2d = charger(fichier, vecteur, n, m);
         n = tailleApresSupp(vecteur, n);
         affiche_Tab2D(ptrTableau2d , n , m);
-        printf("\nindice de l'option : %d\n",seek_option(argv, 'L'));
-        get_debut_fin_domaine(argv[3], 5, &debut, &fin);
+        int *tabControl = control(argv, n, 'L');
         
-        int *tabControl = control(argv, m, 'L');
         
-        //printf("%d",tabControl);
+        
+//        for (int i = 0; i < n; i++) {
+//            printf("%d", tabControl[i]);
+//        }
+        
+        
 
 	}
 	else
 	{
-		
+		signaler_erreur(OUVERTURE_FICHIER_ERREUR);
 	}
     
 	free(vecteur);

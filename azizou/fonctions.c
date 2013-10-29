@@ -326,14 +326,15 @@ int * control(char *const argv[], int dim, char c){
     int debut;
     int fin;
     
-    int correct;
+
     
     int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
     int nbDomaine = get_nbre_domaines(argv, debutDomaines);// donne le nb de dommaine pour la boucle
         
         for (int i = 1; i<=nbDomaine ; i++){// a faire pour chaque domaine
-            correct= get_debut_fin_domaine(argv[debutDomaines+i], dim, &debut, &fin);
-            if (correct) {
+
+            if (get_debut_fin_domaine(*(argv+(debutDomaines+i)), dim, &debut, &fin))
+            {
                 for (int j=debut; j<=fin; j++) {
                     tabRetour[j]=1;
                 }
