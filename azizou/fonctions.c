@@ -285,16 +285,17 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
         // <num>-<num>
         else
         {
-            strtok_r(domaine, "-", &tokens);
+            tokens = strtok(domaine, "-");
             
-            while (*domaine!='\0')
+            while (*tokens!='\0')
             {
-                curChar = curChar*10+(*domaine-'0');
-                domaine++;
+                curChar = curChar*10+(*tokens-'0');
+                tokens++;
                 
             }
             *debut = curChar;
             curChar=0;
+            tokens = strtok(NULL,"-");
             while (*tokens!='\0')
             {
 
