@@ -91,7 +91,8 @@ int nbre_lignes_fichier(FILE *fp)
 	return nbLigne;
 }
 
-
+// retourne le max du tableau pointé par vecteur et de taille v
+// retourne 0 si le tableau est vide (NULL)
 int taille_max_lignes(int * vecteur , int v){
     int maxVal=0;
     for(int i=0; i < v; i++){
@@ -101,8 +102,9 @@ int taille_max_lignes(int * vecteur , int v){
 }
 
 
-
-int nbCaseZero(int *vecteur, int taille_vecteur)
+// retourne une valeur taille auquelle l'on a soustrai le nombre de case
+// contenant 0 du tableau vercteur
+int tailleMoinsCasesZero(int *vecteur, int taille_vecteur)
 {
     int ligne0=0;
     for (int i = 0; i < taille_vecteur; i++) {
@@ -113,6 +115,20 @@ int nbCaseZero(int *vecteur, int taille_vecteur)
     return taille_vecteur - ligne0;
 }
 
+// retourne le nombre de case contenant 0 dans le vecteur
+int NbCaseZero(int *vecteur, int taille_vecteur)
+{
+    int ligne0=0;
+    for (int i = 0; i < taille_vecteur; i++) {
+        if (vecteur[i]==0) {
+            ligne0++;
+        }
+    }
+    return ligne0;
+}
+
+
+
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
 //si vecteur[i]==0, la ligne i du fichier est ignorée car elle est vide d'entier.
 //Cette fonction retourne un pointeur sur la première case d'un tableau 2D n x m
@@ -121,7 +137,7 @@ int nbCaseZero(int *vecteur, int taille_vecteur)
 int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
     int curNb;
-    int nvlleTaille = nbCaseZero(vecteur, taille_vecteur);
+    int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
 
     
@@ -350,7 +366,7 @@ int * control(char *const argv[], int dim, char c, int * ptr){
     //met tout à 0
     for (int x = 0 ; x < dim; x++) {
         tabRetour[x]=0;
-    }
+    }//A SUPPRIMéééééééééééé!               !        !      !
     
     int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
     
@@ -395,47 +411,43 @@ int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
     tabApresFiltre = (int (*)[*m]) mat;
     
 
-   
-//    for (int i = 0 ; i < *n; i++) {
-//        for (int j = 0 ; j < *m; j ++) {
-//            printf("%d", tabApresFiltre[i][j]);
-//        }
-//        printf("\n");
-//    }
+    int nbColonneAfficher_C = NbCaseZero(controlC, *m);
+    int nbLigneAfficher_L = NbCaseZero(controlL, *n);
+    int (*tabFiltrer)[nbColonneAfficher_C];
     
+    tabFiltrer =  malloc(nbLigneAfficher_L*nbColonneAfficher_C*sizeof(int));
     
-    int nbLigneAfficher_C = nbCaseZero(controlC, *m);
-    int nbLigneAfficher_L = nbCaseZero(controlL, *n);
-    int (*tabFiltrer)[nbLigneAfficher_C];
-    
-    tabFiltrer =  malloc(nbLigneAfficher_L*nbLigneAfficher_C*sizeof(int));
-    
-    
-    if (nbLigneAfficher_C==(*m) || nbLigneAfficher_L==(*n)) {
-        signaler_erreur(TABLEAU2D_VIDE_ERREUR);
-        exit(1);
+    if (nbColonneAfficher_C==0 || nbLigneAfficher_L==0) {
+        return NULL;
+        //erreur à traiter
     }
+    int * controlCincr = controlC;
     
-    
-    if (nbLigneAfficher_C!=0)
-    {
+    int posY=0;
+    int posX = 0;
+    for (int y=0; y < nbLigneAfficher_L; y++, posY++) {
+        while (*controlL) {
+            posY++;
+            controlL++;
+        }
         
+        for (int x=0; x < nbColonneAfficher_C; x++, posX++) {
+            while(*controlCincr){
+                posX++;
+                controlCincr++;
+            }
+            tabFiltrer[y][x]= tabApresFiltre[posY][posX];
+            controlCincr++;
+        }
+        controlCincr = controlC;
+        controlL++;
         
     }
-    else if (nbLigneAfficher_L!=0)
-    {
-        
-    }
-    else
-    {
-        return 0;
-    }
     
+    *m= nbColonneAfficher_C;
+    *n= nbLigneAfficher_L;
     
-    
-    
-    
-    return 0;
+    return (int*)tabFiltrer;
 }
 
 
@@ -455,7 +467,12 @@ int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
 //}
 
 
-
+//    for (int i = 0 ; i < *n; i++) {
+//        for (int j = 0 ; j < *m; j ++) {
+//            printf("%d", tabApresFiltre[i][j]);
+//        }
+//        printf("\n");
+//    }
 
 
 

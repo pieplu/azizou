@@ -91,7 +91,7 @@ int main(int argc, char * const argv[])
         affiche_Tab2D(ptrTableau2d , n , m);
         
         ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
-        
+        affiche_Tab2D(ptrTabApresFiltre, n, m);
         
   
         
