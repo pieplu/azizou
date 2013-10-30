@@ -41,7 +41,6 @@ signaler_erreur(int err)
 }
 
 
-
 //affiche un tableau 2D nxm
 void
 affiche_Tab2D(int *ptr, int n, int m)
@@ -69,8 +68,6 @@ affiche_Tab2D(int *ptr, int n, int m)
 }
 
 
-
-
 // retourne le nombre de lignes total du fichier pointé par fp
 int nbre_lignes_fichier(FILE *fp)
 {
@@ -90,6 +87,7 @@ int nbre_lignes_fichier(FILE *fp)
     rewind(fp);
 	return nbLigne;
 }
+
 
 // retourne le max du tableau pointé par vecteur et de taille v
 // retourne 0 si le tableau est vide (NULL)
@@ -128,7 +126,6 @@ int NbCaseZero(int *vecteur, int taille_vecteur)
 }
 
 
-
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
 //si vecteur[i]==0, la ligne i du fichier est ignorée car elle est vide d'entier.
 //Cette fonction retourne un pointeur sur la première case d'un tableau 2D n x m
@@ -140,40 +137,31 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
     int (*tableau2dim)[max_vecteur];
 
-    
-
-    //initialise tout a 0
     tableau2dim=calloc(max_vecteur*nvlleTaille,sizeof(int));
-    
     
     while (!feof (fp)){
         int nbLigne = 0;
+        // passe de ligne en ligne
         for (int y = 0; nbLigne < taille_vecteur; y++, nbLigne++){
+            //ignore les lignes vide
             while (*vecteur == 0){
                 vecteur++;
                 nbLigne++;
             }
-            
+            // prend toutes les valeures de la ligne
             for (int x = 0; x < max_vecteur; x++){
                 if(x < *vecteur){
                     fscanf (fp, "%d", &curNb);
                     tableau2dim[y][x] = curNb;
                 }
-                
             }
             vecteur++;
         }
-        
     }
     
-    //realloc taille-nombre de ligne vides
-    //tableau2dim = realloc( tableau2dim , nvlleTaille * max_vecteur * sizeof(int));
-
     rewind(fp);
     return &(tableau2dim[0][0]);
 }
-
-
 
 
 //verifie si un domaine est syntaxiquement correcte
@@ -194,8 +182,10 @@ int check_domaine(char *domaine){
         domaine++;
     }
     
+    // retourne vrai s'il y a un tiret ou moins et un nombre ou plus.
     return (nbTiret <= 1 && nbNombre > 0);
 }
+
 
 //argv représente le tableau des paramères du programme
 //cette fonction retourne la taille de la liste de domaine à partir argv[pos]
@@ -215,9 +205,9 @@ int get_nbre_domaines(char  *const argv[], int pos)
             pos++;
         }
     }
-    
     return compt;
 }
+
 
 //retourne 1 si la syntaxe  de domaine est correcte et place le début et la fin du domaine dans debut et fin
 //retourne 0 si la syntaxe  de domaine est incorrecte
@@ -227,8 +217,6 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
     unsigned long tailleDomaine = strlen(domaine);
     char * tokens=NULL;
     int curChar=0;
-    
-    
     
     if (!check_domaine(domaine))
     {
@@ -267,8 +255,6 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
     
     else if(domaine[0] != '-' && domaine[tailleDomaine] != '-')
     {
-        
-        
         // <num>
         if (strchr(domaine, '-') == NULL)
         {
@@ -280,7 +266,6 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
             }
             *debut = curChar;
             *fin = curChar;
- 
         }
         // <num>-<num>
         else
@@ -310,6 +295,7 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin)
     return 1;
 }
 
+
 //argv représente le tableau pointant les paramères du programme
 //retourne l'indexe de option dans argv. par exemple esi option est 'C'
 // la valeur retournée est l'indexe de la chaine "-C" dans argv
@@ -330,13 +316,6 @@ int seek_option(char *const argv[], char option)
 }
 
 
-int checkArg(const char **argv){
-    
-    printf("%s", *argv);
-    
-    return 0;
-}
-
 //c est soit 'C', soit 'L'.
 //dim est censée représenter soit le nombre de lignes dans le tableau 2D soit le nombre de colonnnes.
 //argv représente le tableau pointant les paramères du programme.
@@ -352,16 +331,15 @@ int * control(char *const argv[], int dim, char c){
     int debut;
     int fin;
 
-    int debutDomaines = seek_option(argv, c);//donne la position-1 de la suite de domaines à prendre
+    int debutDomaines = seek_option(argv, c);
     
     if (debutDomaines==-1)
     {
         return tabRetour;
     }
     
-    int nbDomaine = get_nbre_domaines(argv, debutDomaines);// donne le nb de dommaine pour la boucle
-        for (int i = 1; i<=nbDomaine ; i++){// a faire pour chaque domaine
-
+    int nbDomaine = get_nbre_domaines(argv, debutDomaines);
+        for (int i = 1; i<=nbDomaine ; i++){
             if (get_debut_fin_domaine(*(argv+(debutDomaines+i)), dim, &debut, &fin))
             {
                 for (int j=debut; j<=fin; j++) {
@@ -384,37 +362,36 @@ int * control(char *const argv[], int dim, char c){
 //retourne NULL sil le tableau résultant est vide.
 int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
 {
+    int (*tabAvantFiltre)[*m] = NULL;
+    tabAvantFiltre = (int (*)[*m]) mat;
     
-    int (*tabApresFiltre)[*m] = NULL;
-    tabApresFiltre = (int (*)[*m]) mat;
-    
-
     int nbColonneAfficher_C = NbCaseZero(controlC, *m);
     int nbLigneAfficher_L = NbCaseZero(controlL, *n);
-    int (*tabFiltrer)[nbColonneAfficher_C];
+    int (*tabFiltre)[nbColonneAfficher_C];
     
-    tabFiltrer =  malloc(nbLigneAfficher_L*nbColonneAfficher_C*sizeof(int));
+    tabFiltre =  malloc(nbLigneAfficher_L*nbColonneAfficher_C*sizeof(int));
     
     if (nbColonneAfficher_C==0 || nbLigneAfficher_L==0) {
         return NULL;
-        //erreur à traiter
     }
-    
     
     int * controlCincr = controlC;
     int posY=0;
+    // incrémente posY et y pour passer de ligne en ligne
     for (int y=0; y < nbLigneAfficher_L; y++, posY++) {
         while (*controlL) {
             posY++;
             controlL++;
         }
+        
         int posX = 0;
+        // incrémente posX et x pour copier une ligne
         for (int x=0; x < nbColonneAfficher_C; x++, posX++) {
             while(*controlCincr){
                 posX++;
                 controlCincr++;
             }
-            tabFiltrer[y][x]= tabApresFiltre[posY][posX];
+            tabFiltre[y][x]= tabAvantFiltre[posY][posX];
             controlCincr++;
         }
         controlCincr = controlC;
@@ -425,32 +402,5 @@ int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
     *m= nbColonneAfficher_C;
     *n= nbLigneAfficher_L;
     
-    return &(tabFiltrer[0][0]);
+    return &(tabFiltre[0][0]);
 }
-
-
-
-
-//for (int y = 0; y < taille_vecteur; y++){
-//    while (*vecteur == 0){
-//        vecteur++;
-//    }
-//    for (int x = 0; x < max_vecteur; x++){
-//        if(x < *vecteur){
-//            fscanf (fp, "%d", &curNb);
-//            tableau2dim[y][x] = curNb;
-//        }
-//    }
-//    vecteur++;
-//}
-
-
-//    for (int i = 0 ; i < *n; i++) {
-//        for (int j = 0 ; j < *m; j ++) {
-//            printf("%d", tabApresFiltre[i][j]);
-//        }
-//        printf("\n");
-//    }
-
-
-
