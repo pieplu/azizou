@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E954DFD184D28E800DF85CF /* affichage.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E954DFB184D28E800DF85CF /* affichage.c */; };
 		5ECDB62B181B14A5004A8F90 /* filtre.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDB62A181B14A5004A8F90 /* filtre.c */; };
 		5ECDB62D181B14A5004A8F90 /* azizou.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ECDB62C181B14A5004A8F90 /* azizou.1 */; };
 		5ECDB635181B1506004A8F90 /* fonctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDB634181B1506004A8F90 /* fonctions.c */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E954DFB184D28E800DF85CF /* affichage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = affichage.c; sourceTree = "<group>"; };
+		5E954DFC184D28E800DF85CF /* affichage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = affichage.h; sourceTree = "<group>"; };
 		5ECDB627181B14A5004A8F90 /* azizou */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = azizou; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECDB62A181B14A5004A8F90 /* filtre.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filtre.c; sourceTree = "<group>"; };
 		5ECDB62C181B14A5004A8F90 /* azizou.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = azizou.1; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 		5ECDB629181B14A5004A8F90 /* azizou */ = {
 			isa = PBXGroup;
 			children = (
+				5E954DFB184D28E800DF85CF /* affichage.c */,
+				5E954DFC184D28E800DF85CF /* affichage.h */,
 				5ECDB62A181B14A5004A8F90 /* filtre.c */,
 				5ECDB634181B1506004A8F90 /* fonctions.c */,
 				5ECDB633181B14EA004A8F90 /* fonctions.h */,
@@ -124,6 +129,7 @@
 			files = (
 				5ECDB62B181B14A5004A8F90 /* filtre.c in Sources */,
 				5ECDB635181B1506004A8F90 /* fonctions.c in Sources */,
+				5E954DFD184D28E800DF85CF /* affichage.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
