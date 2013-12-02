@@ -32,9 +32,6 @@
 //affiche un message d'erreur sur le canal d'erreur selon les cas définis
 void signaler_erreur(int err); // fait
 
-// cette fonction est fournie
-//affiche un tableau 2D nxm
-void affiche_Tab2D(int *ptr, int n, int m); //fait
 
 // retourne le nombre de lignes total du fichier pointé par fp
 int nbre_lignes_fichier(FILE *fp); //fait
