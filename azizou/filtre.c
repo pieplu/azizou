@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "fonctions.h"
+#include "affichage.h"
 
 
 // retourne un tableau contenant le nombre de caractères de chaques lignes du fichier
@@ -78,7 +79,7 @@ int main(int argc, char * const argv[])
     int Lpos = seek_option(argv, 'L');
     
     if (Cpos ==-1 && Lpos == -1 && argc > 2) {
-        signaler_erreur(OPTION_INCONNUE_ERREUR);
+        signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
 
@@ -86,7 +87,7 @@ int main(int argc, char * const argv[])
     int doubleL = seek_option(&argv[Lpos +1 ], 'L');
     
     if (doubleC != -1 || doubleL != -1) {
-        signaler_erreur(OPTION_DUPLIQUEE_ERREUR);
+        signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
     
@@ -105,7 +106,7 @@ int main(int argc, char * const argv[])
     
     if(!m)
 	{
-        signaler_erreur(FICHIER_SANS_ENTIER_ERREUR);
+        signaler_erreur(FICHIER_SANS_DONNEE_ERREUR);
         exit(1);
     }
     
@@ -116,7 +117,11 @@ int main(int argc, char * const argv[])
     ControlC = control(argv, m, 'C');
     
     ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
-    affiche_Tab2D(ptrTabApresFiltre, n, m);
+    stab2d* tableau = (stab2d*)calloc(1, sizeof(stab2d));
+    tableau->lignes = n;
+    tableau->colonnes = m;
+    tableau->ptr = (char**)ptrTabApresFiltre;
+    affiche_Tab2D(*tableau);
     
 	
 	free(vecteur);

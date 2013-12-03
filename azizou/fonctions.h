@@ -1,32 +1,11 @@
 //NOM et Prénom : Alexis Piéplu - François Planet
 //Code permanent : PIEA07058900 - PLAF17069100
 
-#ifndef TP1
-#define TP1
+#ifndef FONCTIONS_H
+#define FONCTIONS_H
 #define true 1
 #define false 0
 
-#define OUVERTURE_FICHIER_ERREUR 0
-
-//Fichier ne comporte aucun entier
-#define FICHIER_SANS_ENTIER_ERREUR 1
-
-// Les parmètres du programmes conformes
-// mais erreur de syntaxe dans l'un des domaines
-#define SYNTAX_DOMAIN_ERREUR 2
-
-//Cette erreur indique les paramètres du programme
-//ne sont pas conformes au format défini
-//Ce cas est autre que la syntax des domaines
-#define OPTION_INCONNUE_ERREUR 3
-
-//deux présences ou plus  de -C ou de -L
-// -C devrait exister 0 ou 1 fois
-// -L devrait exister 0 ou 1 fois
-#define OPTION_DUPLIQUEE_ERREUR 4
-
-//Les résultat est un tableau vide
-#define TABLEAU2D_VIDE_ERREUR 5
 
 // cette fonction est fournie
 //affiche un message d'erreur sur le canal d'erreur selon les cas définis
@@ -85,7 +64,6 @@ int * control(char *const argv[], int dim, char c);
 // des suppressions données par controlC et controlL  et place la nouvelle taille du tableau dans *n et *m.
 //retourne NULL sil le tableau résultant est vide.
 int *filter(int * mat, int *n, int *m, int *controlC, int *controlL);
-
 
 
 #endif

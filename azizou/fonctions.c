@@ -2,10 +2,11 @@
 //Code permanent : PIEA07058900 - PLAF17069100
 
 #include <stdio.h>
-#include "fonctions.h"
+
 #include <stdlib.h>
 #include <string.h>
-
+#include "fonctions.h"
+#include "affichage.h"
 
 
 
