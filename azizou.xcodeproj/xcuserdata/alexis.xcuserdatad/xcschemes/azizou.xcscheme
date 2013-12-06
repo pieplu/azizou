@@ -60,6 +60,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "test02.txt -C"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "test01.txt -C"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

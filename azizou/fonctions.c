@@ -80,7 +80,7 @@ char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
     char *(*tableau2dim)[max_vecteur];
 
-    tableau2dim=calloc(max_vecteur*nvlleTaille,sizeof(int));
+    tableau2dim=calloc(max_vecteur*nvlleTaille,sizeof(char *));
     
     while (!feof (fp)){
         int nbLigne = 0;
@@ -96,6 +96,7 @@ char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
                 if(x < *vecteur){
                     fscanf (fp, "%s", curElem);
                     tableau2dim[y][x] = strcpy(malloc(sizeof(curElem)),curElem);
+                    printf("%s ",&(*curElem));
                 }
             }
             vecteur++;
