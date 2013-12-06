@@ -77,32 +77,42 @@ int NbCaseZero(int *vecteur, int taille_vecteur)
 char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
     char curElem[100];
-    char *vide = "";
+    //char *vide = "";
 
     int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
+    
+    int pos = 0;//pour position du vecteur sans lesZero
+    int *vecteurLight=malloc(nvlleTaille*sizeof(int));
+    for (int i = 0; i < taille_vecteur; ++i){
+        if (vecteur[i]){
+            vecteurLight[pos] = vecteur[i];
+            pos++;
+        }
+    }
+    
     char *(*tableau2dim)[max_vecteur];
 
-    tableau2dim=malloc(max_vecteur*nvlleTaille*sizeof(char *));
+    tableau2dim=calloc(max_vecteur*nvlleTaille, sizeof(char *));
     for(int i = 0; i<nvlleTaille; i++){
         for (int j = 0; j<max_vecteur; j++) {
-            tableau2dim[i][j] = vide;
+            tableau2dim[i][j] = "";
         }
     }
     
     while (!feof (fp)){
-        int nbLigne = 0;
+       // int nbLigne = 0;
         // passe de ligne en ligne
-        for (int y = 0; nbLigne < taille_vecteur; y++, nbLigne++){
+        for (int y = 0; y < nvlleTaille; y++){
             //ignore les lignes vide
-            while (*vecteur == 0){
-                vecteur++;
-                nbLigne++;
-            }
+           // while (*vecteur == 0){
+           //     vecteur++;
+            //    nbLigne++;
+            //}
             // prend toutes les valeures de la ligne
             for (int x = 0; x < max_vecteur; x++){
-                if(x < *vecteur){
+                if(x < *vecteurLight){
                     fscanf (fp, "%s", curElem);
-                    tableau2dim[y][x] = strcpy(malloc(sizeof(curElem)),curElem);
+                    tableau2dim[y][x] = strcpy(calloc(1,sizeof(curElem)),curElem);
                     //printf("%d ",&tableau2dim[y][x]);
                 }
             }
