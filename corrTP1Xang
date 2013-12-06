@@ -1,0 +1,35 @@
+#!/bin/csh
+
+rm trace_corrections*
+rm [a-z]*.res[0-9] [a-z]*.res[0-9][0-9]
+
+foreach nom (`ls *segmenteur.c`)
+	echo $nom 
+        setenv etudiant `echo $nom | sed -e 's/\..*$//'`
+	set TRACE=trace_corrections.$etudiant.txt
+	echo $etudiant >> $TRACE
+	echo >> $TRACE
+	echo Compilation >> $TRACE
+	gcc -W -Wall -lm $nom -o tp1 >>& $TRACE
+	if (-e tp1) then
+		echo Tests >> $TRACE
+		echo --------------------------------------------------- >> $TRACE
+		tests-tp1 >>& $TRACE
+		foreach n (0 1 2 3 4 5 6 7 8 9 10 11 12)
+			echo "	test$n"
+			echo test$n >> $TRACE
+			echo ===== >> $TRACE
+			diff -b -w res$n $etudiant.res$n >&-
+			if ($status != 0) then
+				diff -b -w res$n $etudiant.res$n | head -50 >> $TRACE
+				echo Problème avec le test >> $TRACE
+			else
+				echo Test OK >> $TRACE
+			endif
+			echo ===== >> $TRACE
+		end
+		rm tp1
+	else
+		echo Problèmes de compilation >> $TRACE
+	endif
+end

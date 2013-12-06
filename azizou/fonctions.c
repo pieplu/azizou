@@ -74,11 +74,11 @@ int NbCaseZero(int *vecteur, int taille_vecteur)
 //Cette fonction retourne un pointeur sur la première case d'un tableau 2D n x m
 //Le tableau 2D de taille n x max_veteur est rempli à partir du fichier.
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
-int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
+char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
-    int curNb;
+    char curElem[100];
     int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
-    int (*tableau2dim)[max_vecteur];
+    char *(*tableau2dim)[max_vecteur];
 
     tableau2dim=calloc(max_vecteur*nvlleTaille,sizeof(int));
     
@@ -94,8 +94,8 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
             // prend toutes les valeures de la ligne
             for (int x = 0; x < max_vecteur; x++){
                 if(x < *vecteur){
-                    fscanf (fp, "%d", &curNb);
-                    tableau2dim[y][x] = curNb;
+                    fscanf (fp, "%s", curElem);
+                    tableau2dim[y][x] = strcpy(malloc(sizeof(curElem)),curElem);
                 }
             }
             vecteur++;
@@ -104,6 +104,8 @@ int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     
     rewind(fp);
     return &(tableau2dim[0][0]);
+    //si temps:
+    //recuperation de la chaine a refaire (fgets)
 }
 
 

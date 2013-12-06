@@ -70,8 +70,8 @@ int main(int argc, char * const argv[])
     
     FILE * fichier = NULL;
 	int *vecteur=NULL;
-	int * ptrTableau2d=NULL;
-    int * ptrTabApresFiltre = NULL;
+	char ** ptrTableau2d=NULL;
+    char ** ptrTabApresFiltre = NULL;
     int *ControlL = NULL;
     int *ControlC = NULL;
     
@@ -120,7 +120,7 @@ int main(int argc, char * const argv[])
     stab2d* tableau = (stab2d*)calloc(1, sizeof(stab2d));
     tableau->lignes = n;
     tableau->colonnes = m;
-    tableau->ptr = (char**)ptrTabApresFiltre;
+    tableau->ptr = ptrTabApresFiltre;
     affiche_Tab2D(*tableau);
     
 	

@@ -24,7 +24,7 @@ int taille_max_lignes(int * vecteur , int v); //fait
 //Cette fonction retourne un pointeur sur la première case d'un tableau 2D n x m
 //Le tableau 2D de taille n x max_veteur est rempli à partir du fichier.
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
-int *charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur);
+char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur);
 
 //verifie si un domaine est syntaxiquement correcte
 // retourne 1 si correcte et 0 sinon
