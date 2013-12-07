@@ -76,21 +76,12 @@ int NbCaseZero(int *vecteur, int taille_vecteur)
 char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
     char curElem[100];
-
-    int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
-    
     char *(*tableau2dim)[max_vecteur];
+    tableau2dim=malloc(max_vecteur*taille_vecteur*sizeof(char *));
 
-    tableau2dim=malloc(max_vecteur*nvlleTaille*sizeof(char *));
-//    for(int i = 0; i<nvlleTaille; i++){
-//        for (int j = 0; j<max_vecteur; j++) {
-//            tableau2dim[i][j] = "";
-//        }
-//    }
-    
     // passe de ligne en ligne
-    for (int y = 0; y < nvlleTaille; y++){
-        // prend toutes les valeures de la ligne
+    for (int y = 0; y < taille_vecteur; y++){
+        // insère toutes les valeures de la ligne
         for (int x = 0; x < max_vecteur; x++){
             if(x < *vecteur){
                 fscanf (fp, "%s", curElem);
@@ -104,8 +95,6 @@ char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     
     rewind(fp);
     return &(tableau2dim[0][0]);
-    //si temps:
-    //recuperation de la chaine a refaire (fgets)
 }
 
 
