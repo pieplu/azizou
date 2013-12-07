@@ -70,54 +70,36 @@ int NbCaseZero(int *vecteur, int taille_vecteur)
 
 
 //vecteur[i] représente le nombre d'entiers à ligne i du fichier pointé par fp.
-//si vecteur[i]==0, la ligne i du fichier est ignorée car elle est vide d'entier.
 //Cette fonction retourne un pointeur sur la première case d'un tableau 2D n x m
 //Le tableau 2D de taille n x max_veteur est rempli à partir du fichier.
 //Chaque ligne du fichier qui contient au moins un entier donne lieu à une ligne dans le tableau 2D.
 char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
     char curElem[100];
-    //char *vide = "";
 
     int nvlleTaille = tailleMoinsCasesZero(vecteur, taille_vecteur);
     
-    int pos = 0;//pour position du vecteur sans lesZero
-    int *vecteurLight=malloc(nvlleTaille*sizeof(int));
-    for (int i = 0; i < taille_vecteur; ++i){
-        if (vecteur[i]){
-            vecteurLight[pos] = vecteur[i];
-            pos++;
-        }
-    }
-    
     char *(*tableau2dim)[max_vecteur];
 
-    tableau2dim=calloc(max_vecteur*nvlleTaille, sizeof(char *));
-    for(int i = 0; i<nvlleTaille; i++){
-        for (int j = 0; j<max_vecteur; j++) {
-            tableau2dim[i][j] = "";
-        }
-    }
+    tableau2dim=malloc(max_vecteur*nvlleTaille*sizeof(char *));
+//    for(int i = 0; i<nvlleTaille; i++){
+//        for (int j = 0; j<max_vecteur; j++) {
+//            tableau2dim[i][j] = "";
+//        }
+//    }
     
-    while (!feof (fp)){
-       // int nbLigne = 0;
-        // passe de ligne en ligne
-        for (int y = 0; y < nvlleTaille; y++){
-            //ignore les lignes vide
-           // while (*vecteur == 0){
-           //     vecteur++;
-            //    nbLigne++;
-            //}
-            // prend toutes les valeures de la ligne
-            for (int x = 0; x < max_vecteur; x++){
-                if(x < *vecteurLight){
-                    fscanf (fp, "%s", curElem);
-                    tableau2dim[y][x] = strcpy(calloc(1,sizeof(curElem)),curElem);
-                    //printf("%d ",&tableau2dim[y][x]);
-                }
+    // passe de ligne en ligne
+    for (int y = 0; y < nvlleTaille; y++){
+        // prend toutes les valeures de la ligne
+        for (int x = 0; x < max_vecteur; x++){
+            if(x < *vecteur){
+                fscanf (fp, "%s", curElem);
+                tableau2dim[y][x] = strcpy(calloc(1,sizeof(curElem)),curElem);
+            }else{
+                tableau2dim[y][x] = "";
             }
-            vecteur++;
         }
+        vecteur++;
     }
     
     rewind(fp);

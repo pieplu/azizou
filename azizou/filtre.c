@@ -13,12 +13,12 @@
 
 
 // retourne un tableau contenant le nombre de caractères de chaques lignes du fichier
-int *creerVecteur(FILE* fichier, int nbLigne)
+int *creerVecteur(FILE* fichier, int * nbLigne)
 {
     rewind(fichier);
     int * nbCharLigne;
-    
-    nbCharLigne = malloc( nbLigne * sizeof(int));
+    int nombreLigneVecteur = 0;
+    nbCharLigne = malloc( (*nbLigne) * sizeof(int));
     int *vecteur = nbCharLigne;
     
     int temp;
@@ -32,21 +32,24 @@ int *creerVecteur(FILE* fichier, int nbLigne)
 			unNbLue=true;
 		}
         
-		if(unNbLue){
-			++nbNombres;
-		}
+		if(unNbLue){ ++nbNombres; }
 		
 		if(temp == '\n' || temp == EOF){
-            *nbCharLigne = nbNombres;
-            nbCharLigne++;
-            nbNombres=0;
+            if(nbNombres != 0){
+                *nbCharLigne = nbNombres;
+                nbCharLigne++;
+                nombreLigneVecteur++;
+                nbNombres=0;
+            }
 		}
-        
 		unNbLue=false;
         
 	}while(temp != EOF);
     
+    vecteur = realloc(vecteur , nombreLigneVecteur*sizeof(int));
+    
     rewind(fichier);
+    *nbLigne = nombreLigneVecteur; // vecteur à autant de case que de lignes rempli, le re set pour
     return vecteur;
 }
 
@@ -96,7 +99,7 @@ int main(int argc, char * const argv[])
     }
     
     int n =nbre_lignes_fichier(fichier);
-    vecteur = creerVecteur(fichier, n);
+    vecteur = creerVecteur(fichier, &n);
     int m = taille_max_lignes(vecteur, n);
     if(!m)	{
         signaler_erreur(FICHIER_SANS_DONNEE_ERREUR);
@@ -106,7 +109,7 @@ int main(int argc, char * const argv[])
     stab2d* tableau = (stab2d*)malloc(sizeof(stab2d));
     
     tableau->ptr = charger(fichier, vecteur, n, m);
-    n = tailleApresSupp(vecteur, n);
+    //n = tailleApresSupp(vecteur, n);
     tableau->lignes = n;
     tableau->colonnes = m;
     
