@@ -12,7 +12,7 @@
 #include "affichage.h"
 
 
-// retourne un tableau contenant le nombre de caractères de chaques lignes du fichier
+// retourne un tableau contenant le nombre de caractères de chaques lignes du fichier, igonre les lignes vides
 int *creerVecteur(FILE* fichier, int * nbLigne)
 {
     rewind(fichier);
@@ -46,11 +46,9 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
         
 	}while(temp != EOF);
     
-    vecteur = realloc(vecteur , nombreLigneVecteur*sizeof(int));
-    
     rewind(fichier);
-    *nbLigne = nombreLigneVecteur; // vecteur à autant de case que de lignes rempli, le re set pour
-    return vecteur;
+    *nbLigne = nombreLigneVecteur;
+    return realloc(vecteur , nombreLigneVecteur*sizeof(int));
 }
 
 
