@@ -67,7 +67,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "test01.txt test02.txt test03.txt test04.txt -C 8-9 -L 9 -V"
+            argument = "-V test01.txt test02.txt test03.txt test04.txt -C 8-9 -L 9"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

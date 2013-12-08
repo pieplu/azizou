@@ -58,6 +58,17 @@ int mauvaisVouH(int Vpos, int Hpos) {
     return (Hpos != 1 && Vpos != 1) || (Hpos ==-1 && Vpos == -1);
 }
 
+void checkOptionEnDouble(char* const *argv, char option) {
+    int pos = seek_option(argv, option);
+    if (pos != -1) {
+        int enDouble = seek_option(&argv[pos +1 ], option);
+        if (enDouble != -1) {
+            signaler_erreur(OPTION_ERREUR);
+            exit(1);
+        }
+    }
+}
+
 void verificationOptions(char * const argv[]){
     int Vpos = seek_option(argv, 'V');
     int Hpos = seek_option(argv, 'H');
@@ -65,23 +76,11 @@ void verificationOptions(char * const argv[]){
         signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
-    int Cpos=seek_option(argv, 'C');
-    if( Cpos!= -1){
-        int doubleC = seek_option(&argv[Cpos +1 ], 'C');
-        if (doubleC != -1) {
-            signaler_erreur(OPTION_ERREUR);
-            exit(1);
-        }
-    }
-    int Lpos = seek_option(argv, 'L');
-    if (Lpos != -1) {
-        int doubleL = seek_option(&argv[Lpos +1 ], 'L');
-        if (doubleL != -1) {
-            signaler_erreur(OPTION_ERREUR);
-            exit(1);
-        }
-    }
+    checkOptionEnDouble(argv, 'C');
+    checkOptionEnDouble(argv, 'L');
 }
+
+
 
 int main(int argc, char * const argv[])
 {
@@ -136,7 +135,7 @@ int main(int argc, char * const argv[])
     }
     
     
-	free(fichier);
+
 	free(vecteur);
     free(tableauStructures);
     free(ptrTableau2d);
