@@ -118,7 +118,7 @@ int main(int argc, char * const argv[])
         unTableau.ptr = charger(fichier, vecteur, n, m);
         unTableau.lignes = n;
         unTableau.colonnes = m;
-        tableauStructures[i] = unTableau;
+        tableauStructures[i] = unTableau; // fait une copie
         fclose(fichier);
 
     }
@@ -138,6 +138,7 @@ int main(int argc, char * const argv[])
 
 	free(vecteur);
     free(tableauStructures);
+    
     free(ptrTableau2d);
     free(ptrTabApresFiltre);
     free(ControlC);
