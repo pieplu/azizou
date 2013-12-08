@@ -241,12 +241,23 @@ int seek_option(char *const argv[], char option)
  */
 stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
 
-    int hauteur;
-    int largeur;
+    int hauteur = 17;
+    int largeur = 5;
     
     //tailleMatriceFinale(&hauteur, &largeur);
-    if (option == 'V') {
-        
+    
+    char *(*tableau2dim)[largeur];
+    tableau2dim=malloc(largeur*hauteur*sizeof(char *));
+    
+    // H
+    for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++) {
+        for (int ptrLignes= 0; ptrLignes < hauteur; ptrLignes++) {
+            for (int ptrCol = 0; ptrCol < largeur; ptrCol++) {
+                if (<#condition#>) {
+                    <#statements#>
+                }
+            }
+        }
     }
     
     return *tabMatrices; //A CHANGER
