@@ -92,14 +92,15 @@ int main(int argc, char * const argv[])
     }
     
     int nbFichiers = 0;
-    stab2d* *tableauStructures[nbFichiers];
     
+    stab2d *tableauStructures = malloc(nbFichiers*sizeof(stab2d));
+    stab2d unTableau;
     for (int i=0; i<nbFichiers; i++) {
-    stab2d* unTableau = malloc(sizeof(stab2d)); //(stab2d*)
+        tableauStructures[i] = unTableau; //(stab2d*)
     
-    unTableau->ptr = charger(fichier, vecteur, n, m);
-    unTableau->lignes = n;
-    unTableau->colonnes = m;
+    unTableau.ptr = charger(fichier, vecteur, n, m);
+    unTableau.lignes = n;
+    unTableau.colonnes = m;
     }
     
     
@@ -110,11 +111,10 @@ int main(int argc, char * const argv[])
     
     
    // tableau->ptr = ptrTabApresFiltre;
-    affiche_Tab2D(*unTableau);
+    affiche_Tab2D(unTableau);
     
 	
 	free(vecteur);
-    free(unTableau);
     free(ptrTableau2d);
     free(ptrTabApresFiltre);
     free(ControlC);
