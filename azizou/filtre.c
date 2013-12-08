@@ -54,14 +54,14 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
 
 
 
+int mauvaisVouH(int Vpos, int Hpos) {
+    return (Hpos != 1 && Vpos != 1) || (Hpos ==-1 && Vpos == -1);
+}
+
 void verificationOptions(char * const argv[]){
     int Vpos = seek_option(argv, 'V');
     int Hpos = seek_option(argv, 'H');
-    if (Hpos != 1 && Vpos != 1) {
-        signaler_erreur(OPTION_ERREUR);
-        exit(1);
-    }
-    if (Hpos ==-1 && Vpos == -1) {
+    if (mauvaisVouH(Vpos, Hpos)) {
         signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
@@ -95,9 +95,7 @@ int main(int argc, char * const argv[])
     int n;
     int m;
     
-    
     verificationOptions(argv);
-
     
     int nbFichiers = get_nbre_domaines(argv, 1);
     
@@ -118,7 +116,6 @@ int main(int argc, char * const argv[])
             exit(1);
         }
 
-        
         unTableau.ptr = charger(fichier, vecteur, n, m);
         unTableau.lignes = n;
         unTableau.colonnes = m;
@@ -139,8 +136,9 @@ int main(int argc, char * const argv[])
     }
     
     
-	
+	free(fichier);
 	free(vecteur);
+    free(tableauStructures);
     free(ptrTableau2d);
     free(ptrTabApresFiltre);
     free(ControlC);
