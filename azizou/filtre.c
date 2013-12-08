@@ -52,18 +52,6 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
 }
 
 
-// retourne la nouvelle taille du vecteur en ignaorant les lignes vides
-int tailleApresSupp(int *vecteur, int taille_vecteur)
-{
-    int ligne0=0;
-    for (int i = 0; i < taille_vecteur; i++) {
-        if (vecteur[i]==0) {
-            ligne0++;
-        }
-    }
-    return taille_vecteur - ligne0;
-}
-
 
 
 int main(int argc, char * const argv[])
@@ -82,7 +70,6 @@ int main(int argc, char * const argv[])
         signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
-
     int doubleC = seek_option(&argv[Cpos +1 ], 'C');
     int doubleL = seek_option(&argv[Lpos +1 ], 'L');
     if (doubleC != -1 || doubleL != -1) {
@@ -104,12 +91,17 @@ int main(int argc, char * const argv[])
         exit(1);
     }
     
-    stab2d* tableau = (stab2d*)malloc(sizeof(stab2d));
+    int nbFichiers = 0;
+    stab2d* *tableauStructures[nbFichiers];
     
-    tableau->ptr = charger(fichier, vecteur, n, m);
-    //n = tailleApresSupp(vecteur, n);
-    tableau->lignes = n;
-    tableau->colonnes = m;
+    for (int i=0; i<nbFichiers; i++) {
+    stab2d* unTableau = malloc(sizeof(stab2d)); //(stab2d*)
+    
+    unTableau->ptr = charger(fichier, vecteur, n, m);
+    unTableau->lignes = n;
+    unTableau->colonnes = m;
+    }
+    
     
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
@@ -118,11 +110,11 @@ int main(int argc, char * const argv[])
     
     
    // tableau->ptr = ptrTabApresFiltre;
-    affiche_Tab2D(*tableau);
+    affiche_Tab2D(*unTableau);
     
 	
 	free(vecteur);
-    free(tableau);
+    free(unTableau);
     free(ptrTableau2d);
     free(ptrTabApresFiltre);
     free(ControlC);
