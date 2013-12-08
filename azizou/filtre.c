@@ -63,10 +63,14 @@ int main(int argc, char * const argv[])
     char ** ptrTabApresFiltre = NULL;
     int *ControlL = NULL;
     int *ControlC = NULL;
+    int n;
+    int m;
     
     int Cpos = seek_option(argv, 'C');
     int Lpos = seek_option(argv, 'L');
-    if (Cpos ==-1 && Lpos == -1 && argc > 2) {
+    int Vpos = seek_option(argv, 'V');
+    int Hpos = seek_option(argv, 'H');
+    if (Hpos ==-1 && Vpos == -1) {
         signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
@@ -77,13 +81,12 @@ int main(int argc, char * const argv[])
         exit(1);
     }
     
-    int n;
-    int m;
-    int nbFichiers = 2;
+    
+    int nbFichiers = get_nbre_domaines(argv, 1);
     stab2d *tableauStructures = malloc(nbFichiers*sizeof(stab2d));
     stab2d unTableau;
     for (int i=0; i<nbFichiers; i++) {
-        fichier = fopen(argv[(i+1)], "r");
+        fichier = fopen(argv[(i+2)], "r");
         if(fichier == NULL)	{
             signaler_erreur(OUVERTURE_FICHIER_ERREUR);
             exit(1);
@@ -115,9 +118,10 @@ int main(int argc, char * const argv[])
     
   //  ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
     
-
-    affiche_Tab2D(tabFusion);
-    affiche_Tab2D(tableauStructures[1]);
+    for(int i = 0; i<nbFichiers; i++){
+        affiche_Tab2D(tableauStructures[i]);
+    }
+    
     
 	
 	free(vecteur);

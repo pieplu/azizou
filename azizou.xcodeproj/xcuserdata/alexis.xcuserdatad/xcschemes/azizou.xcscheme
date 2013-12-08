@@ -59,11 +59,15 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
+            argument = "-V test01.txt"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "test02.txt -C"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "test01.txt test02.txt -C"
+            argument = "-H test01.txt test02.txt test03.txt test04.txt -C"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
