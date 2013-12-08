@@ -18,7 +18,7 @@
 //Le résultat est un tableau vide
 #define TABLEAU2D_VIDE_ERREUR 4
 
-typedef struct tab2D stab2d;
+
 //Cette structure offre un type de donnée repésentant un tableau 2D
 struct tab2D{
 int lignes; //nombre de lignes du tableau 2D

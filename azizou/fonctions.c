@@ -16,13 +16,10 @@ int nbre_lignes_fichier(FILE *fp)
 {
 	int nbLigne=1;
 	char c = 0;
-	if(fp != NULL)
-	{
-		while (c != EOF)
-		{
+	if(fp != NULL){
+		while (c != EOF){
 			c = fgetc(fp);
-			if (c == '\n')
-			{
+			if (c == '\n'){
 				nbLigne++;
 			}
 		}
@@ -43,18 +40,6 @@ int taille_max_lignes(int * vecteur , int v){
 }
 
 
-// retourne une valeur taille auquelle l'on a soustrai le nombre de case
-// contenant 0 du tableau vercteur
-int tailleMoinsCasesZero(int *vecteur, int taille_vecteur)
-{
-    int ligne0=0;
-    for (int i = 0; i < taille_vecteur; i++) {
-        if (vecteur[i]==0) {
-            ligne0++;
-        }
-    }
-    return taille_vecteur - ligne0;
-}
 
 // retourne le nombre de case contenant 0 dans le vecteur
 int NbCaseZero(int *vecteur, int taille_vecteur)

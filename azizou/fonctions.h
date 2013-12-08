@@ -5,7 +5,7 @@
 #define FONCTIONS_H
 #define true 1
 #define false 0
-
+typedef struct tab2D stab2d;
 
 // cette fonction est fournie
 //affiche un message d'erreur sur le canal d'erreur selon les cas définis

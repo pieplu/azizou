@@ -77,41 +77,47 @@ int main(int argc, char * const argv[])
         exit(1);
     }
     
-    fichier = fopen(argv[1], "r");
-	if(fichier == NULL)	{
-        signaler_erreur(OUVERTURE_FICHIER_ERREUR);
-        exit(1);
-    }
-    
-    int n =nbre_lignes_fichier(fichier);
-    vecteur = creerVecteur(fichier, &n);
-    int m = taille_max_lignes(vecteur, n);
-    if(!m)	{
-        signaler_erreur(FICHIER_SANS_DONNEE_ERREUR);
-        exit(1);
-    }
-    
-    int nbFichiers = 0;
-    
+    int n;
+    int m;
+    int nbFichiers = 2;
     stab2d *tableauStructures = malloc(nbFichiers*sizeof(stab2d));
     stab2d unTableau;
     for (int i=0; i<nbFichiers; i++) {
-        tableauStructures[i] = unTableau; //(stab2d*)
-    
-    unTableau.ptr = charger(fichier, vecteur, n, m);
-    unTableau.lignes = n;
-    unTableau.colonnes = m;
+        fichier = fopen(argv[(i+1)], "r");
+        if(fichier == NULL)	{
+            signaler_erreur(OUVERTURE_FICHIER_ERREUR);
+            exit(1);
+        }
+        
+        n =nbre_lignes_fichier(fichier);
+        vecteur = creerVecteur(fichier, &n);
+        m = taille_max_lignes(vecteur, n);
+        if(!m)	{
+            signaler_erreur(FICHIER_SANS_DONNEE_ERREUR);
+            exit(1);
+        }
+
+        
+        unTableau.ptr = charger(fichier, vecteur, n, m);
+        unTableau.lignes = n;
+        unTableau.colonnes = m;
+        tableauStructures[i] = unTableau;
+        fclose(fichier);
+
     }
     
     
+    
+    
+    stab2d tabFusion = tableauStructures[0];
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
     
   //  ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
     
-    
-   // tableau->ptr = ptrTabApresFiltre;
-    affiche_Tab2D(unTableau);
+
+    affiche_Tab2D(tabFusion);
+    affiche_Tab2D(tableauStructures[1]);
     
 	
 	free(vecteur);
@@ -119,8 +125,7 @@ int main(int argc, char * const argv[])
     free(ptrTabApresFiltre);
     free(ControlC);
     free(ControlL);
-	fclose(fichier);
-    
+	   
     return 0;
 }
 

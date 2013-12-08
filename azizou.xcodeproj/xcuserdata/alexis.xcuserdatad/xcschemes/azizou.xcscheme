@@ -63,7 +63,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "test01.txt -C"
+            argument = "test01.txt test02.txt -C"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
