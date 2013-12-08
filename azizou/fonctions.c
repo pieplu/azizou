@@ -242,7 +242,8 @@ int seek_option(char *const argv[], char option)
 stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
 
     int lignesFusion = 6;
-    int colonnesFusion = 16;
+    int colonnesFusion = 15;
+    char *tempDebug = malloc(20*sizeof(char));
     
     //tailleMatriceFinale(&hauteur, &largeur);
     
@@ -251,11 +252,16 @@ stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
     int positionDansFusion = 0;
     int pointeurAlire = 0;
     // H
-    for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++) {
-        for (int ptrLignes= 0; ptrLignes < lignesFusion; ptrLignes++) {
-            for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++) {
+    for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++)
+    {
+        for (int ptrLignes= 0; ptrLignes < lignesFusion; ptrLignes++)
+        {
+            for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++)
+            {
                 if (ptrLignes<tabMatrices[ptrMatrices].lignes) {
-                    tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] =tabMatrices[ptrMatrices].ptr[pointeurAlire];
+                    tempDebug = tabMatrices[ptrMatrices].ptr[pointeurAlire];
+                    tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = tempDebug;
+                    printf("%d : %s\n", pointeurAlire, tempDebug);
                     pointeurAlire++;
                 }else{
                     tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = "";

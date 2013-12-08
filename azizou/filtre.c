@@ -130,9 +130,9 @@ int main(int argc, char * const argv[])
     
   //  ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
     
-   // for(int i = 0; i<nbFichiers; i++){
+    //for(int i = 0; i<nbFichiers; i++){
         affiche_Tab2D(tabFusion);
-   // }
+    //}
     
     
 
