@@ -64,9 +64,7 @@ char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
     char *(*tableau2dim)[max_vecteur];
     tableau2dim=malloc(max_vecteur*taille_vecteur*sizeof(char *));
 
-    // passe de ligne en ligne
     for (int y = 0; y < taille_vecteur; y++){
-        // insère toutes les valeures de la ligne
         for (int x = 0; x < max_vecteur; x++){
             if(x < *vecteur){
                 fscanf (fp, "%s", curElem);
@@ -241,14 +239,14 @@ int seek_option(char *const argv[], char option)
  *@param option      : V (fusion Vertical) ou H (fusion Horizontal)
  *@return une nouvelle structure contant la fusion des matrices
  */
-stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
-
-    if (option == 'V') {
-        <#statements#>
-    }
-    
-    return ;
-}
+//stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
+//
+//    if (option == 'V') {
+//        <#statements#>
+//    }
+//    
+//    return ;
+//}
 
 
 //c est soit 'C', soit 'L'.

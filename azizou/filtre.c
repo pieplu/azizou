@@ -107,7 +107,7 @@ int main(int argc, char * const argv[])
             exit(1);
         }
         
-        n =nbre_lignes_fichier(fichier);
+        n = nbre_lignes_fichier(fichier);
         vecteur = creerVecteur(fichier, &n);
         m = taille_max_lignes(vecteur, n);
         if(!m)	{
@@ -124,7 +124,7 @@ int main(int argc, char * const argv[])
     }
     
 
-    stab2d tabFusion = tableauStructures[0];
+   // stab2d tabFusion = tableauStructures[0];
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
     
