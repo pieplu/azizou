@@ -55,7 +55,7 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
 
 
 int mauvaisVouH(int Vpos, int Hpos) {
-    return (Hpos != 1 && Vpos != 1) || (Hpos ==-1 && Vpos == -1);
+    return (Hpos != 1 && Vpos != 1);
 }
 
 void checkOptionEnDouble(char* const *argv, char option) {
