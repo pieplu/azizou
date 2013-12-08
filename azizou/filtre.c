@@ -66,23 +66,37 @@ int main(int argc, char * const argv[])
     int n;
     int m;
     
-    int Cpos = seek_option(argv, 'C');
-    int Lpos = seek_option(argv, 'L');
+    
     int Vpos = seek_option(argv, 'V');
     int Hpos = seek_option(argv, 'H');
+    if (Hpos != 1 && Vpos != 1) {
+        signaler_erreur(OPTION_ERREUR);
+        exit(1);
+    }
     if (Hpos ==-1 && Vpos == -1) {
         signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
-    int doubleC = seek_option(&argv[Cpos +1 ], 'C');
-    int doubleL = seek_option(&argv[Lpos +1 ], 'L');
-    if (doubleC != -1 || doubleL != -1) {
-        signaler_erreur(OPTION_ERREUR);
-        exit(1);
+    int Cpos=seek_option(argv, 'C');
+    if( Cpos!= -1){
+        int doubleC = seek_option(&argv[Cpos +1 ], 'C');
+        if (doubleC != -1) {
+            signaler_erreur(OPTION_ERREUR);
+            exit(1);
+        }
     }
-    
+    int Lpos = seek_option(argv, 'L');
+    if (Lpos != -1) {
+        int doubleL = seek_option(&argv[Lpos +1 ], 'L');
+        if (doubleL != -1) {
+            signaler_erreur(OPTION_ERREUR);
+            exit(1);
+        }
+    }
+
     
     int nbFichiers = get_nbre_domaines(argv, 1);
+    
     stab2d *tableauStructures = malloc(nbFichiers*sizeof(stab2d));
     stab2d unTableau;
     for (int i=0; i<nbFichiers; i++) {
