@@ -239,15 +239,31 @@ int seek_option(char *const argv[], char option)
  *@param option      : V (fusion Vertical) ou H (fusion Horizontal)
  *@return une nouvelle structure contant la fusion des matrices
  */
-//stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
-//
-//    if (option == 'V') {
-//        <#statements#>
-//    }
-//    
-//    return ;
-//}
+stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
 
+    int hauteur;
+    int largeur;
+    
+    //tailleMatriceFinale(&hauteur, &largeur);
+    if (option == 'V') {
+        
+    }
+    
+    return *tabMatrices; //A CHANGER
+}
+
+/*
+ *Defini la taille de la matrice finale apres fusion
+ *@param *hauteur : Tableau des matrices à fusionner
+ *@param *largeur   : Nombre de matrices du tableau
+ *@param option      : V (fusion Vertical) ou H (fusion Horizontal)
+ *@return une nouvelle structure contant la fusion des matrices
+ */
+
+void tailleMatriceFinale(int* hauteur, int* largueur, char option, stab2d *tabMatrices, int nbMatrices)
+{
+    
+}
 
 //c est soit 'C', soit 'L'.
 //dim est censée représenter soit le nombre de lignes dans le tableau 2D soit le nombre de colonnnes.
