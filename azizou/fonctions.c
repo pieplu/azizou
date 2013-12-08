@@ -259,10 +259,13 @@ stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
             for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++)
             {
                 if (ptrLignes<tabMatrices[ptrMatrices].lignes) {
+                    
                     tempDebug = tabMatrices[ptrMatrices].ptr[pointeurAlire];
-                    tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = tempDebug;
                     printf("%d : %s\n", pointeurAlire, tempDebug);
+                    
+                    tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = tempDebug;
                     pointeurAlire++;
+                    
                 }else{
                     tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = "";
                 }
@@ -272,7 +275,7 @@ stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
         pointeurAlire = 0;
     }
     
-    stab2d matriceFusione = {lignesFusion,colonnesFusion,(char **)tableau2dim};
+    stab2d matriceFusione = {lignesFusion,colonnesFusion,&tableau2dim[0][0]};
     return matriceFusione; 
 }
 
