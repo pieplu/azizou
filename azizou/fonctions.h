@@ -66,7 +66,7 @@ stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option);
  */
 
 
-void tailleMatriceFinale(int* hauteur, int* largueur, char option, stab2d *tabMatrices, int nbMatrices);
+void tailleMatriceFinale(int* hauteur, int* largueur, stab2d *tabMatrices, int nbMatrices, char option);
 
 //c est soit 'C', soit 'L'.
 //dim est censée représenter soit le nombre de lignes dans le tableau 2D soit le nombre de colonnnes.

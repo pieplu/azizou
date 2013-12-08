@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "test01.txt -L 4-5"
+            argument = "-H test01.txt test02.txt test03.txt test04.txt -L 4-5"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

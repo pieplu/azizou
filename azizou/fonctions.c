@@ -241,11 +241,11 @@ int seek_option(char *const argv[], char option)
  */
 stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
 
-    int lignesFusion = 6;
-    int colonnesFusion = 15;
+    int lignesFusion = 0;
+    int colonnesFusion = 0;
     char *tempDebug = malloc(20*sizeof(char));
     
-    //tailleMatriceFinale(&hauteur, &largeur);
+    tailleMatriceFinale(&lignesFusion, &colonnesFusion , tabMatrices , nbMatrices, option);
     
     char *(*tableau2dim)[lignesFusion];
     tableau2dim=malloc(colonnesFusion*lignesFusion*sizeof(char *));
@@ -287,8 +287,35 @@ stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
  *@return une nouvelle structure contant la fusion des matrices
  */
 
-void tailleMatriceFinale(int* hauteur, int* largueur, char option, stab2d *tabMatrices, int nbMatrices)
+void tailleMatriceFinale(int* hauteur, int* largueur, stab2d *tabMatrices, int nbMatrices, char option)
 {
+    for (int i = 0; i < nbMatrices; i++)
+    {
+        if (option == 'V')
+        {
+            if (tabMatrices[i].colonnes > *largueur)
+            {
+                *largueur = tabMatrices[i].colonnes;
+            }
+            
+            *hauteur += tabMatrices[i].lignes;
+        }
+        else if (option == 'H')
+        {
+            if (tabMatrices[i].colonnes > *hauteur)
+            {
+                *hauteur = tabMatrices[i].lignes;
+            }
+            *largueur += tabMatrices[i].colonnes;
+        }
+        else
+        {
+            signaler_erreur(SYNTAX_DOMAIN_ERREUR);
+            printf("erreur taille matrice");
+            exit(1);
+        }
+        
+    }
     
 }
 
