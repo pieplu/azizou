@@ -234,6 +234,22 @@ int seek_option(char *const argv[], char option)
     return -1;
 }
 
+/*
+ *Fusione toutes les matrice présente dans le tableau passer en paramère
+ *@param tabMatrices : Tableau des matrices à fusionner
+ *@param nbMatrice   : Nombre de matrices du tableau
+ *@param option      : V (fusion Vertical) ou H (fusion Horizontal)
+ *@return une nouvelle structure contant la fusion des matrices
+ */
+stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
+
+    if (option == 'V') {
+        <#statements#>
+    }
+    
+    return ;
+}
+
 
 //c est soit 'C', soit 'L'.
 //dim est censée représenter soit le nombre de lignes dans le tableau 2D soit le nombre de colonnnes.

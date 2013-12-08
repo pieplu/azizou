@@ -47,6 +47,15 @@ int get_debut_fin_domaine(char * domaine, int max, int *debut, int *fin);
 // retourne -1 si l'option n'est pas trouvée dans argv
 int seek_option(char *const argv[], char option);
 
+/*
+ *Fusione toutes les matrice présente dans le tableau passer en paramère
+ *@param tabMatrices : Tableau des matrices à fusionner
+ *@param nbMatrice   : Nombre de matrices du tableau
+ *@param option      : V (fusion Vertical) ou H (fusion Horizontal)
+ *@return une nouvelle structure contant la fusion des matrices
+ */
+stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option);
+
 //c est soit 'C', soit 'L'.
 //dim est censée représenter soit le nombre de lignes dans le tableau 2D soit le nombre de colonnnes.
 //argv représente le tableau pointant les paramères du programme.
