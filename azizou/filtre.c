@@ -54,19 +54,7 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
 
 
 
-int main(int argc, char * const argv[])
-{
-    
-    FILE * fichier = NULL;
-	int *vecteur=NULL;
-	char ** ptrTableau2d = NULL;
-    char ** ptrTabApresFiltre = NULL;
-    int *ControlL = NULL;
-    int *ControlC = NULL;
-    int n;
-    int m;
-    
-    
+void verificationOptions(char * const argv[]){
     int Vpos = seek_option(argv, 'V');
     int Hpos = seek_option(argv, 'H');
     if (Hpos != 1 && Vpos != 1) {
@@ -93,6 +81,22 @@ int main(int argc, char * const argv[])
             exit(1);
         }
     }
+}
+
+int main(int argc, char * const argv[])
+{
+    
+    FILE * fichier = NULL;
+	int *vecteur=NULL;
+	char ** ptrTableau2d = NULL;
+    char ** ptrTabApresFiltre = NULL;
+    int *ControlL = NULL;
+    int *ControlC = NULL;
+    int n;
+    int m;
+    
+    
+    verificationOptions(argv);
 
     
     int nbFichiers = get_nbre_domaines(argv, 1);
@@ -123,9 +127,7 @@ int main(int argc, char * const argv[])
 
     }
     
-    
-    
-    
+
     stab2d tabFusion = tableauStructures[0];
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
