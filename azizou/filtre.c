@@ -2,7 +2,8 @@
 //Code permanent : PIEA07058900 - PLAF17069100
 
 /*
- Le programme filtre sert à filtrer et afficher une matrice contenue dans un fichier
+ Le programme filtre sert à filtrer et afficher une matrice de chaines de caractères.
+ Elle provient d'un fichier ou plusieurs fichiers (fusioner horizontalement ou verticalement.
  */
 
 #include <stdio.h>
@@ -12,7 +13,13 @@
 #include "affichage.h"
 
 
-// retourne un tableau contenant le nombre de caractères de chaques lignes du fichier, igonre les lignes vides
+/*
+ * Crée un vecteur contenant le nombre d'éléments d'un fichier (séparé par des blanc)
+ * et set le nombre de ligne non vide de ce fichier
+ *@param fichier  : le fichier à parcourir
+ *@param nbLigne  : le nombre de ligne non vide
+ *@return le vecteur
+ */
 int *creerVecteur(FILE* fichier, int * nbLigne)
 {
     rewind(fichier);
@@ -22,29 +29,29 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
     int *vecteur = nbCharLigne;
     
     int temp;
-	int nbNombres=0;
-	int unNbLue =false;
+    int nbNombres=0;
+    int unNbLue =false;
     
-	do{
-		temp=fgetc(fichier);
-		while(temp != ' ' && temp != '\n' && temp != EOF){
-			temp=fgetc(fichier);
-			unNbLue=true;
-		}
+    do{
+        temp=fgetc(fichier);
+        while(temp != ' ' && temp != '\n' && temp != EOF){
+            temp=fgetc(fichier);
+            unNbLue=true;
+        }
         
-		if(unNbLue){ ++nbNombres; }
-		
-		if(temp == '\n' || temp == EOF){
+        if(unNbLue){ ++nbNombres; }
+        
+        if(temp == '\n' || temp == EOF){
             if(nbNombres != 0){
                 *nbCharLigne = nbNombres;
                 nbCharLigne++;
                 nombreLigneVecteur++;
                 nbNombres=0;
             }
-		}
-		unNbLue=false;
+        }
+        unNbLue=false;
         
-	}while(temp != EOF);
+    }while(temp != EOF);
     
     rewind(fichier);
     *nbLigne = nombreLigneVecteur;
@@ -54,10 +61,12 @@ int *creerVecteur(FILE* fichier, int * nbLigne)
 
 
 
-int mauvaisVouH(int Vpos, int Hpos) {
-    return (Hpos != 1 && Vpos != 1);
-}
-
+/*
+ * Vérifie qu'une option n'est pas en double
+ * Déclanche une erreur si c'est le cas
+ *@param argv   : tableau pointant les paramères du programme
+ *@param option : l'option à vérifier
+ */
 void checkOptionEnDouble(char* const *argv, char option) {
     int pos = seek_option(argv, option);
     if (pos != -1) {
@@ -69,10 +78,15 @@ void checkOptionEnDouble(char* const *argv, char option) {
     }
 }
 
+/*
+ * Vérifie les options passées en paramétre du programme,
+ * Déclanche une erreur si la syntaxe est mauvaise
+ *@param argv   : tableau pointant les paramères du programme
+ */
 void verificationOptions(char * const argv[]){
     int Vpos = seek_option(argv, 'V');
     int Hpos = seek_option(argv, 'H');
-    if (mauvaisVouH(Vpos, Hpos)) {
+    if (Hpos != 1 && Vpos != 1) {
         signaler_erreur(OPTION_ERREUR);
         exit(1);
     }
@@ -81,17 +95,20 @@ void verificationOptions(char * const argv[]){
 }
 
 
-
+/*
+ * Main du programme filtre
+ *@param argv  : tableau pointant les paramères du programme
+ *@param argc  : nombre de paramètres du programme
+ */
 int main(int argc, char * const argv[])
 {
     
     FILE * fichier = NULL;
-	int *vecteur=NULL;
-	char ** ptrTableau2d = NULL;
+    int *vecteur=NULL;
     int *ControlL = NULL;
     int *ControlC = NULL;
-    int n;
-    int m;
+    int n = 0;
+    int m = 0;
     
     verificationOptions(argv);
     
@@ -101,7 +118,7 @@ int main(int argc, char * const argv[])
     stab2d unTableau;
     for (int i=0; i<nbFichiers; i++) {
         fichier = fopen(argv[(i+2)], "r");
-        if(fichier == NULL)	{
+        if(fichier == NULL) {
             signaler_erreur(OUVERTURE_FICHIER_ERREUR);
             exit(1);
         }
@@ -109,7 +126,7 @@ int main(int argc, char * const argv[])
         n = nbre_lignes_fichier(fichier);
         vecteur = creerVecteur(fichier, &n);
         m = taille_max_lignes(vecteur, n);
-        if(!m)	{
+        if(!m)  {
             signaler_erreur(FICHIER_SANS_DONNEE_ERREUR);
             exit(1);
         }
@@ -117,6 +134,7 @@ int main(int argc, char * const argv[])
         unTableau.ptr = charger(fichier, vecteur, n, m);
         unTableau.lignes = n;
         unTableau.colonnes = m;
+        
         tableauStructures[i] = unTableau; // fait une copie
         fclose(fichier);
 
@@ -129,23 +147,17 @@ int main(int argc, char * const argv[])
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
     
-   tabFusion.ptr = filter(tabFusion.ptr, &tabFusion.lignes, &tabFusion.colonnes, ControlC, ControlL);
-    //printf("%d %d ", n,m);
+    tabFusion.ptr = filter(tabFusion.ptr, &tabFusion.lignes, &tabFusion.colonnes, ControlC, ControlL);
     
-    //for(int i = 0; i<nbFichiers; i++){
-        affiche_Tab2D(tabFusion);
-    //}
+    affiche_Tab2D(tabFusion);
     
     
 
-	free(vecteur);
+    free(vecteur);
     free(tableauStructures);
-    
-    free(ptrTableau2d);
-    //free(ptrTabApresFiltre);
     free(ControlC);
     free(ControlL);
-	   
+       
     return 0;
 }
 
