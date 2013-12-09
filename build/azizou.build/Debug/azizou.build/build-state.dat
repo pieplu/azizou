@@ -183,50 +183,50 @@ t1382587068
 s5968
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/affichage.c
-c00000000529E60AD00000000000004ED
-t1386111149
+c0000000052A646C700000000000004ED
+t1386628807
 s1261
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/affichage.h
-c0000000052A3CE470000000000000479
-t1386466887
+c0000000052A646C70000000000000479
+t1386628807
 s1145
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/filtre.c
-c0000000052A5F7C10000000000000E03
-t1386608577
-s3587
+c0000000052A6485A0000000000001079
+t1386629210
+s4217
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.c
-c0000000052A5F7C100000000000030AA
-t1386608577
-s12458
+c0000000052A64C280000000000003482
+t1386630184
+s13442
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.h
-c0000000052A5F1FD000000000000108E
-t1386607101
-s4238
+c0000000052A64835000000000000138E
+t1386629173
+s5006
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/build/Debug/azizou
-t1386607140
-s16640
+t1386630067
+s16520
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/affichage.o
-t1386466887
+t1386628807
 s4620
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList
-c00000000529D15B60000000000000162
-t1386026422
+c0000000052A646C70000000000000162
+t1386628807
 s354
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o
-t1386608578
-s8452
+t1386629504
+s8056
 
 N/Users/alexis/Google Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o
-t1386608578
-s15460
+t1386630184
+s15388
 
 N/Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c
 c00000000527056580000000000000AE2
@@ -277,7 +277,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese1608b412f56b841^59a29b412f56b841^---0#1#1#--18"Check dependencies36"2560DAC0-2BAC-4A6F-9B50-AA2B67B7819E-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies9b0182a88356b841^4a6182a88356b841^---0#1#1#--18"Check dependencies36"5564E6CE-3B00-4FA0-9EB6-5CB69B896976-
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/affichage.o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/affichage.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s408159687.386785
@@ -296,8 +296,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile
 b19C68073-A888-4F70-A483-3F69EC7C991D
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s408301377.608583
-e408301378.194366
+s408322304.845999
+e408322304.908276
 r1
 xCompileC
 xbuild/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o
@@ -309,8 +309,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/filtre.c
 d/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.h
 d/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/affichage.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/filtre.c153"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerf1f39b412f56b841^3bc231422f56b841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/alexis/Google%20Drive/UQAM/INF3135/azizou/azizou/filtre.c0000000000000000^2602"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/alexis/Google Drive/UQAM/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources -F/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.d --serialize-diagnostics /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.dia -c /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/filtre.c -o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o36"7BA0A3F1-5373-4AD6-96E9-7FFCDEE63B7E-
-b26E8BB79-3CFE-46FE-A073-985878E2924A
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/filtre.c153"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler88d8d8008156b841^14d0e8008156b841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/alexis/Google%20Drive/UQAM/INF3135/azizou/azizou/filtre.c0000000000000000^2602"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/alexis/Google Drive/UQAM/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources -F/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.d --serialize-diagnostics /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.dia -c /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/filtre.c -o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o36"74C0A0D1-0748-49D4-8034-2A973495134E-
+b240B8A86-FA79-4D54-88DC-44CBBF1AEC22
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/filtre.o /Users/alexis/Prog/C/INF3135/azizou/azizou/filtre.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s404786648.406585
@@ -329,8 +329,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile
 b16BD0EA8-5ADA-4895-8BCA-435E918ECDDF
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s408301377.608702
-e408301378.194502
+s408322984.509320
+e408322984.560036
 r1
 xCompileC
 xbuild/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o
@@ -342,8 +342,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.c
 d/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.h
 d/Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/affichage.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.c159"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerdcf09b412f56b841^abcb31422f56b841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/alexis/Google%20Drive/UQAM/INF3135/azizou/azizou/fonctions.c0000000000000000^2620"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/alexis/Google Drive/UQAM/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources -F/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.d --serialize-diagnostics /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.dia -c /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/fonctions.c -o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o36"0F77BEA4-C37E-46C9-B619-055B9F63C92C-
-b26E8BB79-3CFE-46FE-A073-985878E2924A
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/alexis/Google Drive/UQAM/INF3135/azizou/azizou/fonctions.c159"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler1b7f82a88356b841^c5ae95a88356b841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/alexis/Google%20Drive/UQAM/INF3135/azizou/azizou/fonctions.c0000000000000000^2620"CompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/alexis/Google Drive/UQAM/INF3135/azizou"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-generated-files.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-own-target-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-all-target-headers.hmap -iquote /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/azizou-project-headers.hmap -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources/x86_64 -I/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/DerivedSources -F/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -MMD -MT dependencies -MF /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.d --serialize-diagnostics /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.dia -c /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/azizou/fonctions.c -o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o36"F9F0ACFE-FE79-4A9E-9453-D77902A8A81B-
+b28BBDCB2-A129-4734-BCDC-7D92CA81B84E
 
 CCompileC build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/fonctions.o /Users/alexis/Prog/C/INF3135/azizou/azizou/fonctions.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s407173615.213083
@@ -362,8 +362,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile
 bA4D02F3D-D734-4B90-85B7-CED36C1FCF82
 
 CLd /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/azizou normal x86_64
-s408301378.212887
-e408301378.465708
+s408322984.561763
+e408322984.581778
 r1
 xLd
 x/Users/alexis/Google Drive/UQAM/INF3135/azizou/build/Debug/azizou
@@ -405,8 +405,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Link /Users/alexis/Google Drive/UQAM/INF3135/azizou/build/Debug/azizou35"Ld build/Debug/azizou normal x86_64338d36422f56b841^193977422f56b841^---0#0#1#--880"Ld build/Debug/azizou normal x86_64    cd "/Users/alexis/Google Drive/UQAM/INF3135/azizou"    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -F/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -filelist /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou_dependency_info.dat -o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/azizou36"B1494370-03FC-447C-950D-869F546FA7B6-
-b26E8BB79-3CFE-46FE-A073-985878E2924A
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Link /Users/alexis/Google Drive/UQAM/INF3135/azizou/build/Debug/azizou35"Ld build/Debug/azizou normal x86_64efe48fa88356b841^69e295a88356b841^---0#0#1#--880"Ld build/Debug/azizou normal x86_64    cd "/Users/alexis/Google Drive/UQAM/INF3135/azizou"    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -F/Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug -filelist /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/azizou.build/Debug/azizou.build/Objects-normal/x86_64/azizou_dependency_info.dat -o /Users/alexis/Google\ Drive/UQAM/INF3135/azizou/build/Debug/azizou36"06FBB8B2-EA62-4807-A641-A1D1B9DD551F-
+b28BBDCB2-A129-4734-BCDC-7D92CA81B84E
 
 CLd /Users/alexis/Prog/C/INF3135/azizou/build/Debug/azizou normal x86_64
 s407173615.258738

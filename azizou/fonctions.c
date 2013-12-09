@@ -287,51 +287,48 @@ stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
     tableau2dim = malloc(nbColonnesFusion * nbLignesFusion * (sizeof(char *)));
     int positionDansFusion = 0;
     int pointeurAlire = 0;
-    if (option == 'H')
-    {
-        for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++)
-        {
-            for (int ptrLignes = 0; ptrLignes < nbLignesFusion; ptrLignes++)
-            {
-                for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++)
-                {
-                    if (ptrLignes < tabMatrices[ptrMatrices].lignes)
-                    {
-                        tableau2dim[ptrLignes][ptrCol+positionDansFusion] = tabMatrices[ptrMatrices].ptr[pointeurAlire];
-                        pointeurAlire++;
-                    }
-                    else
-                    {
-                        tableau2dim[ptrLignes][ptrCol+positionDansFusion] = "";
-                    }
-                }
-            }
-            pointeurAlire = 0;
-            positionDansFusion += tabMatrices[ptrMatrices].colonnes;
-        }
-    }
-    else if (option == 'V')
-    {
-        for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++)
-        {
-            for (int ptrLignes = 0; ptrLignes < nbLignesFusion; ptrLignes++)
-            {
-                for (int ptrCol = 0; ptrCol < nbColonnesFusion; ptrCol++)
-                {
-                    if (ptrCol < tabMatrices[ptrMatrices].colonnes)
-                    {
-                        tableau2dim[ptrLignes+positionDansFusion][ptrCol] = tabMatrices[ptrMatrices].ptr[pointeurAlire];
-                        pointeurAlire++;
-                    }
-                    else
-                    {
-                        tableau2dim[ptrLignes+positionDansFusion][ptrCol] = "";
+    
+    
+    switch (option) {
+        case 'H':
+            for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++){
+                for (int ptrLignes = 0; ptrLignes < nbLignesFusion; ptrLignes++){
+                    for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++){
+                        
+                        if (ptrLignes < tabMatrices[ptrMatrices].lignes){
+                            tableau2dim[ptrLignes][ptrCol+positionDansFusion] = tabMatrices[ptrMatrices].ptr[pointeurAlire];
+                            pointeurAlire++;
+                        }
+                        else{
+                            tableau2dim[ptrLignes][ptrCol+positionDansFusion] = "";
+                        }
                     }
                 }
+                positionDansFusion += tabMatrices[ptrMatrices].colonnes;
+                pointeurAlire = 0;
             }
-            pointeurAlire = 0;
-            positionDansFusion += tabMatrices[ptrMatrices].lignes;
-        }
+
+            break;
+            
+        case 'V':
+            for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++){
+                for (int ptrLignes = 0; ptrLignes < nbLignesFusion; ptrLignes++){
+                    for (int ptrCol = 0; ptrCol < nbColonnesFusion; ptrCol++){
+                        
+                        if (ptrCol < tabMatrices[ptrMatrices].colonnes){
+                            tableau2dim[ptrLignes+positionDansFusion][ptrCol] = tabMatrices[ptrMatrices].ptr[pointeurAlire];
+                            pointeurAlire++;
+                        }
+                        else{
+                            tableau2dim[ptrLignes+positionDansFusion][ptrCol] = "";
+                        }
+                    }
+                }
+                pointeurAlire = 0;
+                positionDansFusion += tabMatrices[ptrMatrices].lignes;
+            }
+
+            break;
     }
     
     stab2d matriceFusione = {nbLignesFusion,nbColonnesFusion,&tableau2dim[0][0]};
@@ -350,32 +347,24 @@ void tailleMatriceFinale(int* hauteur, int* largueur, stab2d *tabMatrices, int n
 {
     for (int i = 0; i < nbMatrices; i++)
     {
-        if (option == 'V')
-        {
-            if (tabMatrices[i].colonnes > *largueur)
-            {
-                *largueur = tabMatrices[i].colonnes;
-            }
-            
-            *hauteur += tabMatrices[i].lignes;
+        switch (option) {
+            case 'H':
+                if (tabMatrices[i].colonnes > *hauteur){
+                    *hauteur = tabMatrices[i].lignes;
+                }
+                *largueur += tabMatrices[i].colonnes;
+                break;
+            case 'V':
+                if (tabMatrices[i].colonnes > *largueur){
+                    *largueur = tabMatrices[i].colonnes;
+                }
+                *hauteur += tabMatrices[i].lignes;
+                break;
+            default:
+                signaler_erreur(SYNTAX_DOMAIN_ERREUR);
+                exit(1);
         }
-        else if (option == 'H')
-        {
-            if (tabMatrices[i].colonnes > *hauteur)
-            {
-                *hauteur = tabMatrices[i].lignes;
-            }
-            *largueur += tabMatrices[i].colonnes;
-        }
-        else
-        {
-            signaler_erreur(SYNTAX_DOMAIN_ERREUR);
-            printf("erreur taille matrice");
-            exit(1);
-        }
-        
     }
-    
 }
 
 
