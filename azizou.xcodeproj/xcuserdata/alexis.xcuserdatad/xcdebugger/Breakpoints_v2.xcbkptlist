@@ -157,7 +157,7 @@
                   symbolName = "affiche_Tab2D"
                   moduleName = "azizou"
                   urlString = "file:///Users/alexis/Google%20Drive/UQAM/INF3135/azizou/azizou/affichage.c"
-                  timestampString = "408295945.508265"
+                  timestampString = "408296983.243962"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -171,7 +171,7 @@
                   symbolName = "affiche_Tab2D"
                   moduleName = "azizou"
                   urlString = "file:///Users/alexis/Google%20Drive/UQAM/INF3135/azizou/azizou/affichage.c"
-                  timestampString = "408295945.508685"
+                  timestampString = "408296983.244254"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -179,22 +179,6 @@
                   offsetFromSymbolStart = "174">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "azizou/filtre.c"
-            timestampString = "408169889.714359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "main()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

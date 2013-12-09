@@ -240,103 +240,65 @@ int seek_option(char *const argv[], char option)
  *@return une nouvelle structure contant la fusion des matrices
  */
 stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
-
+    
     int nbColonnesFusion = 0;
-    int nbl = 0;
-    int max = 0;
-    int maxl = 0;
+    int nbLignesFusion = 0;
     
-    if (option == 'V')
-    {
-        for (int i = 0; i < nbMatrices; ++i) {
-            
-            nbl += tabMatrices[i].lignes;
-            
-            if (max < tabMatrices[i].colonnes)
-            {
-                max = tabMatrices[i].colonnes;
-            }
-        }
-        nbColonnesFusion = max;
-    }
-    else if (option == 'H')
-    {
-        for (int i = 0; i < nbMatrices; ++i) {
-            
-            nbColonnesFusion += tabMatrices[i].colonnes;
-            
-            if (maxl < tabMatrices[i].lignes)
-            {
-                maxl = tabMatrices[i].lignes;
-            }
-        }
-        max = nbColonnesFusion;
-        nbl = maxl;
-    }
-    else
-    {
-        signaler_erreur(3);
-        exit(1);
-    }
+    tailleMatriceFinale(&nbLignesFusion, &nbColonnesFusion, tabMatrices, nbMatrices, option);
     
-    char *(*ptrtab2d)[nbColonnesFusion] = NULL;
-    ptrtab2d = malloc((nbColonnesFusion * nbl) * (sizeof(char *)));
-    int pos = 0;
-    int cpt = 0;
-    
+    char *(*tableau2dim)[nbColonnesFusion] = NULL;
+    tableau2dim = malloc(nbColonnesFusion * nbLignesFusion * (sizeof(char *)));
+    int positionDansFusion = 0;
+    int pointeurAlire = 0;
     if (option == 'H')
     {
-        for (int x = 0; x < nbMatrices; ++x)
+        for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++)
         {
-            for (int i = 0; i < nbl; ++i)
+            for (int ptrLignes = 0; ptrLignes < nbLignesFusion; ptrLignes++)
             {
-                for (int j = 0; j < tabMatrices[x].colonnes; ++j)
+                for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++)
                 {
-                    if (i < tabMatrices[x].lignes)
+                    if (ptrLignes < tabMatrices[ptrMatrices].lignes)
                     {
-                        ptrtab2d[i][j+pos] = tabMatrices[x].ptr[cpt];
-                        cpt++;
+                        tableau2dim[ptrLignes][ptrCol+positionDansFusion] = tabMatrices[ptrMatrices].ptr[pointeurAlire];
+                        pointeurAlire++;
                     }
                     else
                     {
-                        ptrtab2d[i][j+pos] = "";
+                        tableau2dim[ptrLignes][ptrCol+positionDansFusion] = "";
                     }
                 }
             }
-            cpt = 0;
-            pos += tabMatrices[x].colonnes;
+            pointeurAlire = 0;
+            positionDansFusion += tabMatrices[ptrMatrices].colonnes;
         }
     }
     else if (option == 'V')
     {
-        for (int x = 0; x < nbMatrices; ++x)
+        for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++)
         {
-            for (int i = 0; i < nbl; ++i)
+            for (int ptrLignes = 0; ptrLignes < nbLignesFusion; ptrLignes++)
             {
-                for (int j = 0; j < nbColonnesFusion; ++j)
+                for (int ptrCol = 0; ptrCol < nbColonnesFusion; ptrCol++)
                 {
-                    if (j < tabMatrices[x].colonnes)
+                    if (ptrCol < tabMatrices[ptrMatrices].colonnes)
                     {
-                        ptrtab2d[i+pos][j] = tabMatrices[x].ptr[cpt];
-                        cpt++;
+                        tableau2dim[ptrLignes+positionDansFusion][ptrCol] = tabMatrices[ptrMatrices].ptr[pointeurAlire];
+                        pointeurAlire++;
                     }
                     else
                     {
-                        ptrtab2d[i+pos][j] = "";
+                        tableau2dim[ptrLignes+positionDansFusion][ptrCol] = "";
                     }
                 }
             }
-            cpt = 0;
-            pos += tabMatrices[x].lignes;
+            pointeurAlire = 0;
+            positionDansFusion += tabMatrices[ptrMatrices].lignes;
         }
     }
     
-    struct tab2D matrice_fusion;
-    matrice_fusion.colonnes = nbColonnesFusion;
-    matrice_fusion.lignes = nbl;
-    matrice_fusion.ptr = &ptrtab2d[0][0];
-    
-    return matrice_fusion;
+    stab2d matriceFusione = {nbLignesFusion,nbColonnesFusion,&tableau2dim[0][0]};
+    return matriceFusione;
 }
 
 /*
