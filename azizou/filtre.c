@@ -124,7 +124,7 @@ int main(int argc, char * const argv[])
     }
     
 
-    stab2d tabFusion = fusionMatrices(tableauStructures, nbFichiers, 'H');
+    stab2d tabFusion = fusionMatrices(tableauStructures, nbFichiers, argv[1][1]);
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
     

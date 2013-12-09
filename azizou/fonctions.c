@@ -241,42 +241,102 @@ int seek_option(char *const argv[], char option)
  */
 stab2d fusionMatrices(stab2d *tabMatrices, int nbMatrices, char option){
 
-    int lignesFusion = 0;
-    int colonnesFusion = 0;
-    char *tempDebug = malloc(20*sizeof(char));
+    int nbColonnesFusion = 0;
+    int nbl = 0;
+    int max = 0;
+    int maxl = 0;
     
-    tailleMatriceFinale(&lignesFusion, &colonnesFusion , tabMatrices , nbMatrices, option);
-    
-    char *(*tableau2dim)[lignesFusion];
-    tableau2dim=malloc(colonnesFusion*lignesFusion*sizeof(char *));
-    int positionDansFusion = 0;
-    int pointeurAlire = 0;
-    // H
-    for (int ptrMatrices = 0; ptrMatrices < nbMatrices; ptrMatrices++)
+    if (option == 'V')
     {
-        for (int ptrLignes= 0; ptrLignes < lignesFusion; ptrLignes++)
-        {
-            for (int ptrCol = 0; ptrCol < tabMatrices[ptrMatrices].colonnes; ptrCol++)
+        for (int i = 0; i < nbMatrices; ++i) {
+            
+            nbl += tabMatrices[i].lignes;
+            
+            if (max < tabMatrices[i].colonnes)
             {
-                if (ptrLignes<tabMatrices[ptrMatrices].lignes) {
-                    
-                    tempDebug = tabMatrices[ptrMatrices].ptr[pointeurAlire];
-                    printf("%d : %s\n", pointeurAlire, tempDebug);
-                    
-                    tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = tempDebug;
-                    pointeurAlire++;
-                    
-                }else{
-                    tableau2dim[ptrLignes][(ptrCol + positionDansFusion)] = "";
-                }
+                max = tabMatrices[i].colonnes;
             }
         }
-        positionDansFusion += tabMatrices[ptrMatrices].colonnes;
-        pointeurAlire = 0;
+        nbColonnesFusion = max;
+    }
+    else if (option == 'H')
+    {
+        for (int i = 0; i < nbMatrices; ++i) {
+            
+            nbColonnesFusion += tabMatrices[i].colonnes;
+            
+            if (maxl < tabMatrices[i].lignes)
+            {
+                maxl = tabMatrices[i].lignes;
+            }
+        }
+        max = nbColonnesFusion;
+        nbl = maxl;
+    }
+    else
+    {
+        signaler_erreur(3);
+        exit(1);
     }
     
-    stab2d matriceFusione = {lignesFusion,colonnesFusion,&tableau2dim[0][0]};
-    return matriceFusione; 
+    char *(*ptrtab2d)[nbColonnesFusion] = NULL;
+    ptrtab2d = malloc((nbColonnesFusion * nbl) * (sizeof(char *)));
+    int pos = 0;
+    int cpt = 0;
+    
+    if (option == 'H')
+    {
+        for (int x = 0; x < nbMatrices; ++x)
+        {
+            for (int i = 0; i < nbl; ++i)
+            {
+                for (int j = 0; j < tabMatrices[x].colonnes; ++j)
+                {
+                    if (i < tabMatrices[x].lignes)
+                    {
+                        ptrtab2d[i][j+pos] = tabMatrices[x].ptr[cpt];
+                        cpt++;
+                    }
+                    else
+                    {
+                        ptrtab2d[i][j+pos] = "";
+                    }
+                }
+            }
+            cpt = 0;
+            pos += tabMatrices[x].colonnes;
+        }
+    }
+    else if (option == 'V')
+    {
+        for (int x = 0; x < nbMatrices; ++x)
+        {
+            for (int i = 0; i < nbl; ++i)
+            {
+                for (int j = 0; j < nbColonnesFusion; ++j)
+                {
+                    if (j < tabMatrices[x].colonnes)
+                    {
+                        ptrtab2d[i+pos][j] = tabMatrices[x].ptr[cpt];
+                        cpt++;
+                    }
+                    else
+                    {
+                        ptrtab2d[i+pos][j] = "";
+                    }
+                }
+            }
+            cpt = 0;
+            pos += tabMatrices[x].lignes;
+        }
+    }
+    
+    struct tab2D matrice_fusion;
+    matrice_fusion.colonnes = nbColonnesFusion;
+    matrice_fusion.lignes = nbl;
+    matrice_fusion.ptr = &ptrtab2d[0][0];
+    
+    return matrice_fusion;
 }
 
 /*
