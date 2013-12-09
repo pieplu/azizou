@@ -88,7 +88,6 @@ int main(int argc, char * const argv[])
     FILE * fichier = NULL;
 	int *vecteur=NULL;
 	char ** ptrTableau2d = NULL;
-    stab2d ptrTabApresFiltre;
     int *ControlL = NULL;
     int *ControlC = NULL;
     int n;
