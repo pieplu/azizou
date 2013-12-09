@@ -423,16 +423,16 @@ int * control(char *const argv[], int dim, char c){
 //retourne un pointeur sur le début d'un tableau 2D de la bonne taille après application
 // des suppressions données par controlC et controlL  et place la nouvelle taille du tableau dans *n et *m.
 //retourne NULL sil le tableau résultant est vide.
-int *filter(int * mat, int *n, int *m, int *controlC, int *controlL)
+char** filter(char** mat, int *n, int *m, int *controlC, int *controlL)
 {
-    int (*tabAvantFiltre)[*m] = NULL;
-    tabAvantFiltre = (int (*)[*m]) mat;
+    char* (*tabAvantFiltre)[*m] = NULL;
+    tabAvantFiltre = (char* (*)[*m]) mat;
     
     int nbColonneAfficher_C = NbCaseZero(controlC, *m);
     int nbLigneAfficher_L = NbCaseZero(controlL, *n);
-    int (*tabFiltre)[nbColonneAfficher_C];
+    char* (*tabFiltre)[nbColonneAfficher_C];
     
-    tabFiltre =  malloc(nbLigneAfficher_L*nbColonneAfficher_C*sizeof(int));
+    tabFiltre =  malloc(nbLigneAfficher_L*nbColonneAfficher_C*sizeof(char*));
     
     if (nbColonneAfficher_C==0 || nbLigneAfficher_L==0) {
         return NULL;

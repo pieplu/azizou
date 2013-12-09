@@ -84,7 +84,7 @@ int * control(char *const argv[], int dim, char c);
 //retourne un pointeur sur le début d'un tableau 2D de la bonne taille après application
 // des suppressions données par controlC et controlL  et place la nouvelle taille du tableau dans *n et *m.
 //retourne NULL sil le tableau résultant est vide.
-int *filter(int * mat, int *n, int *m, int *controlC, int *controlL);
+char** filter(char** mat, int *n, int *m, int *controlC, int *controlL);
 
 
 #endif

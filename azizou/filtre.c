@@ -88,7 +88,7 @@ int main(int argc, char * const argv[])
     FILE * fichier = NULL;
 	int *vecteur=NULL;
 	char ** ptrTableau2d = NULL;
-    char ** ptrTabApresFiltre = NULL;
+    stab2d ptrTabApresFiltre;
     int *ControlL = NULL;
     int *ControlC = NULL;
     int n;
@@ -125,10 +125,13 @@ int main(int argc, char * const argv[])
     
 
     stab2d tabFusion = fusionMatrices(tableauStructures, nbFichiers, argv[1][1]);
+    n = tabFusion.lignes;
+    m = tabFusion.colonnes;
     ControlL = control(argv, n, 'L');
     ControlC = control(argv, m, 'C');
     
-  //  ptrTabApresFiltre = filter(ptrTableau2d, &n, &m, ControlC, ControlL);
+   tabFusion.ptr = filter(tabFusion.ptr, &tabFusion.lignes, &tabFusion.colonnes, ControlC, ControlL);
+    //printf("%d %d ", n,m);
     
     //for(int i = 0; i<nbFichiers; i++){
         affiche_Tab2D(tabFusion);
@@ -140,7 +143,7 @@ int main(int argc, char * const argv[])
     free(tableauStructures);
     
     free(ptrTableau2d);
-    free(ptrTabApresFiltre);
+    //free(ptrTabApresFiltre);
     free(ControlC);
     free(ControlL);
 	   
