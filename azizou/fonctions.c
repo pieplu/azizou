@@ -68,7 +68,7 @@ char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
         for (int x = 0; x < max_vecteur; x++){
             if(x < *vecteur){
                 fscanf (fp, "%s", curElem);
-                tableau2dim[y][x] = strcpy(calloc(1,sizeof(curElem)),curElem);
+                tableau2dim[y][x] = strcpy(calloc(1,strlen(curElem)+1),curElem);
             }else{
                 tableau2dim[y][x] = "";
             }
