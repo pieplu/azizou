@@ -62,7 +62,7 @@ char **charger(FILE *fp, int * vecteur, int taille_vecteur, int max_vecteur)
 {
     char curElem[100];
     char *(*tableau2dim)[max_vecteur];
-    tableau2dim=malloc(max_vecteur*taille_vecteur*sizeof(char *));
+    tableau2dim=calloc(max_vecteur*taille_vecteur,sizeof(char *));
 
     for (int y = 0; y < taille_vecteur; y++){
         for (int x = 0; x < max_vecteur; x++){
