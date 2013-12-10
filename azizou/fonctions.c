@@ -19,7 +19,7 @@
  */
 int nbre_lignes_fichier(FILE *fp)
 {
-    int nbLigne=1;
+    int nbLigne=0;
     char c = 0;
     if(fp != NULL){
         while (c != EOF){
